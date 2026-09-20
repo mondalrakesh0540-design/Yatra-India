@@ -1,3 +1,5 @@
+const BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.BASE_URL) || "/Yatra-India/";
+
 export const DESTINATIONS = [
   // JAMMU & KASHMIR
   {
@@ -2888,7 +2890,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": true,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/maharashtra-gateway.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1000&q=80',
@@ -3069,7 +3071,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": true,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/punjab-golden-temple.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80',
@@ -3160,12 +3162,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": true,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/puri-jagannath.jpg`,
     "gallery": [
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1000&q=80'
+      `${BASE}images/konark-sun-temple.jpg`,
+      `${BASE}images/puri-rath-yatra.jpg`,
+      `${BASE}images/chilika-lake.jpg`,
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -3250,7 +3252,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": true,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1605647540924-852290f6b0d5?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/telangana-charminar.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1572445271230-a78b5944a659?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80',
@@ -3341,7 +3343,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/ap-tirupati.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80',
@@ -3519,7 +3521,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/bihar-mahabodhi.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1000&q=80',
@@ -3609,7 +3611,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/jharkhand-baidyanath.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1000&q=80',
@@ -3698,7 +3700,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/chhattisgarh-chitrakote.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1000&q=80',
@@ -3789,7 +3791,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/haryana-brahma-sarovar.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1000&q=80',
@@ -3879,7 +3881,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": true,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/chandigarh-rock-garden.jpg`,
     "gallery": [
       "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=800&q=80",
@@ -3967,7 +3969,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/manipur-loktak.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1000&q=80',
@@ -4149,7 +4151,7 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": true,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/nagaland-dzukou.jpg`,
     "gallery": [
       "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800&q=80",
@@ -4240,7 +4242,7 @@ export const DESTINATIONS = [
     "isPopular": false,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": `${BASE}images/tripura-unakoti.jpg`,
     "gallery": [
       'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80',
