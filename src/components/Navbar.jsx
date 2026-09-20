@@ -53,7 +53,7 @@ export const Navbar = ({ onOpenSearch }) => {
               <span className="text-xl font-bold tracking-wider font-serif text-white flex items-center gap-1.5">
                 YATRA <span className="text-saffron-500 font-extrabold tracking-widest text-sm uppercase bg-saffron-500/10 px-1.5 py-0.5 rounded border border-saffron-500/30">INDIA</span>
               </span>
-              <span className="text-[10px] text-slate-300 tracking-widest uppercase font-semibold">Explore The True Essence</span>
+              <span className="hidden sm:block text-[10px] text-slate-300 tracking-widest uppercase font-semibold">Explore The True Essence</span>
             </div>
           </Link>
 

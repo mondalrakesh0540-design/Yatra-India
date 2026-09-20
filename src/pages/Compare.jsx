@@ -40,8 +40,14 @@ export const Compare = () => {
 
       {/* Comparison Table / Matrix */}
       {destinations.length > 0 ? (
-        <div className="overflow-x-auto pb-6">
-          <div className="min-w-[800px] grid grid-cols-5 gap-4">
+        <div className="space-y-3">
+          {/* Mobile Swipe Indicator */}
+          <div className="md:hidden flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-saffron-500/10 border border-saffron-500/20 text-[11px] font-medium text-saffron-300 text-center">
+            <span>← Swipe sideways to view all comparison details →</span>
+          </div>
+
+          <div className="overflow-x-auto pb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div className="min-w-[780px] grid grid-cols-5 gap-4">
             {/* Metric Labels Column */}
             <div className="space-y-6 pt-52 text-xs font-bold text-slate-400 uppercase tracking-wider border-r border-white/10 pr-4">
               <div className="h-10 flex items-center">State / Region</div>
@@ -130,6 +136,7 @@ export const Compare = () => {
             )}
           </div>
         </div>
+      </div>
       ) : (
         <div className="p-16 rounded-3xl bg-navy-900/40 border border-white/10 text-center max-w-lg mx-auto">
           <Scale className="w-12 h-12 text-slate-500 mx-auto mb-3 opacity-40" />

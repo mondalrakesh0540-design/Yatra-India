@@ -287,6 +287,131 @@ export const Destinations = () => {
           )}
         </main>
       </div>
+
+      {/* Mobile Filter Drawer / Bottom Sheet */}
+      {mobileFilterOpen && (
+        <div className="fixed inset-0 z-50 md:hidden flex flex-col justify-end bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
+          <div 
+            className="absolute inset-0" 
+            onClick={() => setMobileFilterOpen(false)} 
+          />
+          <div className="relative bg-navy-900 border-t border-white/20 rounded-t-3xl max-h-[85vh] overflow-y-auto p-6 space-y-6 shadow-2xl animate-in slide-in-from-bottom duration-300">
+            {/* Header */}
+            <div className="flex items-center justify-between pb-4 border-b border-white/10 sticky top-0 bg-navy-900 z-10">
+              <div className="flex items-center gap-2">
+                <SlidersHorizontal className="w-5 h-5 text-saffron-500" />
+                <h3 className="font-bold text-base text-white">Filter Destinations</h3>
+              </div>
+              <button
+                onClick={() => setMobileFilterOpen(false)}
+                className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* State Filter */}
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                State / Union Territory
+              </label>
+              <select
+                value={selectedState}
+                onChange={(e) => setSelectedState(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-navy-950 border border-white/15 text-sm text-white focus:outline-none focus:border-saffron-500"
+              >
+                <option value="all">All States & UTs (36)</option>
+                {STATES.map((st) => (
+                  <option key={st.id} value={st.id}>
+                    {st.name} {st.isUT ? '(UT)' : ''}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Travel Style Filter */}
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                Travel Style
+              </label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-navy-950 border border-white/15 text-sm text-white focus:outline-none focus:border-saffron-500 capitalize"
+              >
+                <option value="all">All Styles</option>
+                {CATEGORIES.map((cat) => (
+                  <option key={cat.id} value={cat.id}>
+                    {cat.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Budget Filter */}
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                Budget Per Person
+              </label>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { id: 'all', label: 'All Budgets' },
+                  { id: 'under10k', label: '< ₹10,000' },
+                  { id: '10k-20k', label: '₹10k – ₹20k' },
+                  { id: 'above20k', label: '₹20,000+' },
+                ].map((b) => (
+                  <button
+                    key={b.id}
+                    onClick={() => setSelectedBudget(b.id)}
+                    className={`px-3 py-2.5 rounded-xl text-center text-xs transition-colors border ${
+                      selectedBudget === b.id
+                        ? 'bg-saffron-500/20 text-saffron-300 font-bold border-saffron-500/60'
+                        : 'bg-navy-950 border-white/10 text-slate-300'
+                    }`}
+                  >
+                    {b.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Season Filter */}
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                Ideal Month to Visit
+              </label>
+              <select
+                value={selectedSeason}
+                onChange={(e) => setSelectedSeason(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl bg-navy-950 border border-white/15 text-sm text-white focus:outline-none focus:border-saffron-500"
+              >
+                <option value="all">Any Month</option>
+                {['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].map((m) => (
+                  <option key={m} value={m}>
+                    {m}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Actions: Reset & Apply */}
+            <div className="pt-4 border-t border-white/10 flex items-center gap-3">
+              <button
+                onClick={resetFilters}
+                className="flex-1 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 font-semibold text-xs transition-colors"
+              >
+                Reset All
+              </button>
+              <button
+                onClick={() => setMobileFilterOpen(false)}
+                className="flex-1 py-3 rounded-xl bg-gradient-to-r from-saffron-500 to-amber-600 text-white font-bold text-xs shadow-glow-saffron transition-all"
+              >
+                Apply ({filteredDestinations.length} Results)
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

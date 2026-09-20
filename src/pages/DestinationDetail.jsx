@@ -92,10 +92,10 @@ export const DestinationDetail = () => {
             </div>
 
             {/* Action Buttons: Add to Trip, Save, Share */}
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 shrink-0 w-full sm:w-auto">
               <button
                 onClick={handleAddToTrip}
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-saffron-500 to-amber-600 hover:from-saffron-600 hover:to-amber-700 text-white text-xs sm:text-sm font-bold shadow-glow-saffron transition-all flex items-center gap-2"
+                className="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-saffron-500 to-amber-600 hover:from-saffron-600 hover:to-amber-700 text-white text-xs sm:text-sm font-bold shadow-glow-saffron transition-all flex items-center justify-center gap-2"
               >
                 <Plus className="w-4 h-4" />
                 <span>Add to Trip</span>
@@ -104,27 +104,27 @@ export const DestinationDetail = () => {
               <button
                 onClick={() => toggleSaveDestination(destination.id)}
                 aria-label="Save destination"
-                className={`p-3 rounded-full border transition-all ${
+                className={`p-2.5 sm:p-3 rounded-full border transition-all ${
                   saved
                     ? 'bg-saffron-500 border-saffron-400 text-white shadow-glow-saffron'
                     : 'bg-navy-900/80 border-white/20 text-white hover:bg-navy-900'
                 }`}
               >
-                <Heart className={`w-5 h-5 ${saved ? 'fill-current' : ''}`} />
+                <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${saved ? 'fill-current' : ''}`} />
               </button>
 
               <button
                 onClick={handleShare}
                 aria-label="Share destination"
-                className="p-3 rounded-full bg-navy-900/80 border border-white/20 text-white hover:bg-navy-900 transition-colors relative"
+                className="p-2.5 sm:p-3 rounded-full bg-navy-900/80 border border-white/20 text-white hover:bg-navy-900 transition-colors relative"
               >
-                {copied ? <Check className="w-5 h-5 text-emerald-400" /> : <Share2 className="w-5 h-5" />}
+                {copied ? <Check className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" /> : <Share2 className="w-4 h-4 sm:w-5 sm:h-5" />}
               </button>
 
               <button
                 onClick={() => toggleCompare(destination.id)}
                 aria-label="Compare destination"
-                className={`px-4 py-3 rounded-full border text-xs font-semibold transition-all ${
+                className={`px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full border text-xs font-semibold transition-all ${
                   compared
                     ? 'bg-amber-500 border-amber-400 text-navy-950 font-bold'
                     : 'bg-navy-900/80 border-white/20 text-white hover:bg-navy-900'
