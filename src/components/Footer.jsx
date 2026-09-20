@@ -16,7 +16,7 @@ export const Footer = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-xl bg-white/95 p-1 flex items-center justify-center shadow-glow-saffron overflow-hidden border border-white/20">
-                <img src="/logo-emblem.png" alt="Yatra India Logo" className="w-full h-full object-contain" />
+                <img src={`${import.meta.env.BASE_URL}logo-emblem.png`} alt="Yatra India Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-wider font-serif text-white">

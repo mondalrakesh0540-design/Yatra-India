@@ -47,7 +47,7 @@ export const Navbar = ({ onOpenSearch }) => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/95 p-1 flex items-center justify-center shadow-glow-saffron group-hover:scale-105 transition-transform overflow-hidden border border-white/20">
-              <img src="/logo-emblem.png" alt="Yatra India Logo" className="w-full h-full object-contain" />
+              <img src={`${import.meta.env.BASE_URL}logo-emblem.png`} alt="Yatra India Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-wider font-serif text-white flex items-center gap-1.5">
