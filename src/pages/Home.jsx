@@ -21,62 +21,62 @@ export const Home = ({ onOpenSearch }) => {
       <Hero onOpenSearch={onOpenSearch} />
 
       {/* 4. Trending Destinations Carousel */}
-      <ScrollReveal direction="up" distance={40}>
+      <ScrollReveal direction="up">
         <TrendingDestinations />
       </ScrollReveal>
 
       {/* 5. Explore India Map (28 States & 8 UTs) */}
-      <ScrollReveal direction="up" distance={45}>
+      <ScrollReveal direction="up">
         <IndiaMap />
       </ScrollReveal>
 
       {/* 6. Explore by Travel Style */}
-      <ScrollReveal direction="up" distance={35}>
+      <ScrollReveal direction="up">
         <CategoryGrid />
       </ScrollReveal>
 
       {/* 7. Hidden Gems */}
-      <ScrollReveal direction="up" distance={40}>
+      <ScrollReveal direction="up">
         <HiddenGems />
       </ScrollReveal>
 
       {/* 8. State Explorer (State by State) */}
-      <ScrollReveal direction="up" distance={40}>
+      <ScrollReveal direction="up">
         <StateExplorer />
       </ScrollReveal>
 
       {/* 9. Seasonal Destinations (Monthly Explorer) */}
-      <ScrollReveal direction="up" distance={35}>
+      <ScrollReveal direction="up">
         <SeasonalDestinations />
       </ScrollReveal>
 
       {/* 10. Travel Budget Explorer */}
-      <ScrollReveal direction="up" distance={40}>
+      <ScrollReveal direction="up">
         <BudgetExplorer />
       </ScrollReveal>
 
       {/* 11. Festivals */}
-      <ScrollReveal direction="up" distance={35}>
+      <ScrollReveal direction="up">
         <FestivalSection />
       </ScrollReveal>
 
       {/* 12. Food Explorer */}
-      <ScrollReveal direction="up" distance={35}>
+      <ScrollReveal direction="up">
         <FoodSection />
       </ScrollReveal>
 
       {/* 13. Travel Stories */}
-      <ScrollReveal direction="up" distance={40}>
+      <ScrollReveal direction="up">
         <StoriesSection />
       </ScrollReveal>
 
       {/* 14. Photo Gallery */}
-      <ScrollReveal direction="up" distance={40}>
+      <ScrollReveal direction="up">
         <GallerySection />
       </ScrollReveal>
 
       {/* 15. Trip Planner CTA */}
-      <ScrollReveal direction="zoom" scale={0.96} distance={20}>
+      <ScrollReveal direction="up">
         <TripPlannerCTA />
       </ScrollReveal>
     </div>

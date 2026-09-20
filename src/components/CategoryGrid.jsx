@@ -23,20 +23,12 @@ export const CategoryGrid = () => {
 
       {/* Grid of 12 Travel Style Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-        {CATEGORIES.map((cat, idx) => (
-          <motion.div
+        {CATEGORIES.map((cat) => (
+          <Link
             key={cat.id}
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.45, delay: (idx % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ y: -6, transition: { duration: 0.25 } }}
-            className="h-full"
+            to={`/destinations?category=${cat.id}`}
+            className="group relative h-full bg-navy-900/80 rounded-2xl p-5 border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden"
           >
-            <Link
-              to={`/destinations?category=${cat.id}`}
-              className="group relative h-full bg-navy-900/80 rounded-2xl p-5 border border-white/10 hover:border-saffron-500/50 shadow-glass flex flex-col justify-between overflow-hidden"
-            >
               {/* Ambient Background Gradient on Hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-saffron-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -74,8 +66,7 @@ export const CategoryGrid = () => {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
               </div>
             </Link>
-          </motion.div>
-        ))}
+          ))}
       </div>
     </section>
   );

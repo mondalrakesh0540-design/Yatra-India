@@ -5,11 +5,11 @@ export const ScrollReveal = ({
   children,
   direction = 'up', // 'up' | 'down' | 'left' | 'right' | 'zoom' | 'fade'
   delay = 0,
-  duration = 0.65,
-  distance = 35,
+  duration = 0.4,
+  distance = 12,
   className = '',
   once = true,
-  scale = 0.95
+  scale = 0.98
 }) => {
   const getInitial = () => {
     switch (direction) {
@@ -49,11 +49,11 @@ export const ScrollReveal = ({
     <motion.div
       initial={getInitial()}
       whileInView={getAnimate()}
-      viewport={{ once, margin: '-60px' }}
+      viewport={{ once, margin: '-40px' }}
       transition={{
         duration,
         delay,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.16, 1, 0.3, 1]
       }}
       className={className}
     >

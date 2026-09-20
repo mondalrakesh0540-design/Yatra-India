@@ -41,20 +41,12 @@ export const HiddenGems = () => {
 
         {/* Gems Showcase Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {gems.map((gem, idx) => (
-            <motion.div
+          {gems.map((gem) => (
+            <Link
               key={gem.id}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.5, delay: (idx % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ y: -8, transition: { duration: 0.25 } }}
-              className="h-[380px]"
+              to={`/destination/${gem.id}`}
+              className="group relative h-[380px] w-full rounded-2xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/60 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-end p-6"
             >
-              <Link
-                to={`/destination/${gem.id}`}
-                className="group relative h-full w-full rounded-2xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/60 shadow-glass flex flex-col justify-end p-6"
-              >
               {/* Background Image with Dark Gradient */}
               <img
                 src={gem.heroImage}
@@ -98,8 +90,7 @@ export const HiddenGems = () => {
                 </div>
               </div>
             </Link>
-          </motion.div>
-        ))}
+          ))}
         </div>
       </div>
     </section>

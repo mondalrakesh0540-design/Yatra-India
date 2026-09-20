@@ -108,15 +108,10 @@ export const GallerySection = () => {
       {/* Masonry-Style Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {filteredPhotos.map((photo, index) => (
-          <motion.div
+          <div
             key={photo.id}
             onClick={() => setActiveImageIndex(index)}
-            initial={{ opacity: 0, scale: 0.92 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.4, delay: (index % 4) * 0.06, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-glass"
+            className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-glass transition-all duration-300 hover:-translate-y-1"
           >
             <img
               src={photo.url}
@@ -140,7 +135,7 @@ export const GallerySection = () => {
                 {photo.title}
               </h4>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 

@@ -4,6 +4,7 @@ import { SavedProvider } from './context/SavedContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { SearchModal } from './components/SearchModal';
+import { ScrollProgressBar } from './components/ScrollProgressBar';
 
 // Pages
 import { Home } from './pages/Home';
@@ -44,6 +45,7 @@ export function App() {
     <SavedProvider>
       <Router>
         <ScrollToTop />
+        <ScrollProgressBar />
         <div className="min-h-screen flex flex-col bg-navy-950 text-slate-100">
           {/* Navbar */}
           <Navbar onOpenSearch={() => setIsSearchOpen(true)} />

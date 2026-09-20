@@ -26,21 +26,16 @@ export const FestivalSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left: Quick Festival Picker List */}
         <div className="lg:col-span-5 space-y-2.5 max-h-[560px] overflow-y-auto pr-2">
-          {FESTIVALS.map((fest, idx) => {
+          {FESTIVALS.map((fest) => {
             const isSelected = selectedFestival.id === fest.id;
             return (
-              <motion.button
+              <button
                 key={fest.id}
                 onClick={() => setSelectedFestival(fest)}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-30px' }}
-                transition={{ duration: 0.35, delay: idx * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ x: 4, transition: { duration: 0.2 } }}
-                className={`w-full p-4 rounded-xl text-left transition-colors border flex items-center justify-between gap-4 ${
+                className={`w-full p-4 rounded-xl text-left transition-all duration-200 border flex items-center justify-between gap-4 ${
                   isSelected
                     ? 'bg-gradient-to-r from-saffron-500/20 to-amber-600/10 border-saffron-500 text-white shadow-sm ring-1 ring-saffron-500/30'
-                    : 'bg-navy-900/60 hover:bg-navy-900 border-white/10 text-slate-300'
+                    : 'bg-navy-900/60 hover:bg-navy-900 hover:border-white/20 border-white/10 text-slate-300'
                 }`}
               >
                 <div>
@@ -66,7 +61,7 @@ export const FestivalSection = () => {
                     isSelected ? 'text-saffron-400 translate-x-1' : 'text-slate-500'
                   }`}
                 />
-              </motion.button>
+              </button>
             );
           })}
         </div>
