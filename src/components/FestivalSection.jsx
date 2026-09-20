@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MapPin, Sparkles, Compass, ArrowRight, Info } from 'lucide-react';
 import { FESTIVALS } from '../data/festivals';
 
@@ -25,13 +26,18 @@ export const FestivalSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left: Quick Festival Picker List */}
         <div className="lg:col-span-5 space-y-2.5 max-h-[560px] overflow-y-auto pr-2">
-          {FESTIVALS.map((fest) => {
+          {FESTIVALS.map((fest, idx) => {
             const isSelected = selectedFestival.id === fest.id;
             return (
-              <button
+              <motion.button
                 key={fest.id}
                 onClick={() => setSelectedFestival(fest)}
-                className={`w-full p-4 rounded-xl text-left transition-all border flex items-center justify-between gap-4 ${
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{ duration: 0.35, delay: idx * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ x: 4, transition: { duration: 0.2 } }}
+                className={`w-full p-4 rounded-xl text-left transition-colors border flex items-center justify-between gap-4 ${
                   isSelected
                     ? 'bg-gradient-to-r from-saffron-500/20 to-amber-600/10 border-saffron-500 text-white shadow-sm ring-1 ring-saffron-500/30'
                     : 'bg-navy-900/60 hover:bg-navy-900 border-white/10 text-slate-300'
@@ -60,13 +66,19 @@ export const FestivalSection = () => {
                     isSelected ? 'text-saffron-400 translate-x-1' : 'text-slate-500'
                   }`}
                 />
-              </button>
+              </motion.button>
             );
           })}
         </div>
 
         {/* Right: Detailed Festival Showcase Card */}
-        <div className="lg:col-span-7 bg-navy-900/90 border border-white/15 rounded-2xl overflow-hidden shadow-glass">
+        <motion.div
+          key={selectedFestival.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          className="lg:col-span-7 bg-navy-900/90 border border-white/15 rounded-2xl overflow-hidden shadow-glass"
+        >
           {/* Festival Banner Image */}
           <div className="relative h-64 sm:h-72 w-full overflow-hidden">
             <img
@@ -128,7 +140,7 @@ export const FestivalSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

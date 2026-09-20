@@ -12,48 +12,73 @@ import { FoodSection } from '../components/FoodSection';
 import { StoriesSection } from '../components/StoriesSection';
 import { GallerySection } from '../components/GallerySection';
 import { TripPlannerCTA } from '../components/TripPlannerCTA';
+import { ScrollReveal } from '../components/ScrollReveal';
 
 export const Home = ({ onOpenSearch }) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6 overflow-hidden">
       {/* 2. Cinematic Hero with 3. Search */}
       <Hero onOpenSearch={onOpenSearch} />
 
       {/* 4. Trending Destinations Carousel */}
-      <TrendingDestinations />
+      <ScrollReveal direction="up" distance={40}>
+        <TrendingDestinations />
+      </ScrollReveal>
 
       {/* 5. Explore India Map (28 States & 8 UTs) */}
-      <IndiaMap />
+      <ScrollReveal direction="up" distance={45}>
+        <IndiaMap />
+      </ScrollReveal>
 
       {/* 6. Explore by Travel Style */}
-      <CategoryGrid />
+      <ScrollReveal direction="up" distance={35}>
+        <CategoryGrid />
+      </ScrollReveal>
 
       {/* 7. Hidden Gems */}
-      <HiddenGems />
+      <ScrollReveal direction="up" distance={40}>
+        <HiddenGems />
+      </ScrollReveal>
 
       {/* 8. State Explorer (State by State) */}
-      <StateExplorer />
+      <ScrollReveal direction="up" distance={40}>
+        <StateExplorer />
+      </ScrollReveal>
 
       {/* 9. Seasonal Destinations (Monthly Explorer) */}
-      <SeasonalDestinations />
+      <ScrollReveal direction="up" distance={35}>
+        <SeasonalDestinations />
+      </ScrollReveal>
 
       {/* 10. Travel Budget Explorer */}
-      <BudgetExplorer />
+      <ScrollReveal direction="up" distance={40}>
+        <BudgetExplorer />
+      </ScrollReveal>
 
       {/* 11. Festivals */}
-      <FestivalSection />
+      <ScrollReveal direction="up" distance={35}>
+        <FestivalSection />
+      </ScrollReveal>
 
       {/* 12. Food Explorer */}
-      <FoodSection />
+      <ScrollReveal direction="up" distance={35}>
+        <FoodSection />
+      </ScrollReveal>
 
       {/* 13. Travel Stories */}
-      <StoriesSection />
+      <ScrollReveal direction="up" distance={40}>
+        <StoriesSection />
+      </ScrollReveal>
 
       {/* 14. Photo Gallery */}
-      <GallerySection />
+      <ScrollReveal direction="up" distance={40}>
+        <GallerySection />
+      </ScrollReveal>
 
       {/* 15. Trip Planner CTA */}
-      <TripPlannerCTA />
+      <ScrollReveal direction="zoom" scale={0.96} distance={20}>
+        <TripPlannerCTA />
+      </ScrollReveal>
     </div>
   );
 };

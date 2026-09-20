@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Sparkles, Eye, ArrowRight, MapPin, Compass } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
 
@@ -40,12 +41,20 @@ export const HiddenGems = () => {
 
         {/* Gems Showcase Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {gems.map((gem) => (
-            <Link
+          {gems.map((gem, idx) => (
+            <motion.div
               key={gem.id}
-              to={`/destination/${gem.id}`}
-              className="group relative h-[380px] rounded-2xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/60 shadow-glass transition-all duration-500 hover:-translate-y-2 flex flex-col justify-end p-6"
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: (idx % 3) * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -8, transition: { duration: 0.25 } }}
+              className="h-[380px]"
             >
+              <Link
+                to={`/destination/${gem.id}`}
+                className="group relative h-full w-full rounded-2xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/60 shadow-glass flex flex-col justify-end p-6"
+              >
               {/* Background Image with Dark Gradient */}
               <img
                 src={gem.heroImage}
@@ -89,7 +98,8 @@ export const HiddenGems = () => {
                 </div>
               </div>
             </Link>
-          ))}
+          </motion.div>
+        ))}
         </div>
       </div>
     </section>

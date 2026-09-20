@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { IndianRupee, Compass, Sparkles, ArrowRight, Wallet } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
 import { DestinationCard } from './DestinationCard';
@@ -62,15 +63,20 @@ export const BudgetExplorer = () => {
 
       {/* Budget Tier Selector Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-        {budgetTiers.map((tier) => {
+        {budgetTiers.map((tier, idx) => {
           const isSelected = activeTier === tier.id;
           return (
-            <button
+            <motion.button
               key={tier.id}
               onClick={() => setActiveTier(tier.id)}
-              className={`p-6 rounded-2xl text-left transition-all border flex flex-col justify-between ${
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.45, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className={`p-6 rounded-2xl text-left transition-colors border flex flex-col justify-between ${
                 isSelected
-                  ? 'bg-gradient-to-b from-navy-900 to-navy-950 border-saffron-500 shadow-glow-saffron ring-1 ring-saffron-500/40 -translate-y-1'
+                  ? 'bg-gradient-to-b from-navy-900 to-navy-950 border-saffron-500 shadow-glow-saffron ring-1 ring-saffron-500/40'
                   : 'bg-navy-900/60 hover:bg-navy-900 border-white/10 text-slate-300'
               }`}
             >
@@ -101,15 +107,15 @@ export const BudgetExplorer = () => {
                 </span>
                 <ArrowRight className={`w-4 h-4 ${isSelected ? 'text-saffron-400 translate-x-1' : ''}`} />
               </div>
-            </button>
+            </motion.button>
           );
         })}
       </div>
 
       {/* Filtered Destinations */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredDestinations.slice(0, 6).map((dest) => (
-          <DestinationCard key={dest.id} destination={dest} />
+        {filteredDestinations.slice(0, 6).map((dest, idx) => (
+          <DestinationCard key={dest.id} destination={dest} index={idx} />
         ))}
       </div>
     </section>

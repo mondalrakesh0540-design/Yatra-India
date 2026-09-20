@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { BookOpen, Clock, ArrowRight, Sparkles } from 'lucide-react';
 import { STORIES } from '../data/stories';
 
@@ -32,12 +33,20 @@ export const StoriesSection = () => {
 
       {/* Grid of Stories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {STORIES.map((story) => (
-          <Link
+        {STORIES.map((story, idx) => (
+          <motion.div
             key={story.id}
-            to={`/story/${story.id}`}
-            className="group bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.45, delay: (idx % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            className="h-full"
           >
+            <Link
+              to={`/story/${story.id}`}
+              className="group bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass flex flex-col justify-between h-full"
+            >
             {/* Cover Image */}
             <div className="relative h-52 w-full overflow-hidden">
               <img
@@ -82,7 +91,8 @@ export const StoriesSection = () => {
               </div>
             </div>
           </Link>
-        ))}
+        </motion.div>
+      ))}
       </div>
     </section>
   );

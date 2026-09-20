@@ -70,12 +70,12 @@ export const TrendingDestinations = () => {
         className="flex gap-6 overflow-x-auto scrollbar-none pb-6 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 snap-x snap-mandatory"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        {popularList.map((dest) => (
+        {popularList.map((dest, idx) => (
           <div
             key={dest.id}
             className="min-w-[300px] sm:min-w-[340px] md:min-w-[360px] max-w-[360px] shrink-0 snap-start"
           >
-            <DestinationCard destination={dest} />
+            <DestinationCard destination={dest} index={idx} />
           </div>
         ))}
       </div>

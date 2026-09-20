@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { MapPin, Calendar, Compass, ArrowRight, Search, Sparkles, Landmark } from 'lucide-react';
 import { STATES } from '../data/states';
 
@@ -85,12 +86,20 @@ export const StateExplorer = () => {
 
       {/* Grid of State Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filtered.map((st) => (
-          <Link
+        {filtered.map((st, idx) => (
+          <motion.div
             key={st.id}
-            to={`/state/${st.id}`}
-            className="group bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.45, delay: (idx % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            className="h-full"
           >
+            <Link
+              to={`/state/${st.id}`}
+              className="group h-full bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass flex flex-col justify-between"
+            >
             {/* Hero Image */}
             <div className="relative h-48 w-full overflow-hidden">
               <img
@@ -167,7 +176,8 @@ export const StateExplorer = () => {
               </div>
             </div>
           </Link>
-        ))}
+        </motion.div>
+      ))}
       </div>
     </section>
   );

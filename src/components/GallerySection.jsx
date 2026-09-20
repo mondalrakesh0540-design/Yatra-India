@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Camera, X, Compass, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 
 export const GallerySection = () => {
@@ -107,9 +108,14 @@ export const GallerySection = () => {
       {/* Masonry-Style Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {filteredPhotos.map((photo, index) => (
-          <div
+          <motion.div
             key={photo.id}
             onClick={() => setActiveImageIndex(index)}
+            initial={{ opacity: 0, scale: 0.92 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.4, delay: (index % 4) * 0.06, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
             className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-glass"
           >
             <img
@@ -134,7 +140,7 @@ export const GallerySection = () => {
                 {photo.title}
               </h4>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 

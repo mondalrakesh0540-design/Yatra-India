@@ -1,15 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Heart, Star, Calendar, IndianRupee, ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import { useSaved } from '../context/SavedContext';
 
-export const DestinationCard = ({ destination, className = '' }) => {
+export const DestinationCard = ({ destination, className = '', index = 0 }) => {
   const { isSaved, toggleSaveDestination } = useSaved();
   const saved = isSaved(destination.id);
 
   return (
-    <div
-      className={`group relative bg-navy-900/90 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col ${className}`}
+    <motion.div
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.5, delay: Math.min((index % 6) * 0.08, 0.4), ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -6, transition: { duration: 0.25 } }}
+      className={`group relative bg-navy-900/90 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass flex flex-col ${className}`}
     >
       {/* Image Container with Badges & Save Action */}
       <div className="relative h-60 w-full overflow-hidden">
@@ -107,6 +113,6 @@ export const DestinationCard = ({ destination, className = '' }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

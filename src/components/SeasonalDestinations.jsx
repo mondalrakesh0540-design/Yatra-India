@@ -65,8 +65,8 @@ export const SeasonalDestinations = () => {
 
       {/* Matching Destinations Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {matchingDestinations.slice(0, 6).map((dest) => (
-          <DestinationCard key={dest.id} destination={dest} />
+        {matchingDestinations.slice(0, 6).map((dest, idx) => (
+          <DestinationCard key={dest.id} destination={dest} index={idx} />
         ))}
       </div>
     </section>
