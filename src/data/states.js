@@ -11,7 +11,7 @@ export const STATES = [
     heroImage: `${BASE}images/ap-tirupati.jpg`,
     description: 'The land of the Tirupati Temple, fragrant spice markets, pristine Coromandel beaches, and Buddhist heritage sites.',
     bestSeason: 'October to March',
-    topDestinations: ['Tirupati', 'Visakhapatnam', 'Araku Valley', 'Vijayawada', 'Gandikota', 'Lepakshi'],
+    topDestinations: ["Tirupati","Visakhapatnam","Araku Valley","Vijayawada"],
     highlights: ['Gandikota Grand Canyon', 'Tirumala Venkateswara', 'Borra Caves', 'Rishikonda Beach'],
     climate: 'Tropical with warm coastal breezes',
     famousFor: ['Tirupati Laddu', 'Kalamkari Art', 'Kuchipudi Dance', 'Coromandel Coast']
@@ -25,7 +25,7 @@ export const STATES = [
     heroImage: `${BASE}images/arunachal-tawang.jpg`,
     description: 'The "Land of Dawn-lit Mountains" features dramatic Himalayan peaks, untouched pine forests, and ancient Buddhist monasteries.',
     bestSeason: 'October to April',
-    topDestinations: ['Tawang', 'Ziro Valley', 'Bomdila', 'Namdapha', 'Dirang', 'Mechuka'],
+    topDestinations: ["Tawang","Ziro Valley","Dirang","Bomdila","Mechuka"],
     highlights: ['Tawang Monastery', 'Sela Pass', 'Ziro Music Valley', 'Sangti Valley'],
     climate: 'Alpine in the north, sub-tropical in the south',
     famousFor: ['Tibetan Monasteries', 'Apatani Tribal Culture', 'Orchids', 'Snow Peaks']
@@ -39,7 +39,7 @@ export const STATES = [
     heroImage: `${BASE}images/assam-kamakhya.jpg`,
     description: 'Gateway to the Northeast, renowned for rolling tea gardens, the mighty Brahmaputra river, and the rare one-horned rhinoceros.',
     bestSeason: 'November to April',
-    topDestinations: ['Kaziranga National Park', 'Majuli Island', 'Guwahati', 'Manas National Park', 'Sivasagar', 'Haflong'],
+    topDestinations: ["Kaziranga","Guwahati","Majuli","Sivasagar","Manas"],
     highlights: ['One-Horned Rhinos', 'Kamakhya Temple', 'World’s Largest River Island', 'Tea Estates'],
     climate: 'Sub-tropical with heavy monsoons',
     famousFor: ['Assam Black Tea', 'Muga Golden Silk', 'Bihu Festival', 'River Cruises']
@@ -53,7 +53,7 @@ export const STATES = [
     heroImage: `${BASE}images/bihar-mahabodhi.jpg`,
     description: 'Cradle of ancient empires, Buddhism and Jainism, home to the sacred Bodhi Tree and the historic ruins of Nalanda University.',
     bestSeason: 'October to March',
-    topDestinations: ['Bodh Gaya', 'Nalanda', 'Rajgir', 'Patna', 'Vaishali', 'Sasaram'],
+    topDestinations: ["Bodh Gaya","Nalanda","Rajgir","Patna","Vaishali"],
     highlights: ['Mahabodhi Temple', 'Ancient Nalanda University', 'Vishwa Shanti Stupa', 'Tomb of Sher Shah Suri'],
     climate: 'Continental with hot summers and mild winters',
     famousFor: ['Buddhism Pilgrimage', 'Madhubani Paintings', 'Litti Chokha', 'Chhath Puja']
@@ -67,7 +67,7 @@ export const STATES = [
     heroImage: `${BASE}images/chhattisgarh-chitrakote.jpg`,
     description: 'India’s green heartland boasting the roaring Chitrakote Falls ("Niagara of India"), dense sal forests, and ancient tribal traditions.',
     bestSeason: 'October to March',
-    topDestinations: ['Bastar', 'Chitrakote Falls', 'Raipur', 'Mainpat', 'Barnawapara', 'Sirpur'],
+    topDestinations: ["Chitrakote Falls","Jagdalpur","Bastar","Sirpur","Kanger Valley"],
     highlights: ['Chitrakote Horseshoe Falls', 'Tirathgarh Falls', 'Bastar Dussehra', 'Mainpat Tibetan Settlement'],
     climate: 'Tropical with pleasant winters',
     famousFor: ['Dhokra Bell Metal Craft', 'Tribal Art', 'Waterfalls', 'Ancient Temples']
@@ -81,7 +81,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
     description: 'Sun-drenched golden beaches, Portuguese heritage villas, vibrant beach shacks, spice plantations, and pulsating nightlife.',
     bestSeason: 'November to February',
-    topDestinations: ['North Goa', 'South Goa', 'Panaji', 'Old Goa', 'Palolem', 'Dudhsagar Falls'],
+    topDestinations: ["Baga Beach","Calangute","Panjim","Old Goa","Dudhsagar Falls"],
     highlights: ['Basilica of Bom Jesus', 'Dudhsagar Waterfalls', 'Anjuna Flea Market', 'Cabo de Rama Fort'],
     climate: 'Tropical maritime',
     famousFor: ['Goan Fish Curry', 'Feni', 'Portuguese Architecture', 'Sunset Cruises']
@@ -95,7 +95,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80',
     description: 'Land of legends, the endless white salt desert of Rann of Kutch, Asiatic Lions in Gir, and world-class stepwells.',
     bestSeason: 'October to March',
-    topDestinations: ['Rann of Kutch', 'Gir National Park', 'Ahmedabad', 'Statue of Unity', 'Dwarka', 'Somnath'],
+    topDestinations: ["Statue of Unity","Ahmedabad","Rann of Kutch","Dwarka","Somnath"],
     highlights: ['Rann Utsav White Desert', 'Asiatic Lion Safari', 'Rani ki Vav Stepwell', 'Statue of Unity'],
     climate: 'Dry and sunny with cool winter breezes',
     famousFor: ['Garba Dance', 'Dhokla & Gujarati Thali', 'Bandhani Textiles', 'Temple Architecture']
@@ -109,7 +109,7 @@ export const STATES = [
     heroImage: `${BASE}images/haryana-brahma-sarovar.jpg`,
     description: 'The cradle of Vedic civilization, home to the battleground of Kurukshetra, heritage Havelis, and lush agricultural plains.',
     bestSeason: 'October to March',
-    topDestinations: ['Kurukshetra', 'Sultanpur Bird Sanctuary', 'Morni Hills', 'Pinjore Gardens', 'Farrukhnagar', 'Damdama Lake'],
+    topDestinations: ["Kurukshetra","Sultanpur National Park","Pinjore Gardens","Morni Hills"],
     highlights: ['Brahma Sarovar', 'Pinjore Mughal Gardens', 'Sultanpur Bird Watching', 'Tikkar Taal Lake'],
     climate: 'Semi-arid to sub-tropical',
     famousFor: ['Surajkund Crafts Mela', 'Vedic Lore', 'Rich Dairy Cuisine', 'Heritage Farms']
@@ -123,7 +123,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80',
     description: 'The "Abode of Snow", renowned for majestic alpine landscapes, apple orchards, Tibetan spirituality, and adrenaline-pumping treks.',
     bestSeason: 'March to June & September to February',
-    topDestinations: ['Manali', 'Shimla', 'Dharamshala & McLeod Ganj', 'Spiti Valley', 'Kasol', 'Dalhousie'],
+    topDestinations: ["Shimla","Manali","Dharamshala","Spiti Valley","Dalhousie"],
     highlights: ['Rohtang & Atal Tunnel', 'Spiti High-Altitude Monasteries', 'Parvati Valley', 'Toy Train ride'],
     climate: 'Alpine mountain climate with snowy winters',
     famousFor: ['Himachali Apples', 'Trekking & Skiing', 'Himachali Dham', 'Tibetan Culture']
@@ -137,7 +137,7 @@ export const STATES = [
     heroImage: `${BASE}images/jharkhand-baidyanath.jpg`,
     description: 'The "Land of Forests" filled with scenic waterfalls, sacred pilgrimage hills of Parasnath, and pristine national parks.',
     bestSeason: 'October to March',
-    topDestinations: ['Ranchi', 'Betla National Park', 'Netarhat', 'Deoghar', 'Hazaribagh', 'Parasnath'],
+    topDestinations: ["Deoghar","Netarhat","Hundru Falls","Betla National Park","Dassam Falls"],
     highlights: ['Hundru & Jonha Falls', 'Netarhat Sunset Point', 'Baidyanath Dham Jyotirlinga', 'Betla Elephant Safaris'],
     climate: 'Humid sub-tropical',
     famousFor: ['Waterfalls', 'Tribal Handlooms', 'Sohrai Art', 'Deoghar Temple']
@@ -151,7 +151,7 @@ export const STATES = [
     heroImage: `${BASE}images/karnataka-hampi.jpg`,
     description: 'A captivating tapestry of UNESCO ruins at Hampi, fragrant coffee hills of Coorg, royal Mysore palaces, and secluded Gokarna beaches.',
     bestSeason: 'October to March',
-    topDestinations: ['Hampi', 'Coorg', 'Mysore', 'Gokarna', 'Chikmagalur', 'Bengaluru'],
+    topDestinations: ["Hampi","Coorg","Mysore","Gokarna","Bengaluru"],
     highlights: ['Vijayanagara Empire Ruins', 'Mysore Palace Illumination', 'Om Beach & Kudle', 'Coffee Estate Stays'],
     climate: 'Varied: Tropical coastal, pleasant interior plateau',
     famousFor: ['Filter Coffee', 'Mysore Silk', 'Mysore Pak', 'Carnatic Music']
@@ -165,7 +165,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80',
     description: '“God’s Own Country” — tranquil emerald backwaters, rolling tea carpets of Munnar, Ayurvedic healing, and coconut-fringed coasts.',
     bestSeason: 'September to March',
-    topDestinations: ['Munnar', 'Alleppey (Alappuzha)', 'Kochi (Cochin)', 'Wayanad', 'Varkala', 'Thekkady'],
+    topDestinations: ["Munnar","Alleppey","Wayanad","Kochi","Varkala"],
     highlights: ['Houseboat Backwater Cruises', 'Munnar Tea Plantations', 'Varkala Cliff Beach', 'Kathakali Dance & Kalaripayattu'],
     climate: 'Tropical maritime with lush monsoons',
     famousFor: ['Ayurvedic Spas', 'Kerala Sadya Feast', 'Houseboats', 'Spices']
@@ -179,7 +179,7 @@ export const STATES = [
     heroImage: `${BASE}images/mp-khajuraho.jpg`,
     description: 'The "Heart of Incredible India" — home to the Khajuraho temples, ancient stupas of Sanchi, and the highest concentration of wild tigers.',
     bestSeason: 'October to March',
-    topDestinations: ['Khajuraho', 'Bandhavgarh National Park', 'Kanha National Park', 'Orchha', 'Gwalior', 'Ujjain'],
+    topDestinations: ["Khajuraho","Ujjain","Pachmarhi","Sanchi","Kanha","Bandhavgarh"],
     highlights: ['UNESCO Khajuraho Sculptures', 'Royal Tiger Safaris', 'Orchha Riverfront Cenotaphs', 'Gwalior Fortress'],
     climate: 'Sub-tropical with warm sunny winters',
     famousFor: ['Bengal Tigers', 'Temple Architecture', 'Chanderi Sarees', 'Bhimbetka Caves']
@@ -193,7 +193,7 @@ export const STATES = [
     heroImage: `${BASE}images/maharashtra-gateway.jpg`,
     description: 'Dynamic metropolis of Mumbai, ancient rock-cut caves of Ajanta & Ellora, misty Western Ghats hill stations, and coastal Konkan forts.',
     bestSeason: 'October to March',
-    topDestinations: ['Mumbai', 'Ajanta & Ellora Caves', 'Mahabaleshwar', 'Lonavala', 'Pune', 'Tarkarli'],
+    topDestinations: ["Mumbai","Lonavala","Mahabaleshwar","Ajanta","Ellora","Shirdi"],
     highlights: ['Marine Drive & Gateway of India', 'Kailash Temple (Ellora)', 'Konkan Coastal Forts', 'Strawberry Valleys'],
     climate: 'Tropical coastal and plateau climate',
     famousFor: ['Bollywood', 'Vada Pav & Misal Pav', 'Ganesh Utsav', 'Warli Painting']
@@ -207,7 +207,7 @@ export const STATES = [
     heroImage: `${BASE}images/manipur-loktak.jpg`,
     description: 'The "Jewel of India" — floating islands (phumdis) of Loktak Lake, Keibul Lamjao national park, and classical Manipuri dance.',
     bestSeason: 'October to April',
-    topDestinations: ['Loktak Lake', 'Imphal', 'Moirang', 'Ukhrul', 'Andro', 'Tamenglong'],
+    topDestinations: ["Loktak Lake","Imphal","Keibul Lamjao","Ukhrul"],
     highlights: ['World’s only floating National Park', 'Keibul Lamjao Sangai Deer', 'Kangla Fort', 'Shirui Lily Festival'],
     climate: 'Pleasant sub-tropical',
     famousFor: ['Manipuri Classical Dance', 'Polo Origin', 'Loktak Lake', 'Black Rice (Chak-hao)']
@@ -221,7 +221,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80',
     description: 'The "Abode of the Clouds" — bio-engineered Living Root Bridges, crystal-clear Dawki River, and the wettest places on earth.',
     bestSeason: 'September to May',
-    topDestinations: ['Cherrapunji (Sohra)', 'Shillong', 'Dawki', 'Mawlynnong', 'Nohkalikai Falls', 'Jowai'],
+    topDestinations: ["Shillong","Cherrapunji","Dawki","Mawlynnong","Nongriat"],
     highlights: ['Double Decker Living Root Bridge', 'Umngot Glass-like River', 'Asia’s Cleanest Village Mawlynnong', 'Nohkalikai Falls'],
     climate: 'Cool, highland subtropical with heavy monsoon',
     famousFor: ['Living Root Bridges', 'Indie Rock Culture', 'Caves Exploration', 'Orange Honey']
@@ -235,7 +235,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
     description: 'Serene ridges, rolling emerald bamboo hills, vibrant Mizo community life, and spectacular high viewpoints overlooking misty valleys.',
     bestSeason: 'October to March',
-    topDestinations: ['Aizawl', 'Champhai', 'Vantawng Falls', 'Reiek', 'Tamdil Lake', 'Lunglei'],
+    topDestinations: ["Aizawl","Reiek","Vantawng Falls","Champhai"],
     highlights: ['Reiek Peak Panorama', 'Vantawng 750ft Falls', 'Mizo Cultural Villages', 'Blue Mountain (Phawngpui)'],
     climate: 'Pleasant and mild year-round',
     famousFor: ['Cheraw Bamboo Dance', 'Handloom Puan', 'Untouched Hills', 'Warm Hospitality']
@@ -249,7 +249,7 @@ export const STATES = [
     heroImage: `${BASE}images/nagaland-dzukou.jpg`,
     description: 'Land of brave warrior heritage, vibrant Hornbill Festival, scenic Dzukou Valley, and mist-shrouded green Naga hills.',
     bestSeason: 'October to May (December for Hornbill)',
-    topDestinations: ['Kohima', 'Dzukou Valley', 'Mokokchung', 'Mon', 'Khonoma', 'Dimapur'],
+    topDestinations: ["Kohima","Dzükou Valley","Mokokchung","Mon","Khonoma"],
     highlights: ['Hornbill Festival Celebrations', 'Dzukou Valley Trek', 'Green Village Khonoma', 'Konyak Headhunter Villages in Mon'],
     climate: 'Sub-tropical with cool winters',
     famousFor: ['Hornbill Festival', 'Naga Shawls', 'Bhut Jolokia Chili', 'Indigenous Woodcarving']
@@ -263,7 +263,7 @@ export const STATES = [
     heroImage: `${BASE}images/puri-jagannath.jpg`,
     description: 'Land of the Sun Temple at Konark, sacred Jagannath Puri Rath Yatra, Chilika Lake dolphin sanctuary, and timeless classical Odissi arts.',
     bestSeason: 'October to March',
-    topDestinations: ['Puri', 'Bhubaneswar', 'Konark', 'Chilika Lake', 'Gopalpur', 'Simlipal National Park'],
+    topDestinations: ["Puri","Konark","Bhubaneswar","Chilika Lake","Simlipal"],
     highlights: ['Konark Sun Temple UNESCO', 'Puri Jagannath Rath Yatra', 'Chilika Irrawaddy Dolphins', 'Udayagiri & Khandagiri Caves'],
     climate: 'Tropical with cool winters',
     famousFor: ['Pattachitra Paintings', 'Odissi Classical Dance', 'Chhena Poda Dessert', 'Silver Filigree']
@@ -277,7 +277,7 @@ export const STATES = [
     heroImage: `${BASE}images/punjab-golden-temple.jpg`,
     description: 'The "Land of Five Rivers" — shimmering Golden Temple of Amritsar, passionate hospitality, patriotic Wagah Border ceremony, and rich buttery cuisine.',
     bestSeason: 'October to March',
-    topDestinations: ['Amritsar', 'Chandigarh', 'Patiala', 'Jalandhar', 'Bathinda', 'Anandpur Sahib'],
+    topDestinations: ["Golden Temple","Amritsar","Wagah Border","Patiala","Anandpur Sahib"],
     highlights: ['Harmandir Sahib (Golden Temple)', 'Wagah Border Beating Retreat', 'Jallianwala Bagh', 'Qila Mubarak'],
     climate: 'Continental with crisp chilly winters',
     famousFor: ['Amritsari Kulcha', 'Bhangra & Giddha Dance', 'Phulkari Embroidery', 'Sikh Heritage']
@@ -291,7 +291,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80',
     description: 'The "Land of Kings" — golden Thar desert dunes, grand palaces, formidable hill forts, colorful turbans, and vibrant camel fairs.',
     bestSeason: 'October to March',
-    topDestinations: ['Jaipur', 'Udaipur', 'Jaisalmer', 'Jodhpur', 'Pushkar', 'Mount Abu', 'Ranthambore'],
+    topDestinations: ["Jaipur","Udaipur","Jaisalmer","Jodhpur","Mount Abu","Pushkar"],
     highlights: ['Amber Fort & Hawa Mahal', 'Lake Pichola Palace Cruises', 'Jaisalmer Desert Dunes & Fort', 'Mehrangarh Fort'],
     climate: 'Arid to semi-arid with pleasant sunny winters',
     famousFor: ['Dal Baati Churma', 'Puppet Shows & Ghoomar', 'Royal Heritage Hotels', 'Block Print Fabrics']
@@ -305,7 +305,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80',
     description: 'Nestled in the shadow of Mount Kangchenjunga — India’s first 100% organic state featuring glacial lakes, rhododendron valleys, and Buddhist monasteries.',
     bestSeason: 'March to May & October to December',
-    topDestinations: ['Gangtok', 'Tsomgo Lake', 'Nathula Pass', 'Pelling', 'Lachung & Yumthang', 'Ravangla'],
+    topDestinations: ["Gangtok","Nathula Pass","Pelling","Lachung","Yumthang Valley"],
     highlights: ['Gurudongmar Glacial Lake', 'Yumthang Valley of Flowers', 'Rumtek Monastery', 'Buddha Park Ravangla'],
     climate: 'Alpine temperate with cool summers and snow in winter',
     famousFor: ['Kangchenjunga Views', 'Organic Agriculture', 'Momos & Thukpa', 'Prayer Flags']
@@ -319,7 +319,7 @@ export const STATES = [
     heroImage: `${BASE}images/tn-meenakshi.jpg`,
     description: 'Cradle of Dravidian culture — towering temple gopurams of Madurai, UNESCO Shore Temples of Mahabalipuram, Nilgiri toy train, and French flair of Pondicherry nearby.',
     bestSeason: 'November to March',
-    topDestinations: ['Chennai', 'Madurai', 'Mahabalipuram', 'Ooty', 'Kodaikanal', 'Rameswaram', 'Thanjavur'],
+    topDestinations: ["Ooty","Chennai","Kodaikanal","Madurai","Rameswaram","Thanjavur"],
     highlights: ['Meenakshi Amman Temple', 'Mahabalipuram Rock Reliefs', 'Brihadisvara Big Temple', 'Pamban Sea Bridge'],
     climate: 'Tropical with warm pleasant winters',
     famousFor: ['Kanchipuram Silk Sarees', 'Filter Coffee & Crispy Dosa', 'Bharatanatyam Dance', 'Chola Bronzes']
@@ -333,7 +333,7 @@ export const STATES = [
     heroImage: `${BASE}images/telangana-charminar.jpg`,
     description: 'A harmonious blend of Nizami grandeur and modern high-tech innovation, legendary Hyderabadi Biryani, and historic Golconda Fort.',
     bestSeason: 'October to March',
-    topDestinations: ['Hyderabad', 'Warangal', 'Nagarjuna Sagar', 'Ramappa Temple', 'Bhadrachalam'],
+    topDestinations: ["Hyderabad","Golconda Fort","Charminar","Warangal","Nagarjuna Sagar"],
     highlights: ['Charminar & Laad Bazaar', 'Golconda Fort Sound & Light', 'Ramappa UNESCO Temple', 'Ramoji Film City'],
     climate: 'Semi-arid with warm days and cool evenings',
     famousFor: ['Hyderabadi Dum Biryani', 'Pearl Jewellery', 'Bidri Crafts', 'Irani Chai & Osmania Biscuits']
@@ -347,7 +347,7 @@ export const STATES = [
     heroImage: `${BASE}images/tripura-unakoti.jpg`,
     description: 'Royal water palaces, rock-cut bas-relief carvings of Unakoti, bamboo forests, and ancient tribal heritage.',
     bestSeason: 'October to March',
-    topDestinations: ['Agartala', 'Neermahal Water Palace', 'Unakoti', 'Udaipur', 'Jampui Hills', 'Sepahijala'],
+    topDestinations: ["Agartala","Ujjayanta Palace","Neermahal","Unakoti"],
     highlights: ['Neermahal Lake Palace', 'Unakoti Rock-Cut Shiva Faces', 'Tripura Sundari Temple', 'Jampui Orange Hills'],
     climate: 'Warm and humid tropical',
     famousFor: ['Bamboo and Cane Handicrafts', 'Royal Palaces', 'Orange Festival', 'Rich Tribal Weaves']
@@ -361,7 +361,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
     description: 'Home of the timeless Taj Mahal, the eternal sacred ghats of Varanasi, Mughal palaces of Agra, and Awadhi culinary elegance of Lucknow.',
     bestSeason: 'October to March',
-    topDestinations: ['Agra', 'Varanasi', 'Lucknow', 'Ayodhya', 'Mathura & Vrindavan', 'Prayagraj'],
+    topDestinations: ["Agra","Varanasi","Ayodhya","Mathura-Vrindavan","Lucknow","Prayagraj"],
     highlights: ['Taj Mahal Wonder of the World', 'Ganga Aarti at Dashashwamedh Ghat', 'Bada Imambara Lucknow', 'Fatehpur Sikri'],
     climate: 'Sub-tropical with cool winters',
     famousFor: ['Awadhi Kebabs & Biryani', 'Chikan Embroidery', 'Banarasi Silk Sarees', 'Spiritual Pilgrimage']
@@ -375,7 +375,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=1200&q=80',
     description: '“Devbhoomi” (Land of the Gods) — yoga capital of Rishikesh, snow-crested Char Dham shrines, emerald lakes of Nainital, and Jim Corbett tiger reserve.',
     bestSeason: 'March to June & September to November',
-    topDestinations: ['Rishikesh', 'Mussoorie', 'Nainital', 'Kedarnath', 'Badrinath', 'Auli', 'Jim Corbett'],
+    topDestinations: ["Rishikesh","Haridwar","Nainital","Mussoorie","Kedarnath","Badrinath"],
     highlights: ['Ganga River Rafting in Rishikesh', 'Auli Ski Slopes & Ropeway', 'Kedarnath Himalayan Temple', 'Naini Lake Boating'],
     climate: 'Temperate to alpine mountain climate',
     famousFor: ['Yoga & Meditation', 'Himalayan Treks', 'River Rafting', 'Garhwali Cuisine']
@@ -389,7 +389,7 @@ export const STATES = [
     heroImage: `${BASE}images/wb-victoria-memorial.jpg`,
     description: 'From the snow-crowned tea slopes of Darjeeling to the colonial grand architecture of Kolkata and the mangrove tiger realm of the Sundarbans.',
     bestSeason: 'October to March',
-    topDestinations: ['Darjeeling', 'Kolkata', 'Sundarbans', 'Kalimpong', 'Digha', 'Bishnupur', 'Sandakphu'],
+    topDestinations: ["Darjeeling","Kolkata","Digha","Sundarbans","Kalimpong","Dooars"],
     highlights: ['Darjeeling Himalayan Railway (Toy Train)', 'Victoria Memorial Kolkata', 'Royal Bengal Tiger Sundarbans', 'Sandakphu Trek'],
     climate: 'Sub-tropical to alpine in the northern hills',
     famousFor: ['Durga Puja Festival', 'Rosogolla & Sandesh', 'Macher Jhol', 'Rabindra Sangeet & Literature']
@@ -405,7 +405,7 @@ export const STATES = [
     heroImage: `${BASE}images/andaman-cellular-jail.jpg`,
     description: 'Tropical archipelago paradise with turquoise lagoons, white coral beaches, bioluminescent waters, and world-class scuba diving.',
     bestSeason: 'November to May',
-    topDestinations: ['Havelock Island (Swaraj Dweep)', 'Neil Island (Shaheed Dweep)', 'Port Blair', 'Radhanagar Beach', 'Baratang Island'],
+    topDestinations: ["Port Blair","Havelock/Swaraj Dweep","Neil/Shaheed Dweep","Cellular Jail"],
     highlights: ['Radhanagar Beach Sunset', 'Scuba Diving at Elephant Beach', 'Historic Cellular Jail', 'Bioluminescence Kayaking'],
     climate: 'Tropical maritime with cooling sea breezes',
     famousFor: ['Scuba Diving & Snorkeling', 'Pristine Coral Reefs', 'Seafood', 'Colonial History']
@@ -419,7 +419,7 @@ export const STATES = [
     heroImage: `${BASE}images/chandigarh-rock-garden.jpg`,
     description: 'India’s premier planned "City Beautiful", designed by Le Corbusier, featuring the iconic Rock Garden and tranquil Sukhna Lake.',
     bestSeason: 'October to March',
-    topDestinations: ['Rock Garden', 'Sukhna Lake', 'Zakir Hussain Rose Garden', 'Sector 17 Plaza', 'Open Hand Monument'],
+    topDestinations: ["Rock Garden","Sukhna Lake","Capitol Complex","Rose Garden"],
     highlights: ['Nek Chand’s Recycled Rock Garden', 'Sukhna Lake Sunset Boating', 'Asia’s Largest Rose Garden', 'Le Corbusier Capitol Complex'],
     climate: 'Humid subtropical with crisp winters',
     famousFor: ['Modernist Architecture', 'Urban Greenery', 'High Living Standard', 'Gedi Route']
@@ -433,7 +433,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80',
     description: 'Coastal Portuguese fort towns with tranquil palm-fringed beaches, tranquil estuaries, and centuries-old Catholic churches.',
     bestSeason: 'October to March',
-    topDestinations: ['Diu Fort', 'Nagoa Beach', 'Moti Daman Fort', 'Silvassa', 'Jampore Beach', 'Dudhani Lake'],
+    topDestinations: ["Daman","Diu","Silvassa","Naida Caves","Devka Beach"],
     highlights: ['Historic Diu Fort & Lighthouse', 'Nagoa Hoka Tree Beach', 'St. Jerome Fort', 'Lion Safari Silvassa'],
     climate: 'Pleasant coastal maritime',
     famousFor: ['Portuguese Forts', 'Hoka Palm Trees', 'Beach Promenades', 'Tax-free Coastal Retreats']
@@ -447,7 +447,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80',
     description: 'The historic and dynamic capital city of India, where Mughal monuments, colonial boulevards, and bustling street markets coexist.',
     bestSeason: 'October to March',
-    topDestinations: ['Qutub Minar', 'Red Fort', 'Humayun’s Tomb', 'India Gate', 'Chandni Chowk', 'Lotus Temple', 'Akshardham'],
+    topDestinations: ["India Gate","Red Fort","Qutub Minar","Humayun's Tomb","Lotus Temple"],
     highlights: ['UNESCO World Heritage Trio', 'Old Delhi Street Food Trail', 'Rajpath & Rashtrapati Bhavan', 'Akshardham Water Show'],
     climate: 'Extreme continental with hot summers and chilly foggy winters',
     famousFor: ['Street Food (Chaat & Chole Bhature)', 'Mughal Architecture', 'Shopping Bazaars', 'Power & Politics']
@@ -461,7 +461,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80',
     description: '“Paradise on Earth” — floating wooden shikaras on Dal Lake, snow-capped alpine meadows of Gulmarg, and saffron fields of Pampore.',
     bestSeason: 'April to October (Spring/Autumn) & December to February (Snow)',
-    topDestinations: ['Srinagar', 'Gulmarg', 'Pahalgam', 'Sonamarg', 'Doodhpathri', 'Gurez Valley', 'Vaishno Devi'],
+    topDestinations: ["Srinagar","Gulmarg","Pahalgam","Sonamarg","Dal Lake"],
     highlights: ['Dal Lake Shikara & Houseboats', 'Gulmarg Gondola World’s Highest', 'Betaab Valley in Pahalgam', 'Kashmir Great Lakes Trek'],
     climate: 'Alpine mountain climate with cold snowy winters',
     famousFor: ['Pashmina Shawls', 'Kahwa Tea', 'Kashmiri Wazwan', 'Walnuts & Saffron']
@@ -475,7 +475,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80',
     description: 'The "Land of High Mountain Passes" — surreal indigo Pangong Lake, sand dunes of Nubra Valley with double-humped camels, and ancient cliffside gompas.',
     bestSeason: 'May to September',
-    topDestinations: ['Leh', 'Pangong Tso', 'Nubra Valley', 'Tso Moriri', 'Khardung La', 'Zanskar Valley', 'Alchi'],
+    topDestinations: ["Leh","Pangong Lake","Nubra Valley","Tso Moriri","Khardung La"],
     highlights: ['Pangong Tso Color-Changing Lake', 'Khardung La Pass (17,982 ft)', 'Nubra Valley Sand Dunes', 'Magnetic Hill & Thiksey Gompa'],
     climate: 'Cold desert alpine with intense sunlight and dry air',
     famousFor: ['High Altitude Passes', 'Tibetan Buddhism', 'Bactrian Camels', 'Chadar Frozen River Trek']
@@ -489,7 +489,7 @@ export const STATES = [
     heroImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
     description: 'An exotic emerald string of coral atolls in the Arabian Sea with crystal lagoons, pristine white beaches, and vibrant sea turtles.',
     bestSeason: 'October to May',
-    topDestinations: ['Agatti Island', 'Bangaram Island', 'Kavaratti', 'Minicoy', 'Kadmat Island'],
+    topDestinations: ["Kavaratti","Agatti","Bangaram","Kadmat","Kalpeni"],
     highlights: ['Bangaram Atoll Lagoon', 'Scuba Diving with Sea Turtles', 'Kavaratti Marine Aquarium', 'Glass-bottom Boat Rides'],
     climate: 'Tropical warm oceanic',
     famousFor: ['Untouched Coral Reefs', 'Water Sports', 'Tuna Fishing', 'Coconut Island Culture']
@@ -503,7 +503,7 @@ export const STATES = [
     heroImage: `${BASE}images/puducherry-matrimandir.jpg`,
     description: 'The French Riviera of the East — pastel French Quarter villas, bohemian seaside cafes, spiritual sanctuary of Auroville, and tranquil beaches.',
     bestSeason: 'October to March',
-    topDestinations: ['White Town (French Quarter)', 'Auroville', 'Promenade Beach', 'Paradise Beach', 'Serenity Beach'],
+    topDestinations: ["Promenade Beach","Auroville","French Quarter","Paradise Beach"],
     highlights: ['Auroville Matrimandir', 'French Quarter Heritage Walk', 'Promenade Seaside Promenade', 'Paradise Beach Ferry'],
     climate: 'Warm tropical maritime',
     famousFor: ['French Bakeries & Croissants', 'Auroville Community', 'Bicycle Tours', 'Seaside Cafes']
