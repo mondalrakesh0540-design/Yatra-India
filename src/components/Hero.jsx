@@ -1,10 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Compass, Sparkles, ArrowRight, MapPin, Calendar, Heart, Shield } from 'lucide-react';
+import { Search, Compass, Sparkles, ArrowRight, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const HERO_SLIDES = [
+  {
+    url: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=2000&q=85',
+    title: 'Taj Mahal, Agra',
+    subtitle: 'Uttar Pradesh',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=2000&q=85',
+    title: 'Tea Gardens of Munnar',
+    subtitle: 'Kerala',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=2000&q=85',
+    title: 'Amber Fort',
+    subtitle: 'Rajasthan',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=2000&q=85',
+    title: 'Dal Lake, Srinagar',
+    subtitle: 'Jammu & Kashmir',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=85',
+    title: 'Pangong Lake',
+    subtitle: 'Ladakh',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=2000&q=85',
+    title: 'Radhanagar Beach',
+    subtitle: 'Andaman & Nicobar',
+  },
+];
 
 export const Hero = ({ onOpenSearch }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [searchInput, setSearchInput] = useState('');
   const navigate = useNavigate();
+
+  // Auto-cycle slides every 6 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -15,27 +57,74 @@ export const Hero = ({ onOpenSearch }) => {
     }
   };
 
+  const goToPrev = () => setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+  const goToNext = () => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+
   const trendingTags = ['Goa', 'Kashmir', 'Darjeeling', 'Rajasthan', 'Kerala', 'Varanasi', 'Meghalaya'];
 
   return (
-    <section className="relative min-h-[95vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
-      {/* Cinematic Background with Deep Gradient & Dark Vignette */}
+    <section className="relative min-h-[88vh] max-h-[920px] flex items-center justify-center pt-24 pb-14 overflow-hidden">
+      {/* Background Slideshow */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=2000&q=85"
-          alt="Majestic India"
-          className="w-full h-full object-cover object-center scale-105 animate-pulse duration-1000"
-          style={{ animationDuration: '14s' }}
-        />
-        {/* Soft Multi-stop Vignette for extreme legibility and luxury contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 via-transparent to-navy-950/80" />
-        {/* Subtle decorative golden mesh */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(249,115,22,0.08)_0%,_transparent_70%)]" />
+        {HERO_SLIDES.map((slide, idx) => (
+          <div
+            key={idx}
+            className="absolute inset-0 transition-opacity duration-1000"
+            style={{ opacity: currentSlide === idx ? 1 : 0 }}
+          >
+            <img
+              src={slide.url}
+              alt={slide.title}
+              className="w-full h-full object-cover object-center"
+              loading={idx === 0 ? 'eager' : 'lazy'}
+            />
+          </div>
+        ))}
+        {/* Layered dark gradients for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/65 to-navy-950/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/70 via-transparent to-navy-950/70 z-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(249,115,22,0.06)_0%,_transparent_70%)] z-10" />
+      </div>
+
+      {/* Slide Nav Arrows */}
+      <button
+        onClick={goToPrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-navy-900/70 backdrop-blur-md border border-white/15 text-white hover:bg-saffron-500 hover:border-saffron-500 transition-all shadow-glass"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2.5 rounded-full bg-navy-900/70 backdrop-blur-md border border-white/15 text-white hover:bg-saffron-500 hover:border-saffron-500 transition-all shadow-glass"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+
+      {/* Slide Caption (bottom-left) */}
+      <div className="absolute bottom-5 left-6 z-20 text-left hidden sm:block">
+        <span className="text-[10px] uppercase font-bold tracking-widest text-saffron-400 block">📍 {HERO_SLIDES[currentSlide].subtitle}</span>
+        <span className="text-sm font-serif font-semibold text-white opacity-90">{HERO_SLIDES[currentSlide].title}</span>
+      </div>
+
+      {/* Slide Dot Indicators */}
+      <div className="absolute bottom-5 right-6 z-20 flex items-center gap-1.5">
+        {HERO_SLIDES.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentSlide(idx)}
+            className={`rounded-full transition-all duration-300 ${
+              idx === currentSlide
+                ? 'w-6 h-2 bg-saffron-500'
+                : 'w-2 h-2 bg-white/30 hover:bg-white/60'
+            }`}
+          />
+        ))}
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+      <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         {/* Top Tagline Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-saffron-300 text-xs sm:text-sm font-medium mb-6 shadow-glass animate-in fade-in slide-in-from-bottom-3 duration-500">
           <Sparkles className="w-4 h-4 text-amber-400" />
@@ -46,7 +135,7 @@ export const Hero = ({ onOpenSearch }) => {
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-serif tracking-tight text-white leading-[1.15] max-w-4xl mb-6 drop-shadow-md">
           India is not just a destination. <br className="hidden sm:inline" />
           <span className="bg-gradient-to-r from-white via-saffron-200 to-amber-400 bg-clip-text text-transparent">
-            It is a thousand stories waiting to be explored.
+            It is a thousand stories waiting.
           </span>
         </h1>
 

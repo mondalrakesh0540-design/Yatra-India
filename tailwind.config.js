@@ -7,6 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
+        // shadcn semantic tokens
+        background: '#060a14',
+        foreground: '#f8fafc',
+        card: {
+          DEFAULT: '#0b1326',
+          foreground: '#f8fafc',
+        },
+        muted: {
+          DEFAULT: '#111d38',
+          foreground: '#94a3b8',
+        },
+        ring: '#f97316',
+
+        // Brand colors
         navy: {
           950: '#060a14',
           900: '#0b1326',

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Scale, X, Plus, Star, MapPin, Calendar, Clock, IndianRupee, Plane, Train, Sparkles } from 'lucide-react';
+import { Scale, X, Plus, Star, MapPin, Calendar, Clock, Plane, Train, Sparkles } from 'lucide-react';
 import { useSaved } from '../context/SavedContext';
 import { DESTINATIONS } from '../data/destinations';
 
@@ -23,7 +23,7 @@ export const Compare = () => {
             Compare Destinations
           </h1>
           <p className="text-slate-400 text-sm font-light mt-1">
-            Compare budget, weather, duration, attractions, and accessibility to make the perfect choice.
+            Compare season, weather, duration, attractions, and accessibility to make the perfect choice.
           </p>
         </div>
 
@@ -40,20 +40,13 @@ export const Compare = () => {
 
       {/* Comparison Table / Matrix */}
       {destinations.length > 0 ? (
-        <div className="space-y-3">
-          {/* Mobile Swipe Indicator */}
-          <div className="md:hidden flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-saffron-500/10 border border-saffron-500/20 text-[11px] font-medium text-saffron-300 text-center">
-            <span>← Swipe sideways to view all comparison details →</span>
-          </div>
-
-          <div className="overflow-x-auto pb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
-            <div className="min-w-[780px] grid grid-cols-5 gap-4">
+        <div className="overflow-x-auto pb-6">
+          <div className="min-w-[800px] grid grid-cols-5 gap-4">
             {/* Metric Labels Column */}
             <div className="space-y-6 pt-52 text-xs font-bold text-slate-400 uppercase tracking-wider border-r border-white/10 pr-4">
               <div className="h-10 flex items-center">State / Region</div>
               <div className="h-10 flex items-center">Travel Style</div>
               <div className="h-10 flex items-center">Rating</div>
-              <div className="h-10 flex items-center">Starting Budget</div>
               <div className="h-10 flex items-center">Ideal Duration</div>
               <div className="h-10 flex items-center">Best Season</div>
               <div className="h-14 flex items-center">Summer Weather</div>
@@ -103,7 +96,6 @@ export const Compare = () => {
                   <div className="h-10 flex items-center pt-2 font-medium">{dest.state}</div>
                   <div className="h-10 flex items-center pt-2 capitalize text-saffron-400 font-semibold">{dest.category}</div>
                   <div className="h-10 flex items-center pt-2 font-bold text-amber-400">★ {dest.rating} ({dest.reviewsCount})</div>
-                  <div className="h-10 flex items-center pt-2 font-bold text-white">{dest.formattedBudget}</div>
                   <div className="h-10 flex items-center pt-2 font-medium">{dest.recommendedDuration}</div>
                   <div className="h-10 flex items-center pt-2 text-slate-300">{dest.bestTimeToVisit ? dest.bestTimeToVisit.split('(')[0].trim() : 'Year-round'}</div>
                   <div className="h-14 flex items-center pt-2 text-slate-400 leading-snug">{dest.weatherInfo?.summer || '25°C to 35°C'}</div>
@@ -136,7 +128,6 @@ export const Compare = () => {
             )}
           </div>
         </div>
-      </div>
       ) : (
         <div className="p-16 rounded-3xl bg-navy-900/40 border border-white/10 text-center max-w-lg mx-auto">
           <Scale className="w-12 h-12 text-slate-500 mx-auto mb-3 opacity-40" />
@@ -189,7 +180,7 @@ export const Compare = () => {
                   />
                   <div className="flex-1 min-w-0">
                     <h4 className="font-semibold text-white text-sm truncate">{d.name}</h4>
-                    <span className="text-xs text-slate-400">{d.state} • {d.formattedBudget}</span>
+                    <span className="text-xs text-slate-400 capitalize">{d.state} • {d.category}</span>
                   </div>
                   <Plus className="w-4 h-4 text-saffron-400 shrink-0" />
                 </div>

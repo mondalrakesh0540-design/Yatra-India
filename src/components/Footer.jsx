@@ -14,23 +14,23 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-xl bg-white/95 p-1 flex items-center justify-center shadow-glow-saffron overflow-hidden border border-white/20">
-                <img src={`${import.meta.env.BASE_URL}logo-emblem.png`} alt="Yatra India Logo" className="w-full h-full object-contain" />
+            <Link to="/" className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-saffron-500 to-amber-600 flex items-center justify-center shadow-glow-saffron">
+                <Compass className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-wider font-serif text-white">
                   YATRA <span className="text-saffron-500">INDIA</span>
                 </span>
-                <span className="text-[10px] text-slate-400 tracking-widest uppercase font-semibold">
-                  Explore The True Essence
+                <span className="text-[10px] text-slate-400 tracking-widest uppercase font-medium">
+                  Experience Extraordinary
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
               “Discover India. Experience the Extraordinary.” <br />
-              A premium travel discovery platform and smart trip planner curated for explorers seeking authentic destinations across all 28 states and 8 union territories.
+              A premium travel discovery platform curated for explorers seeking authentic destinations across all 28 states and 8 union territories.
             </p>
 
             {/* Social Icons */}
@@ -151,11 +151,6 @@ export const Footer = () => {
               <li>
                 <Link to="/stories" className="hover:text-saffron-400 transition-colors">
                   Travel Stories & Blogs
-                </Link>
-              </li>
-              <li>
-                <Link to="/plan-trip" className="hover:text-saffron-400 transition-colors">
-                  Smart Trip Planner
                 </Link>
               </li>
               <li>

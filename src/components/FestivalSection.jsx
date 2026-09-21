@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MapPin, Sparkles, Compass, ArrowRight, Info } from 'lucide-react';
 import { FESTIVALS } from '../data/festivals';
 
@@ -32,10 +31,10 @@ export const FestivalSection = () => {
               <button
                 key={fest.id}
                 onClick={() => setSelectedFestival(fest)}
-                className={`w-full p-4 rounded-xl text-left transition-all duration-200 border flex items-center justify-between gap-4 ${
+                className={`w-full p-4 rounded-xl text-left transition-all border flex items-center justify-between gap-4 ${
                   isSelected
                     ? 'bg-gradient-to-r from-saffron-500/20 to-amber-600/10 border-saffron-500 text-white shadow-sm ring-1 ring-saffron-500/30'
-                    : 'bg-navy-900/60 hover:bg-navy-900 hover:border-white/20 border-white/10 text-slate-300'
+                    : 'bg-navy-900/60 hover:bg-navy-900 border-white/10 text-slate-300'
                 }`}
               >
                 <div>
@@ -67,13 +66,7 @@ export const FestivalSection = () => {
         </div>
 
         {/* Right: Detailed Festival Showcase Card */}
-        <motion.div
-          key={selectedFestival.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-7 bg-navy-900/90 border border-white/15 rounded-2xl overflow-hidden shadow-glass"
-        >
+        <div className="lg:col-span-7 bg-navy-900/90 border border-white/15 rounded-2xl overflow-hidden shadow-glass">
           {/* Festival Banner Image */}
           <div className="relative h-64 sm:h-72 w-full overflow-hidden">
             <img
@@ -135,7 +128,7 @@ export const FestivalSection = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Sparkles, Eye, ArrowRight, MapPin, Compass } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
 
@@ -45,7 +44,7 @@ export const HiddenGems = () => {
             <Link
               key={gem.id}
               to={`/destination/${gem.id}`}
-              className="group relative h-[380px] w-full rounded-2xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/60 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-end p-6"
+              className="group relative h-[380px] rounded-2xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/60 shadow-glass transition-all duration-500 hover:-translate-y-2 flex flex-col justify-end p-6"
             >
               {/* Background Image with Dark Gradient */}
               <img

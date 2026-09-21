@@ -50,7 +50,7 @@ export const CATEGORIES = [
     icon: 'Compass',
     emoji: '🐅',
     description: 'Royal Bengal tigers, Asiatic lions, one-horned rhinos, and vibrant bird sanctuaries in raw natural habitats.',
-    heroImage: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80',
     count: '22+ Destinations'
   },
   {

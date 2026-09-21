@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Utensils, MapPin, Sparkles, ArrowRight } from 'lucide-react';
 import { REGIONAL_FOODS } from '../data/food';
 

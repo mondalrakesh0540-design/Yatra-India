@@ -17,7 +17,6 @@ export const Destinations = () => {
   const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [selectedState, setSelectedState] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
-  const [selectedBudget, setSelectedBudget] = useState('all'); // all, under10k, 10k-20k, above20k
   const [selectedSeason, setSelectedSeason] = useState('all');
   const [sortBy, setSortBy] = useState(initialFilter === 'hidden-gems' ? 'hidden-gems' : 'popular');
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
@@ -50,11 +49,6 @@ export const Destinations = () => {
         if (!tagMatch) return false;
       }
 
-      // Budget filter
-      if (selectedBudget === 'under10k' && d.startingBudget > 10000) return false;
-      if (selectedBudget === '10k-20k' && (d.startingBudget <= 10000 || d.startingBudget > 20000)) return false;
-      if (selectedBudget === 'above20k' && d.startingBudget <= 20000) return false;
-
       // Season filter
       if (selectedSeason !== 'all') {
         const matchSeason = d.idealMonths.some(m => m.toLowerCase() === selectedSeason.toLowerCase());
@@ -65,24 +59,21 @@ export const Destinations = () => {
     }).sort((a, b) => {
       if (sortBy === 'popular') return (b.reviewsCount || 0) - (a.reviewsCount || 0);
       if (sortBy === 'highest-rated') return (b.rating || 0) - (a.rating || 0);
-      if (sortBy === 'budget-low') return a.startingBudget - b.startingBudget;
-      if (sortBy === 'budget-high') return b.startingBudget - a.startingBudget;
       if (sortBy === 'trending') return (b.isTrending ? 1 : 0) - (a.isTrending ? 1 : 0);
       if (sortBy === 'hidden-gems') return (b.isHiddenGem ? 1 : 0) - (a.isHiddenGem ? 1 : 0);
       return 0;
     });
-  }, [searchQuery, selectedState, selectedCategory, selectedBudget, selectedSeason, sortBy]);
+  }, [searchQuery, selectedState, selectedCategory, selectedSeason, sortBy]);
 
   const resetFilters = () => {
     setSearchQuery('');
     setSelectedState('all');
     setSelectedCategory('all');
-    setSelectedBudget('all');
     setSelectedSeason('all');
     setSortBy('popular');
   };
 
-  const hasActiveFilters = searchQuery || selectedState !== 'all' || selectedCategory !== 'all' || selectedBudget !== 'all' || selectedSeason !== 'all' || sortBy !== 'popular';
+  const hasActiveFilters = searchQuery || selectedState !== 'all' || selectedCategory !== 'all' || selectedSeason !== 'all' || sortBy !== 'popular';
 
   return (
     <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -131,8 +122,6 @@ export const Destinations = () => {
               <option value="trending">Trending Now</option>
               <option value="highest-rated">Highest Rated (★ 5.0)</option>
               <option value="hidden-gems">Hidden Gems</option>
-              <option value="budget-low">Budget: Low to High</option>
-              <option value="budget-high">Budget: High to Low</option>
             </select>
           </div>
 
@@ -203,34 +192,6 @@ export const Destinations = () => {
             </select>
           </div>
 
-          {/* Budget Filter */}
-          <div>
-            <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-              Budget Per Person
-            </label>
-            <div className="space-y-1.5">
-              {[
-                { id: 'all', label: 'All Budgets' },
-                { id: 'under10k', label: 'Under ₹10,000 (Budget)' },
-                { id: '10k-20k', label: '₹10,000 – ₹20,000 (Comfort)' },
-                { id: 'above20k', label: '₹20,000+ (Premium/Luxury)' },
-              ].map((b) => (
-                <button
-                  key={b.id}
-                  onClick={() => setSelectedBudget(b.id)}
-                  className={`w-full px-3 py-2 rounded-lg text-left text-xs transition-colors flex items-center justify-between ${
-                    selectedBudget === b.id
-                      ? 'bg-saffron-500/20 text-saffron-300 font-semibold border border-saffron-500/40'
-                      : 'text-slate-400 hover:text-white hover:bg-white/5'
-                  }`}
-                >
-                  <span>{b.label}</span>
-                  {selectedBudget === b.id && <span className="w-1.5 h-1.5 rounded-full bg-saffron-400" />}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Season Filter */}
           <div>
             <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
@@ -266,8 +227,8 @@ export const Destinations = () => {
           {/* Destinations Grid */}
           {filteredDestinations.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredDestinations.map((dest, idx) => (
-                <DestinationCard key={dest.id} destination={dest} index={idx} />
+              {filteredDestinations.map((dest) => (
+                <DestinationCard key={dest.id} destination={dest} />
               ))}
             </div>
           ) : (
@@ -287,131 +248,6 @@ export const Destinations = () => {
           )}
         </main>
       </div>
-
-      {/* Mobile Filter Drawer / Bottom Sheet */}
-      {mobileFilterOpen && (
-        <div className="fixed inset-0 z-50 md:hidden flex flex-col justify-end bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
-          <div 
-            className="absolute inset-0" 
-            onClick={() => setMobileFilterOpen(false)} 
-          />
-          <div className="relative bg-navy-900 border-t border-white/20 rounded-t-3xl max-h-[85vh] overflow-y-auto p-6 space-y-6 shadow-2xl animate-in slide-in-from-bottom duration-300">
-            {/* Header */}
-            <div className="flex items-center justify-between pb-4 border-b border-white/10 sticky top-0 bg-navy-900 z-10">
-              <div className="flex items-center gap-2">
-                <SlidersHorizontal className="w-5 h-5 text-saffron-500" />
-                <h3 className="font-bold text-base text-white">Filter Destinations</h3>
-              </div>
-              <button
-                onClick={() => setMobileFilterOpen(false)}
-                className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* State Filter */}
-            <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                State / Union Territory
-              </label>
-              <select
-                value={selectedState}
-                onChange={(e) => setSelectedState(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-navy-950 border border-white/15 text-sm text-white focus:outline-none focus:border-saffron-500"
-              >
-                <option value="all">All States & UTs (36)</option>
-                {STATES.map((st) => (
-                  <option key={st.id} value={st.id}>
-                    {st.name} {st.isUT ? '(UT)' : ''}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Travel Style Filter */}
-            <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                Travel Style
-              </label>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-navy-950 border border-white/15 text-sm text-white focus:outline-none focus:border-saffron-500 capitalize"
-              >
-                <option value="all">All Styles</option>
-                {CATEGORIES.map((cat) => (
-                  <option key={cat.id} value={cat.id}>
-                    {cat.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Budget Filter */}
-            <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                Budget Per Person
-              </label>
-              <div className="grid grid-cols-2 gap-2">
-                {[
-                  { id: 'all', label: 'All Budgets' },
-                  { id: 'under10k', label: '< ₹10,000' },
-                  { id: '10k-20k', label: '₹10k – ₹20k' },
-                  { id: 'above20k', label: '₹20,000+' },
-                ].map((b) => (
-                  <button
-                    key={b.id}
-                    onClick={() => setSelectedBudget(b.id)}
-                    className={`px-3 py-2.5 rounded-xl text-center text-xs transition-colors border ${
-                      selectedBudget === b.id
-                        ? 'bg-saffron-500/20 text-saffron-300 font-bold border-saffron-500/60'
-                        : 'bg-navy-950 border-white/10 text-slate-300'
-                    }`}
-                  >
-                    {b.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Season Filter */}
-            <div>
-              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                Ideal Month to Visit
-              </label>
-              <select
-                value={selectedSeason}
-                onChange={(e) => setSelectedSeason(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-navy-950 border border-white/15 text-sm text-white focus:outline-none focus:border-saffron-500"
-              >
-                <option value="all">Any Month</option>
-                {['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].map((m) => (
-                  <option key={m} value={m}>
-                    {m}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Actions: Reset & Apply */}
-            <div className="pt-4 border-t border-white/10 flex items-center gap-3">
-              <button
-                onClick={resetFilters}
-                className="flex-1 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 font-semibold text-xs transition-colors"
-              >
-                Reset All
-              </button>
-              <button
-                onClick={() => setMobileFilterOpen(false)}
-                className="flex-1 py-3 rounded-xl bg-gradient-to-r from-saffron-500 to-amber-600 text-white font-bold text-xs shadow-glow-saffron transition-all"
-              >
-                Apply ({filteredDestinations.length} Results)
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

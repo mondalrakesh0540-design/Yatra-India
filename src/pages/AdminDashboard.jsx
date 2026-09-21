@@ -19,7 +19,6 @@ export const AdminDashboard = () => {
     name: '',
     state: 'West Bengal',
     category: 'mountains',
-    startingBudget: 12000,
     bestTimeToVisit: 'October to March',
     shortDescription: ''
   });
@@ -34,8 +33,6 @@ export const AdminDashboard = () => {
       state: newDest.state,
       stateId: newDest.state.toLowerCase().replace(/\s+/g, '-'),
       category: newDest.category,
-      startingBudget: Number(newDest.startingBudget),
-      formattedBudget: `₹${Number(newDest.startingBudget).toLocaleString()} / person`,
       bestTimeToVisit: newDest.bestTimeToVisit,
       idealMonths: ['October', 'November', 'December'],
       rating: 4.8,
@@ -59,7 +56,6 @@ export const AdminDashboard = () => {
       name: '',
       state: 'West Bengal',
       category: 'mountains',
-      startingBudget: 12000,
       bestTimeToVisit: 'October to March',
       shortDescription: ''
     });
@@ -191,7 +187,7 @@ export const AdminDashboard = () => {
                   <th className="py-3 px-4">Destination</th>
                   <th className="py-3 px-4">State</th>
                   <th className="py-3 px-4">Category</th>
-                  <th className="py-3 px-4">Budget</th>
+                  <th className="py-3 px-4">Best Season</th>
                   <th className="py-3 px-4">Rating</th>
                   <th className="py-3 px-4 text-right">Actions</th>
                 </tr>
@@ -213,7 +209,7 @@ export const AdminDashboard = () => {
                         {dest.category}
                       </span>
                     </td>
-                    <td className="py-3 px-4 font-medium text-white">{dest.formattedBudget}</td>
+                    <td className="py-3 px-4 font-medium text-slate-300">{dest.bestTimeToVisit ? dest.bestTimeToVisit.split('(')[0].trim() : 'Year-round'}</td>
                     <td className="py-3 px-4 font-bold text-amber-400">★ {dest.rating}</td>
                     <td className="py-3 px-4 text-right space-x-2">
                       <button
@@ -317,11 +313,11 @@ export const AdminDashboard = () => {
               </div>
 
               <div>
-                <label className="block text-slate-300 font-bold uppercase mb-1">Starting Budget (₹)</label>
+                <label className="block text-slate-300 font-bold uppercase mb-1">Ideal Duration</label>
                 <input
-                  type="number"
-                  value={newDest.startingBudget}
-                  onChange={(e) => setNewDest({ ...newDest, startingBudget: e.target.value })}
+                  type="text"
+                  value={newDest.recommendedDuration || '2-3 Days'}
+                  onChange={(e) => setNewDest({ ...newDest, recommendedDuration: e.target.value })}
                   className="w-full px-3 py-2 rounded-xl bg-navy-950 border border-white/10 text-white"
                 />
               </div>

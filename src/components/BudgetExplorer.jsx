@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { IndianRupee, Compass, Sparkles, ArrowRight, Wallet } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
 import { DestinationCard } from './DestinationCard';
@@ -69,9 +68,9 @@ export const BudgetExplorer = () => {
             <button
               key={tier.id}
               onClick={() => setActiveTier(tier.id)}
-              className={`p-6 rounded-2xl text-left transition-all duration-200 hover:-translate-y-1 border flex flex-col justify-between ${
+              className={`p-6 rounded-2xl text-left transition-all border flex flex-col justify-between ${
                 isSelected
-                  ? 'bg-gradient-to-b from-navy-900 to-navy-950 border-saffron-500 shadow-glow-saffron ring-1 ring-saffron-500/40'
+                  ? 'bg-gradient-to-b from-navy-900 to-navy-950 border-saffron-500 shadow-glow-saffron ring-1 ring-saffron-500/40 -translate-y-1'
                   : 'bg-navy-900/60 hover:bg-navy-900 border-white/10 text-slate-300'
               }`}
             >
@@ -109,8 +108,8 @@ export const BudgetExplorer = () => {
 
       {/* Filtered Destinations */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredDestinations.slice(0, 6).map((dest, idx) => (
-          <DestinationCard key={dest.id} destination={dest} index={idx} />
+        {filteredDestinations.slice(0, 6).map((dest) => (
+          <DestinationCard key={dest.id} destination={dest} />
         ))}
       </div>
     </section>

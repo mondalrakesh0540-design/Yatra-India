@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { MapPin, Calendar, Compass, ArrowRight, Search, Sparkles, Landmark } from 'lucide-react';
 import { STATES } from '../data/states';
 
@@ -90,7 +89,7 @@ export const StateExplorer = () => {
           <Link
             key={st.id}
             to={`/state/${st.id}`}
-            className="group h-full bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+            className="group bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
           >
             {/* Hero Image */}
             <div className="relative h-48 w-full overflow-hidden">

@@ -19,12 +19,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/ap-tirupati.jpg",
     "gallery": [
+      "/images/ap-tirupati.jpg",
       "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -35,9 +35,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 1622,
     "recommendedDuration": "2-3 Days",
@@ -90,9 +87,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Andhra Pradesh/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Andhra Pradesh/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -106,9 +103,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2345,
     "recommendedDuration": "2-3 Days",
@@ -161,9 +155,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Andhra Pradesh/album/araku-valley.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Andhra Pradesh/album/araku-valley.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -177,9 +171,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 2391,
     "recommendedDuration": "2-3 Days",
@@ -232,9 +223,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Andhra Pradesh/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Andhra Pradesh/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -248,9 +239,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 3224,
     "recommendedDuration": "2-3 Days",
@@ -303,12 +291,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/arunachal-tawang.jpg",
     "gallery": [
+      "/images/arunachal-tawang.jpg",
       "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -319,9 +307,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 18000,
-    "formattedBudget": "₹18,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 3830,
     "recommendedDuration": "2-3 Days",
@@ -374,9 +359,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/arunachal Pradas/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/arunachal Pradas/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -390,9 +375,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14000,
-    "formattedBudget": "₹14,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 3616,
     "recommendedDuration": "2-3 Days",
@@ -445,9 +427,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/arunachal Pradas/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/arunachal Pradas/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -461,9 +443,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 13000,
-    "formattedBudget": "₹13,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 3910,
     "recommendedDuration": "2-3 Days",
@@ -516,9 +495,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/arunachal Pradas/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/arunachal Pradas/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -532,9 +511,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12000,
-    "formattedBudget": "₹12,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 1876,
     "recommendedDuration": "2-3 Days",
@@ -587,9 +563,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/arunachal Pradas/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/arunachal Pradas/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -603,9 +579,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 19000,
-    "formattedBudget": "₹19,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 2265,
     "recommendedDuration": "2-3 Days",
@@ -658,12 +631,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/asam/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/asam/album/images.jpg",
+      "/images/assam-kamakhya.jpg",
+      "/yatra/state/asam/album/images (4).jpg",
+      "/yatra/state/asam/album/images (1).jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -674,9 +647,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 15000,
-    "formattedBudget": "₹15,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 3053,
     "recommendedDuration": "2-3 Days",
@@ -729,12 +699,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/assam-kamakhya.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/assam-kamakhya.jpg",
+      "/yatra/state/asam/album/images (10).jpg",
+      "/yatra/state/asam/album/images (2).jpg",
+      "/yatra/state/asam/album/images.jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -745,9 +715,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 1363,
     "recommendedDuration": "2-3 Days",
@@ -800,9 +767,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/asam/album/images (6).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/asam/album/images (6).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -816,9 +783,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 1863,
     "recommendedDuration": "2-3 Days",
@@ -871,9 +835,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/asam/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/asam/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -887,9 +851,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 4117,
     "recommendedDuration": "2-3 Days",
@@ -942,12 +903,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/asam/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/asam/album/images (1).jpg",
+      "/yatra/state/asam/album/images (8).jpg",
+      "/yatra/state/asam/album/images.jpg",
+      "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -958,9 +919,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14000,
-    "formattedBudget": "₹14,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 4114,
     "recommendedDuration": "2-3 Days",
@@ -1013,12 +971,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/bihar-mahabodhi.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/bihar-mahabodhi.jpg",
+      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -1029,9 +987,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2236,
     "recommendedDuration": "2-3 Days",
@@ -1084,9 +1039,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/bihar/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/bihar/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1100,9 +1055,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3589,
     "recommendedDuration": "2-3 Days",
@@ -1155,9 +1107,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/bihar/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/bihar/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1171,9 +1123,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2872,
     "recommendedDuration": "2-3 Days",
@@ -1226,9 +1175,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/bihar/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/bihar/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1242,9 +1191,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1416,
     "recommendedDuration": "2-3 Days",
@@ -1297,9 +1243,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/bihar/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/bihar/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1313,9 +1259,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5500,
-    "formattedBudget": "₹5,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 3165,
     "recommendedDuration": "2-3 Days",
@@ -1368,12 +1311,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/chhattisgarh-chitrakote.jpg",
     "gallery": [
+      "/images/chhattisgarh-chitrakote.jpg",
       "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -1384,9 +1327,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3321,
     "recommendedDuration": "2-3 Days",
@@ -1439,9 +1379,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Chhattisgarh/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Chhattisgarh/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1455,9 +1395,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2477,
     "recommendedDuration": "2-3 Days",
@@ -1510,9 +1447,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Chhattisgarh/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Chhattisgarh/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1526,9 +1463,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 3316,
     "recommendedDuration": "2-3 Days",
@@ -1581,9 +1515,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Chhattisgarh/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Chhattisgarh/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1597,9 +1531,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 2476,
     "recommendedDuration": "2-3 Days",
@@ -1652,9 +1583,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Chhattisgarh/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Chhattisgarh/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1668,9 +1599,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 1338,
     "recommendedDuration": "2-3 Days",
@@ -1723,12 +1651,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/goa/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/goa/album/images (3).jpg",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -1739,9 +1667,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14000,
-    "formattedBudget": "₹14,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 3938,
     "recommendedDuration": "2-3 Days",
@@ -1794,12 +1719,11 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -1810,9 +1734,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 13000,
-    "formattedBudget": "₹13,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 4195,
     "recommendedDuration": "2-3 Days",
@@ -1865,9 +1786,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/goa/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/goa/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1881,9 +1802,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 2810,
     "recommendedDuration": "2-3 Days",
@@ -1936,9 +1854,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/goa/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/goa/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -1952,9 +1870,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 4055,
     "recommendedDuration": "2-3 Days",
@@ -2007,9 +1922,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2023,9 +1938,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10000,
-    "formattedBudget": "₹10,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3047,
     "recommendedDuration": "2-3 Days",
@@ -2078,12 +1990,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Gujarat/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Gujarat/album/images (1).jpg",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -2094,9 +2006,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1670,
     "recommendedDuration": "2-3 Days",
@@ -2149,9 +2058,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Gujarat/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Gujarat/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2165,9 +2074,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 2673,
     "recommendedDuration": "2-3 Days",
@@ -2220,12 +2126,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Gujarat/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Gujarat/album/images (2).jpg",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -2236,9 +2142,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 16000,
-    "formattedBudget": "₹16,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 3896,
     "recommendedDuration": "2-3 Days",
@@ -2291,9 +2194,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Gujarat/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Gujarat/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2307,9 +2210,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 1465,
     "recommendedDuration": "2-3 Days",
@@ -2362,9 +2262,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Gujarat/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Gujarat/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2378,9 +2278,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 3420,
     "recommendedDuration": "2-3 Days",
@@ -2433,12 +2330,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/haryana-brahma-sarovar.jpg",
     "gallery": [
+      "/images/haryana-brahma-sarovar.jpg",
       "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -2449,9 +2346,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5500,
-    "formattedBudget": "₹5,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 1730,
     "recommendedDuration": "2-3 Days",
@@ -2504,12 +2398,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1520808663317-647b476a81b9?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1520808663317-647b476a81b9?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/hariyana/album/images (3).jpg",
+      "/yatra/state/hariyana/album/images.jpg",
+      "/images/haryana-brahma-sarovar.jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -2520,9 +2414,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5000,
-    "formattedBudget": "₹5,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 1252,
     "recommendedDuration": "2-3 Days",
@@ -2575,9 +2466,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/hariyana/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/hariyana/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2591,9 +2482,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5500,
-    "formattedBudget": "₹5,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1364,
     "recommendedDuration": "2-3 Days",
@@ -2646,9 +2534,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/hariyana/main imege.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/hariyana/main imege.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2662,9 +2550,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2944,
     "recommendedDuration": "2-3 Days",
@@ -2717,9 +2602,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Himachal Pradesh/album/images (6).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Himachal Pradesh/album/images (6).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2733,9 +2618,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12000,
-    "formattedBudget": "₹12,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 3343,
     "recommendedDuration": "2-3 Days",
@@ -2788,9 +2670,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Himachal Pradesh/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Himachal Pradesh/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2804,9 +2686,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14000,
-    "formattedBudget": "₹14,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 1851,
     "recommendedDuration": "2-3 Days",
@@ -2859,9 +2738,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Himachal Pradesh/album/images (8).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Himachal Pradesh/album/images (8).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2875,9 +2754,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 1701,
     "recommendedDuration": "2-3 Days",
@@ -2930,9 +2806,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Himachal Pradesh/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Himachal Pradesh/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -2946,9 +2822,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 20000,
-    "formattedBudget": "₹20,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 2286,
     "recommendedDuration": "2-3 Days",
@@ -3001,9 +2874,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Himachal Pradesh/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Himachal Pradesh/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3017,9 +2890,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11500,
-    "formattedBudget": "₹11,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 2036,
     "recommendedDuration": "2-3 Days",
@@ -3072,12 +2942,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/jharkhand-baidyanath.jpg",
     "gallery": [
+      "/images/jharkhand-baidyanath.jpg",
       "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -3088,9 +2958,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 1732,
     "recommendedDuration": "2-3 Days",
@@ -3143,9 +3010,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Jharkhand/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Jharkhand/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3159,9 +3026,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 1346,
     "recommendedDuration": "2-3 Days",
@@ -3214,9 +3078,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Jharkhand/album/images (9).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Jharkhand/album/images (9).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3230,9 +3094,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5500,
-    "formattedBudget": "₹5,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 2996,
     "recommendedDuration": "2-3 Days",
@@ -3285,12 +3146,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Jharkhand/album/images (5).jpg",
+      "/yatra/state/Jharkhand/album/images (6).jpg",
+      "/images/jharkhand-baidyanath.jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -3301,9 +3162,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 2924,
     "recommendedDuration": "2-3 Days",
@@ -3356,9 +3214,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Jharkhand/main imege.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Jharkhand/main imege.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3372,9 +3230,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5500,
-    "formattedBudget": "₹5,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3786,
     "recommendedDuration": "2-3 Days",
@@ -3427,12 +3282,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/karnataka-hampi.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/karnataka-hampi.jpg",
+      "https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -3443,9 +3298,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 3656,
     "recommendedDuration": "2-3 Days",
@@ -3498,9 +3350,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/karnataka/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/karnataka/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3514,9 +3366,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12500,
-    "formattedBudget": "₹12,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 1818,
     "recommendedDuration": "2-3 Days",
@@ -3569,9 +3418,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/karnataka/album/Mysore-Palace.webp",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/karnataka/album/Mysore-Palace.webp",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3585,9 +3434,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 3500,
     "recommendedDuration": "2-3 Days",
@@ -3640,9 +3486,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/karnataka/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/karnataka/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3656,9 +3502,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9500,
-    "formattedBudget": "₹9,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2945,
     "recommendedDuration": "2-3 Days",
@@ -3711,9 +3554,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/karnataka/album/images (9).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/karnataka/album/images (9).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3727,9 +3570,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10000,
-    "formattedBudget": "₹10,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2455,
     "recommendedDuration": "2-3 Days",
@@ -3782,12 +3622,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/kerala/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/kerala/album/images (7).jpg",
+      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -3798,9 +3638,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14000,
-    "formattedBudget": "₹14,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 2022,
     "recommendedDuration": "2-3 Days",
@@ -3853,12 +3690,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/kerala/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/kerala/album/images (1).jpg",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -3869,9 +3706,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 15000,
-    "formattedBudget": "₹15,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 2969,
     "recommendedDuration": "2-3 Days",
@@ -3924,9 +3758,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/kerala/main imege.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/kerala/main imege.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -3940,9 +3774,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12000,
-    "formattedBudget": "₹12,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 2866,
     "recommendedDuration": "2-3 Days",
@@ -3995,9 +3826,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/kerala/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/kerala/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4011,9 +3842,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10000,
-    "formattedBudget": "₹10,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 2148,
     "recommendedDuration": "2-3 Days",
@@ -4066,9 +3894,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/kerala/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/kerala/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4082,9 +3910,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10500,
-    "formattedBudget": "₹10,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 1757,
     "recommendedDuration": "2-3 Days",
@@ -4137,12 +3962,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/mp-khajuraho.jpg",
     "gallery": [
+      "/images/mp-khajuraho.jpg",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -4153,9 +3978,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10000,
-    "formattedBudget": "₹10,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3081,
     "recommendedDuration": "2-3 Days",
@@ -4208,9 +4030,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/madya pradesh/album/BhasmaAarti.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/madya pradesh/album/BhasmaAarti.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4224,9 +4046,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1669,
     "recommendedDuration": "2-3 Days",
@@ -4279,9 +4098,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/madya pradesh/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/madya pradesh/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4295,9 +4114,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9500,
-    "formattedBudget": "₹9,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1858,
     "recommendedDuration": "2-3 Days",
@@ -4350,9 +4166,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/madya pradesh/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/madya pradesh/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4366,9 +4182,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2075,
     "recommendedDuration": "2-3 Days",
@@ -4421,12 +4234,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/madya pradesh/album/images (4).jpg",
+      "/yatra/state/madya pradesh/album/images (6).jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -4437,9 +4250,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 16000,
-    "formattedBudget": "₹16,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 1271,
     "recommendedDuration": "2-3 Days",
@@ -4492,12 +4302,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1500463959177-e0869687df26?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1500463959177-e0869687df26?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/madya pradesh/album/images (7).jpg",
+      "/yatra/state/madya pradesh/album/images (8).jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -4508,9 +4318,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 17000,
-    "formattedBudget": "₹17,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 1226,
     "recommendedDuration": "2-3 Days",
@@ -4563,12 +4370,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/maharashtra-gateway.jpg",
     "gallery": [
+      "/images/maharashtra-gateway.jpg",
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -4579,9 +4386,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 15000,
-    "formattedBudget": "₹15,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 1428,
     "recommendedDuration": "2-3 Days",
@@ -4634,9 +4438,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Maharashtra/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Maharashtra/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4650,9 +4454,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2784,
     "recommendedDuration": "2-3 Days",
@@ -4705,9 +4506,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Maharashtra/album/pratapgarh-fort-mahabaleshwar-maharashtra-1-attr-nearby.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Maharashtra/album/pratapgarh-fort-mahabaleshwar-maharashtra-1-attr-nearby.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4721,9 +4522,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 1353,
     "recommendedDuration": "2-3 Days",
@@ -4776,9 +4574,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Maharashtra/main imege.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Maharashtra/main imege.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4792,9 +4590,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2420,
     "recommendedDuration": "2-3 Days",
@@ -4847,9 +4642,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Maharashtra/album/images (6).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Maharashtra/album/images (6).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4863,9 +4658,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 3637,
     "recommendedDuration": "2-3 Days",
@@ -4918,9 +4710,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Maharashtra/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Maharashtra/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -4934,9 +4726,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2536,
     "recommendedDuration": "2-3 Days",
@@ -4989,12 +4778,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/manipur-loktak.jpg",
     "gallery": [
+      "/images/manipur-loktak.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -5005,9 +4794,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9500,
-    "formattedBudget": "₹9,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2668,
     "recommendedDuration": "2-3 Days",
@@ -5060,9 +4846,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/manipur/album/kangla-fort-imphal-manipur-1-attr-hero.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/manipur/album/kangla-fort-imphal-manipur-1-attr-hero.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5076,9 +4862,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3965,
     "recommendedDuration": "2-3 Days",
@@ -5131,12 +4914,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/manipur/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/manipur/album/images (2).jpg",
+      "/images/manipur-loktak.jpg",
+      "/yatra/state/manipur/album/images (1).jpg",
+      "/yatra/state/manipur/album/images (6).jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -5147,9 +4930,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10000,
-    "formattedBudget": "₹10,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 3856,
     "recommendedDuration": "2-3 Days",
@@ -5202,9 +4982,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/manipur/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/manipur/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5218,9 +4998,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2039,
     "recommendedDuration": "2-3 Days",
@@ -5273,9 +5050,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Meghalaya/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Meghalaya/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5289,9 +5066,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 1918,
     "recommendedDuration": "2-3 Days",
@@ -5344,12 +5118,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Meghalaya/album/images (11).jpg",
     "gallery": [
+      "/yatra/state/Meghalaya/album/images (11).jpg",
       "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -5360,9 +5134,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11500,
-    "formattedBudget": "₹11,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 2138,
     "recommendedDuration": "2-3 Days",
@@ -5415,9 +5186,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Meghalaya/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Meghalaya/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5431,9 +5202,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10500,
-    "formattedBudget": "₹10,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 2932,
     "recommendedDuration": "2-3 Days",
@@ -5486,9 +5254,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Meghalaya/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Meghalaya/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5502,9 +5270,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3565,
     "recommendedDuration": "2-3 Days",
@@ -5557,12 +5322,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Meghalaya/album/images (9).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Meghalaya/album/images (9).jpg",
+      "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -5573,9 +5338,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 3271,
     "recommendedDuration": "2-3 Days",
@@ -5628,9 +5390,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Mizoram/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Mizoram/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5644,9 +5406,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10000,
-    "formattedBudget": "₹10,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 4073,
     "recommendedDuration": "2-3 Days",
@@ -5699,9 +5458,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Mizoram/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Mizoram/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5715,9 +5474,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 4182,
     "recommendedDuration": "2-3 Days",
@@ -5770,9 +5526,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Mizoram/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Mizoram/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5786,9 +5542,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3841,
     "recommendedDuration": "2-3 Days",
@@ -5841,9 +5594,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Mizoram/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Mizoram/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5857,9 +5610,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10500,
-    "formattedBudget": "₹10,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 2821,
     "recommendedDuration": "2-3 Days",
@@ -5912,9 +5662,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/nagaland/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/nagaland/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -5928,9 +5678,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 1469,
     "recommendedDuration": "2-3 Days",
@@ -5983,12 +5730,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/nagaland-dzukou.jpg",
     "gallery": [
+      "/images/nagaland-dzukou.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -5999,9 +5746,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12000,
-    "formattedBudget": "₹12,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 3571,
     "recommendedDuration": "2-3 Days",
@@ -6054,9 +5798,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/nagaland/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/nagaland/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -6070,9 +5814,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9500,
-    "formattedBudget": "₹9,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1651,
     "recommendedDuration": "2-3 Days",
@@ -6125,9 +5866,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/nagaland/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/nagaland/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -6141,9 +5882,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 13500,
-    "formattedBudget": "₹13,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 3415,
     "recommendedDuration": "2-3 Days",
@@ -6196,9 +5934,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/nagaland/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/nagaland/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -6212,9 +5950,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2680,
     "recommendedDuration": "2-3 Days",
@@ -6267,12 +6002,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/puri-jagannath.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/puri-jagannath.jpg",
+      "/images/puri-rath-yatra.jpg",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -6283,9 +6018,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2246,
     "recommendedDuration": "2-3 Days",
@@ -6338,12 +6070,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/konark-sun-temple.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/konark-sun-temple.jpg",
+      "/images/puri-jagannath.jpg",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -6354,9 +6086,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 1455,
     "recommendedDuration": "2-3 Days",
@@ -6409,9 +6138,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/odisha/album/images (8).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/odisha/album/images (8).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -6425,9 +6154,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1670,
     "recommendedDuration": "2-3 Days",
@@ -6480,12 +6206,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/chilika-lake.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/chilika-lake.jpg",
+      "/images/puri-jagannath.jpg",
+      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -6496,9 +6222,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3739,
     "recommendedDuration": "2-3 Days",
@@ -6551,12 +6274,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/odisha/album/images.jpg",
+      "/images/chilika-lake.jpg",
+      "/yatra/state/odisha/album/images (7).jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -6567,9 +6290,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 4163,
     "recommendedDuration": "2-3 Days",
@@ -6622,12 +6342,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/punjab-golden-temple.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/punjab-golden-temple.jpg",
+      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -6638,9 +6358,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 3330,
     "recommendedDuration": "2-3 Days",
@@ -6693,12 +6410,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/panjab/alnum/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/panjab/alnum/images (4).jpg",
+      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -6709,9 +6426,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2539,
     "recommendedDuration": "2-3 Days",
@@ -6764,9 +6478,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/panjab/images (11).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/panjab/images (11).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -6780,9 +6494,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 1450,
     "recommendedDuration": "2-3 Days",
@@ -6835,9 +6546,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/panjab/alnum/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/panjab/alnum/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -6851,9 +6562,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 1285,
     "recommendedDuration": "2-3 Days",
@@ -6906,9 +6614,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/panjab/alnum/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/panjab/alnum/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -6922,9 +6630,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3139,
     "recommendedDuration": "2-3 Days",
@@ -6977,12 +6682,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Rajeshthan/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Rajeshthan/album/images (1).jpg",
+      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -6993,9 +6698,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 2916,
     "recommendedDuration": "2-3 Days",
@@ -7048,12 +6750,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Rajeshthan/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Rajeshthan/album/images (3).jpg",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -7064,9 +6766,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14000,
-    "formattedBudget": "₹14,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 2662,
     "recommendedDuration": "2-3 Days",
@@ -7119,9 +6818,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Rajeshthan/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Rajeshthan/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7135,9 +6834,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 13000,
-    "formattedBudget": "₹13,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 3745,
     "recommendedDuration": "2-3 Days",
@@ -7190,9 +6886,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Rajeshthan/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Rajeshthan/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7206,9 +6902,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10500,
-    "formattedBudget": "₹10,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 2950,
     "recommendedDuration": "2-3 Days",
@@ -7261,9 +6954,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Rajeshthan/album/images (8).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Rajeshthan/album/images (8).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7277,9 +6970,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9500,
-    "formattedBudget": "₹9,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 2326,
     "recommendedDuration": "2-3 Days",
@@ -7332,9 +7022,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Rajeshthan/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Rajeshthan/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7348,9 +7038,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 1586,
     "recommendedDuration": "2-3 Days",
@@ -7403,9 +7090,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/sikkim/main imege.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/sikkim/main imege.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7419,9 +7106,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 13000,
-    "formattedBudget": "₹13,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 3333,
     "recommendedDuration": "2-3 Days",
@@ -7474,9 +7158,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/sikkim/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/sikkim/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7490,9 +7174,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 15000,
-    "formattedBudget": "₹15,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 2525,
     "recommendedDuration": "2-3 Days",
@@ -7545,9 +7226,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/sikkim/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/sikkim/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7561,9 +7242,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 1520,
     "recommendedDuration": "2-3 Days",
@@ -7616,9 +7294,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/sikkim/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/sikkim/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7632,9 +7310,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14500,
-    "formattedBudget": "₹14,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 3307,
     "recommendedDuration": "2-3 Days",
@@ -7687,9 +7362,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7703,9 +7378,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 16000,
-    "formattedBudget": "₹16,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 2410,
     "recommendedDuration": "2-3 Days",
@@ -7758,9 +7430,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Tamildaru/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Tamildaru/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7774,9 +7446,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12000,
-    "formattedBudget": "₹12,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 1237,
     "recommendedDuration": "2-3 Days",
@@ -7829,9 +7498,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Tamildaru/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Tamildaru/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7845,9 +7514,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 2073,
     "recommendedDuration": "2-3 Days",
@@ -7900,9 +7566,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -7916,9 +7582,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11500,
-    "formattedBudget": "₹11,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 2366,
     "recommendedDuration": "2-3 Days",
@@ -7971,12 +7634,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/tn-meenakshi.jpg",
     "gallery": [
+      "/images/tn-meenakshi.jpg",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -7987,9 +7650,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 1836,
     "recommendedDuration": "2-3 Days",
@@ -8042,9 +7702,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Tamildaru/album/Temple-Rameswaram-Tamil-Nadu-India.webp",
     "gallery": [
-      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Tamildaru/album/Temple-Rameswaram-Tamil-Nadu-India.webp",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8058,9 +7718,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9500,
-    "formattedBudget": "₹9,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 3610,
     "recommendedDuration": "2-3 Days",
@@ -8113,9 +7770,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Tamildaru/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Tamildaru/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8129,9 +7786,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 4051,
     "recommendedDuration": "2-3 Days",
@@ -8184,12 +7838,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Telangana/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Telangana/album/images (7).jpg",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -8200,9 +7854,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 4190,
     "recommendedDuration": "2-3 Days",
@@ -8255,9 +7906,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Telangana/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Telangana/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8271,9 +7922,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2920,
     "recommendedDuration": "2-3 Days",
@@ -8326,12 +7974,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/telangana-charminar.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/telangana-charminar.jpg",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -8342,9 +7990,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5500,
-    "formattedBudget": "₹5,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 3121,
     "recommendedDuration": "2-3 Days",
@@ -8397,9 +8042,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Telangana/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Telangana/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8413,9 +8058,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3187,
     "recommendedDuration": "2-3 Days",
@@ -8468,9 +8110,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Telangana/main imege.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Telangana/main imege.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8484,9 +8126,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 1620,
     "recommendedDuration": "2-3 Days",
@@ -8539,9 +8178,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Tripura/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Tripura/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8555,9 +8194,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 1824,
     "recommendedDuration": "2-3 Days",
@@ -8610,9 +8246,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Tripura/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Tripura/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8626,9 +8262,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 4059,
     "recommendedDuration": "2-3 Days",
@@ -8681,9 +8314,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Tripura/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Tripura/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -8697,9 +8330,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2730,
     "recommendedDuration": "2-3 Days",
@@ -8752,12 +8382,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/tripura-unakoti.jpg",
     "gallery": [
+      "/images/tripura-unakoti.jpg",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -8768,9 +8398,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 3931,
     "recommendedDuration": "2-3 Days",
@@ -8823,12 +8450,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttar Pradesh/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Uttar Pradesh/album/images (1).jpg",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -8839,9 +8466,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2270,
     "recommendedDuration": "2-3 Days",
@@ -8894,12 +8518,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttar Pradesh/album/images (11).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Uttar Pradesh/album/images (11).jpg",
+      "https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -8910,9 +8534,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 2737,
     "recommendedDuration": "2-3 Days",
@@ -8965,12 +8586,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttar Pradesh/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Uttar Pradesh/album/images (4).jpg",
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -8981,9 +8602,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 2699,
     "recommendedDuration": "2-3 Days",
@@ -9036,9 +8654,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttar Pradesh/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Uttar Pradesh/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9052,9 +8670,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 2687,
     "recommendedDuration": "2-3 Days",
@@ -9107,9 +8722,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttar Pradesh/album/images (12).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Uttar Pradesh/album/images (12).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9123,9 +8738,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3995,
     "recommendedDuration": "2-3 Days",
@@ -9178,9 +8790,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttar Pradesh/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Uttar Pradesh/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9194,9 +8806,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1241,
     "recommendedDuration": "2-3 Days",
@@ -9249,12 +8858,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttarakhand/album/images (16).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Uttarakhand/album/images (16).jpg",
+      "https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -9265,9 +8874,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 2915,
     "recommendedDuration": "2-3 Days",
@@ -9320,12 +8926,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttarakhand/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/Uttarakhand/album/images (2).jpg",
+      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -9336,9 +8942,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7000,
-    "formattedBudget": "₹7,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3014,
     "recommendedDuration": "2-3 Days",
@@ -9391,9 +8994,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttarakhand/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Uttarakhand/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9407,9 +9010,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 2915,
     "recommendedDuration": "2-3 Days",
@@ -9462,9 +9062,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttarakhand/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Uttarakhand/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9478,9 +9078,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11500,
-    "formattedBudget": "₹11,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 3641,
     "recommendedDuration": "2-3 Days",
@@ -9533,9 +9130,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttarakhand/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Uttarakhand/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9549,9 +9146,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 16000,
-    "formattedBudget": "₹16,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 3362,
     "recommendedDuration": "2-3 Days",
@@ -9604,9 +9198,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/Uttarakhand/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/Uttarakhand/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9620,9 +9214,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 15500,
-    "formattedBudget": "₹15,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 3043,
     "recommendedDuration": "2-3 Days",
@@ -9675,12 +9266,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/west bengal/album/images (10).jpg",
     "gallery": [
+      "/yatra/state/west bengal/album/images (10).jpg",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -9691,9 +9282,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12500,
-    "formattedBudget": "₹12,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 3518,
     "recommendedDuration": "2-3 Days",
@@ -9746,12 +9334,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/wb-victoria-memorial.jpg",
     "gallery": [
+      "/images/wb-victoria-memorial.jpg",
       "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -9762,9 +9350,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 3912,
     "recommendedDuration": "2-3 Days",
@@ -9817,9 +9402,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/west bengal/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/west bengal/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9833,9 +9418,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 1232,
     "recommendedDuration": "2-3 Days",
@@ -9888,12 +9470,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/west bengal/album/images (12).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/state/west bengal/album/images (12).jpg",
+      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/west bengal/album/images (16).jpg",
+      "/yatra/state/west bengal/album/images (14).jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -9904,9 +9486,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12000,
-    "formattedBudget": "₹12,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 1300,
     "recommendedDuration": "2-3 Days",
@@ -9959,9 +9538,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/state/west bengal/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/west bengal/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -9975,9 +9554,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 10000,
-    "formattedBudget": "₹10,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 3764,
     "recommendedDuration": "2-3 Days",
@@ -10030,12 +9606,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1588714477688-cf28a50e94f7?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "https://images.unsplash.com/photo-1588714477688-cf28a50e94f7?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/state/west bengal/album/images (14).jpg",
+      "/yatra/state/west bengal/album/images (15).jpg",
+      "/yatra/state/west bengal/album/images (32).jpg"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -10046,9 +9622,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 11000,
-    "formattedBudget": "₹11,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 2308,
     "recommendedDuration": "2-3 Days",
@@ -10101,9 +9674,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Andaman & Nicobar/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Andaman & Nicobar/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10117,9 +9690,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 16000,
-    "formattedBudget": "₹16,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 3905,
     "recommendedDuration": "2-3 Days",
@@ -10172,9 +9742,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Andaman & Nicobar/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Andaman & Nicobar/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10188,9 +9758,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 22000,
-    "formattedBudget": "₹22,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 3952,
     "recommendedDuration": "2-3 Days",
@@ -10243,9 +9810,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Andaman & Nicobar/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Andaman & Nicobar/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10259,9 +9826,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 18000,
-    "formattedBudget": "₹18,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 3141,
     "recommendedDuration": "2-3 Days",
@@ -10314,12 +9878,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/andaman-cellular-jail.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/andaman-cellular-jail.jpg",
+      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -10330,9 +9894,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 12000,
-    "formattedBudget": "₹12,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 3902,
     "recommendedDuration": "2-3 Days",
@@ -10385,12 +9946,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/chandigarh-rock-garden.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/chandigarh-rock-garden.jpg",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600100397608-f010f443bbf6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -10401,9 +9962,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5000,
-    "formattedBudget": "₹5,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 1313,
     "recommendedDuration": "2-3 Days",
@@ -10456,9 +10014,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Chandigarh/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Chandigarh/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10472,9 +10030,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 4500,
-    "formattedBudget": "₹4,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3129,
     "recommendedDuration": "2-3 Days",
@@ -10527,9 +10082,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Chandigarh/album/images (10).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Chandigarh/album/images (10).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10543,9 +10098,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 5000,
-    "formattedBudget": "₹5,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 1849,
     "recommendedDuration": "2-3 Days",
@@ -10598,9 +10150,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Chandigarh/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Chandigarh/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10614,9 +10166,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 4000,
-    "formattedBudget": "₹4,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 2907,
     "recommendedDuration": "2-3 Days",
@@ -10669,9 +10218,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10685,9 +10234,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 7500,
-    "formattedBudget": "₹7,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 2167,
     "recommendedDuration": "2-3 Days",
@@ -10740,9 +10286,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10756,9 +10302,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 1376,
     "recommendedDuration": "2-3 Days",
@@ -10811,9 +10354,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10827,9 +10370,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6500,
-    "formattedBudget": "₹6,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 2167,
     "recommendedDuration": "2-3 Days",
@@ -10882,9 +10422,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10898,9 +10438,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 3604,
     "recommendedDuration": "2-3 Days",
@@ -10953,9 +10490,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Dadra & Nagar Haveli and Daman & Diu/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -10969,9 +10506,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 6000,
-    "formattedBudget": "₹6,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3441,
     "recommendedDuration": "2-3 Days",
@@ -11024,12 +10558,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Delhi/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/Union Territories/Delhi/album/images (1).jpg",
+      "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -11040,9 +10574,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 4000,
-    "formattedBudget": "₹4,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.8,
     "reviewsCount": 3746,
     "recommendedDuration": "2-3 Days",
@@ -11095,9 +10626,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Delhi/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1585135497273-1a86b09fe70e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Delhi/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11111,9 +10642,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 4500,
-    "formattedBudget": "₹4,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 1310,
     "recommendedDuration": "2-3 Days",
@@ -11166,9 +10694,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Delhi/album/images.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Delhi/album/images.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11182,9 +10710,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 4000,
-    "formattedBudget": "₹4,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.9,
     "reviewsCount": 3314,
     "recommendedDuration": "2-3 Days",
@@ -11237,9 +10762,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Delhi/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Delhi/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11253,9 +10778,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 4500,
-    "formattedBudget": "₹4,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3201,
     "recommendedDuration": "2-3 Days",
@@ -11308,9 +10830,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11324,9 +10846,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 3500,
-    "formattedBudget": "₹3,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3640,
     "recommendedDuration": "2-3 Days",
@@ -11379,12 +10898,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Jammu & Kashmir/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/Union Territories/Jammu & Kashmir/album/images (7).jpg",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -11395,9 +10914,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 16000,
-    "formattedBudget": "₹16,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 1323,
     "recommendedDuration": "2-3 Days",
@@ -11450,9 +10966,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Jammu & Kashmir/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Jammu & Kashmir/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11466,9 +10982,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 18000,
-    "formattedBudget": "₹18,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 3697,
     "recommendedDuration": "2-3 Days",
@@ -11521,9 +11034,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Jammu & Kashmir/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Jammu & Kashmir/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11537,9 +11050,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 15000,
-    "formattedBudget": "₹15,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 2296,
     "recommendedDuration": "2-3 Days",
@@ -11592,9 +11102,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Jammu & Kashmir/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Jammu & Kashmir/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11608,9 +11118,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 15500,
-    "formattedBudget": "₹15,500 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 2906,
     "recommendedDuration": "2-3 Days",
@@ -11663,12 +11170,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Jammu & Kashmir/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/Union Territories/Jammu & Kashmir/album/images (1).jpg",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -11679,9 +11186,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 14000,
-    "formattedBudget": "₹14,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 4063,
     "recommendedDuration": "2-3 Days",
@@ -11734,12 +11238,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Ladakh/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/Union Territories/Ladakh/album/images (7).jpg",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -11750,9 +11254,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 19000,
-    "formattedBudget": "₹19,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 4011,
     "recommendedDuration": "2-3 Days",
@@ -11805,12 +11306,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Ladakh/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/yatra/Union Territories/Ladakh/album/images (1).jpg",
+      "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -11821,9 +11322,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 21000,
-    "formattedBudget": "₹21,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 2070,
     "recommendedDuration": "2-3 Days",
@@ -11876,9 +11374,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Ladakh/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Ladakh/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11892,9 +11390,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 20000,
-    "formattedBudget": "₹20,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 2377,
     "recommendedDuration": "2-3 Days",
@@ -11947,9 +11442,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": true,
-    "heroImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Ladakh/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Ladakh/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -11963,9 +11458,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 22000,
-    "formattedBudget": "₹22,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.5,
     "reviewsCount": 1228,
     "recommendedDuration": "2-3 Days",
@@ -12018,9 +11510,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Ladakh/main imege.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Ladakh/main imege.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12034,9 +11526,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 18000,
-    "formattedBudget": "₹18,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.7,
     "reviewsCount": 3656,
     "recommendedDuration": "2-3 Days",
@@ -12089,9 +11578,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Lakshadweep/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Lakshadweep/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12105,9 +11594,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 24000,
-    "formattedBudget": "₹24,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.9,
     "reviewsCount": 2857,
     "recommendedDuration": "2-3 Days",
@@ -12160,9 +11646,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Lakshadweep/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Lakshadweep/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12176,9 +11662,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 26000,
-    "formattedBudget": "₹26,000 / person",
-    "budgetCategory": "premium",
     "rating": 4.7,
     "reviewsCount": 3792,
     "recommendedDuration": "2-3 Days",
@@ -12231,9 +11714,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Lakshadweep/album/images (1).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Lakshadweep/album/images (1).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12247,9 +11730,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 32000,
-    "formattedBudget": "₹32,000 / person",
-    "budgetCategory": "premium",
     "rating": 4.8,
     "reviewsCount": 3250,
     "recommendedDuration": "2-3 Days",
@@ -12302,9 +11782,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Lakshadweep/album/images (5).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Lakshadweep/album/images (5).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12318,9 +11798,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 25000,
-    "formattedBudget": "₹25,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.6,
     "reviewsCount": 1398,
     "recommendedDuration": "2-3 Days",
@@ -12373,9 +11850,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Lakshadweep/album/images (7).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Lakshadweep/album/images (7).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12389,9 +11866,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 23000,
-    "formattedBudget": "₹23,000 / person",
-    "budgetCategory": "comfortable",
     "rating": 4.8,
     "reviewsCount": 2105,
     "recommendedDuration": "2-3 Days",
@@ -12444,9 +11918,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Puducherry/album/images (3).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Puducherry/album/images (3).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12460,9 +11934,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8500,
-    "formattedBudget": "₹8,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 2116,
     "recommendedDuration": "2-3 Days",
@@ -12515,12 +11986,12 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/images/puducherry-matrimandir.jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
+      "/images/puducherry-matrimandir.jpg",
+      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
     ],
     "bestTimeToVisit": "October to March",
     "idealMonths": [
@@ -12531,9 +12002,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9000,
-    "formattedBudget": "₹9,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.6,
     "reviewsCount": 2123,
     "recommendedDuration": "2-3 Days",
@@ -12586,9 +12054,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Puducherry/album/images (2).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Puducherry/album/images (2).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12602,9 +12070,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 9500,
-    "formattedBudget": "₹9,500 / person",
-    "budgetCategory": "budget",
     "rating": 4.5,
     "reviewsCount": 1268,
     "recommendedDuration": "2-3 Days",
@@ -12657,9 +12122,9 @@ export const DESTINATIONS = [
     "isPopular": true,
     "isTrending": false,
     "isHiddenGem": false,
-    "heroImage": "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+    "heroImage": "/yatra/Union Territories/Puducherry/album/images (4).jpg",
     "gallery": [
-      "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80",
+      "/yatra/Union Territories/Puducherry/album/images (4).jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
       "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1000&q=80"
@@ -12673,9 +12138,6 @@ export const DESTINATIONS = [
       "February",
       "March"
     ],
-    "startingBudget": 8000,
-    "formattedBudget": "₹8,000 / person",
-    "budgetCategory": "budget",
     "rating": 4.7,
     "reviewsCount": 3833,
     "recommendedDuration": "2-3 Days",

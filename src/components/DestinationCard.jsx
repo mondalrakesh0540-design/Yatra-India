@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Heart, Star, Calendar, IndianRupee, ArrowRight, MapPin, Sparkles } from 'lucide-react';
+import { Heart, Star, Calendar, Clock, ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import { useSaved } from '../context/SavedContext';
 
-export const DestinationCard = ({ destination, className = '', index = 0 }) => {
+export const DestinationCard = ({ destination, className = '' }) => {
   const { isSaved, toggleSaveDestination } = useSaved();
   const saved = isSaved(destination.id);
 
@@ -86,16 +85,19 @@ export const DestinationCard = ({ destination, className = '', index = 0 }) => {
           </p>
         </div>
 
-        {/* Footer Meta: Best Time & Budget */}
+        {/* Footer Meta: Best Time & Duration */}
         <div className="pt-3 border-t border-white/10 space-y-2.5">
           <div className="flex items-center justify-between text-xs text-slate-300">
             <span className="flex items-center gap-1.5 text-slate-400">
               <Calendar className="w-3.5 h-3.5 text-slate-400" />
               <span>{destination.bestTimeToVisit ? destination.bestTimeToVisit.split('(')[0].trim() : 'Year-round'}</span>
             </span>
-            <span className="font-bold text-white flex items-center">
-              {destination.formattedBudget}
-            </span>
+            {destination.recommendedDuration && (
+              <span className="text-slate-300 font-medium flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5 text-slate-400" />
+                <span>{destination.recommendedDuration}</span>
+              </span>
+            )}
           </div>
 
           {/* Explore Button */}

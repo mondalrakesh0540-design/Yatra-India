@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { BookOpen, Clock, ArrowRight, Sparkles } from 'lucide-react';
 import { STORIES } from '../data/stories';
 
@@ -37,7 +36,7 @@ export const StoriesSection = () => {
           <Link
             key={story.id}
             to={`/story/${story.id}`}
-            className="group bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between h-full"
+            className="group bg-navy-900/80 rounded-2xl overflow-hidden border border-white/10 hover:border-saffron-500/50 shadow-glass transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
           >
             {/* Cover Image */}
             <div className="relative h-52 w-full overflow-hidden">

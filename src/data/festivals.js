@@ -183,7 +183,7 @@ export const FESTIVALS = [
       'Sacred Aarti rituals honoring Goddess Amba at midnight'
     ],
     travelTips: 'Passes for major Garba grounds in Ahmedabad and Vadodara must be booked in advance online. Dancers continue well past 2 AM.',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80',
+    image: '/yatra/state/Gujarat/album/images (2).jpg',
     tags: ['Dance', 'Nine Nights', 'Gujarat', 'Vibrant']
   },
   {

@@ -2,16 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========================================
+   YATRA INDIA — Premium Travel Platform
+   Global Styles & Custom Utilities
+   ======================================== */
+
 @layer base {
   body {
     @apply bg-navy-950 text-slate-100 antialiased selection:bg-saffron-500 selection:text-white font-sans;
+    scroll-behavior: smooth;
+  }
+
+  /* Focus ring for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-saffron-500;
   }
 }
 
-/* Custom modern sleek scrollbar */
+/* ========================
+   Custom Scrollbar
+   ======================== */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,7 +40,18 @@
   background: #f97316;
 }
 
-/* Glassmorphism utility */
+/* Hide scrollbar utility */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================
+   Glassmorphism Utilities
+   ======================== */
 .glass {
   background: rgba(11, 19, 38, 0.75);
   backdrop-filter: blur(16px);
@@ -35,13 +59,119 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Print styles for itinerary */
+.glass-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========================
+   Animation Utilities
+   ======================== */
+
+/* Fade-in slide up (used on cards) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Fade in (used on tooltips / overlays) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Gentle float animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Shimmer loading effect */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
+
+/* ========================
+   India map SVG overrides
+   ======================== */
+svg path {
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+
+/* ========================
+   Typography Enhancements
+   ======================== */
+.font-display {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  letter-spacing: 0.02em;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; }
+.line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.line-clamp-3 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+
+/* ========================
+   Image Utilities
+   ======================== */
+img {
+  display: block;
+}
+
+/* Prevent image drag */
+img, svg {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* ========================
+   Print Styles (Trip Itinerary)
+   ======================== */
 @media print {
-  header, footer, button, nav {
+  header, footer, button, nav, .no-print {
     display: none !important;
   }
   body {
     background: white !important;
     color: black !important;
+    font-size: 12pt;
+  }
+  h1, h2, h3 {
+    color: #000 !important;
+  }
+  .print-break-before {
+    break-before: page;
   }
 }

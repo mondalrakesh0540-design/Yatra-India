@@ -4,11 +4,14 @@ import { MapPin, Calendar, Compass, Sparkles, ArrowRight, Layers, Utensils, Land
 import { STATES } from '../data/states';
 import { DESTINATIONS } from '../data/destinations';
 import { DestinationCard } from '../components/DestinationCard';
+import InteractiveImageBentoGallery from '@/components/ui/bento-gallery';
+import { STATE_ALBUMS } from '../data/stateAlbums';
 
 export const StateDetail = () => {
   const { id } = useParams();
   const state = STATES.find((s) => s.id === id) || STATES[0];
   const stateDestinations = DESTINATIONS.filter((d) => d.stateId === state.id);
+  const album = STATE_ALBUMS[state.id];
 
   return (
     <div className="pt-20 pb-24">
@@ -135,6 +138,17 @@ export const StateDetail = () => {
             </div>
           )}
         </section>
+
+        {/* State Photo Album using Interactive Bento Gallery */}
+        {album && album.items && album.items.length > 0 && (
+          <section className="bg-navy-900/60 border border-white/10 rounded-3xl overflow-hidden shadow-glass">
+            <InteractiveImageBentoGallery
+              imageItems={album.items}
+              title={`${state.name} Visual Album`}
+              description={`An interactive photo journey through ${state.name} featuring ${album.totalPhotos} authentic photographs. Drag horizontally to browse the collection, click any photo to view in full resolution.`}
+            />
+          </section>
+        )}
 
         {/* State Highlights */}
         <section className="bg-navy-900/70 border border-white/10 rounded-3xl p-8 shadow-glass">

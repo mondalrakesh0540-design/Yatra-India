@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
-  Heart, Share2, Plus, Star, MapPin, Calendar, Clock, IndianRupee, 
+  Heart, Share2, Plus, Star, MapPin, Calendar, Clock, 
   Plane, Train, Car, ShieldAlert, Sparkles, Utensils, Compass, ArrowRight, Check, Info,
   Camera, ChevronLeft, ChevronRight, X, Maximize2
 } from 'lucide-react';
@@ -18,6 +18,7 @@ export const DestinationDetail = () => {
   const destination = DESTINATIONS.find((d) => d.id === id) || DESTINATIONS[0];
   const saved = isSaved(destination.id);
   const compared = isCompared(destination.id);
+  const nearbySpots = DESTINATIONS.filter((d) => d.stateId === destination.stateId && d.id !== destination.id).slice(0, 3);
 
   // Keyboard navigation for Lightbox
   useEffect(() => {
@@ -45,9 +46,6 @@ export const DestinationDetail = () => {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleAddToTrip = () => {
-    navigate(`/plan-trip?dest=${destination.stateId}&days=5`);
-  };
 
   return (
     <div className="pt-20 pb-24">
@@ -91,40 +89,33 @@ export const DestinationDetail = () => {
               </p>
             </div>
 
-            {/* Action Buttons: Add to Trip, Save, Share */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 shrink-0 w-full sm:w-auto">
-              <button
-                onClick={handleAddToTrip}
-                className="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-saffron-500 to-amber-600 hover:from-saffron-600 hover:to-amber-700 text-white text-xs sm:text-sm font-bold shadow-glow-saffron transition-all flex items-center justify-center gap-2"
-              >
-                <Plus className="w-4 h-4" />
-                <span>Add to Trip</span>
-              </button>
+            {/* Action Buttons: Save, Share, Compare */}
+            <div className="flex items-center gap-3 shrink-0">
 
               <button
                 onClick={() => toggleSaveDestination(destination.id)}
                 aria-label="Save destination"
-                className={`p-2.5 sm:p-3 rounded-full border transition-all ${
+                className={`p-3 rounded-full border transition-all ${
                   saved
                     ? 'bg-saffron-500 border-saffron-400 text-white shadow-glow-saffron'
                     : 'bg-navy-900/80 border-white/20 text-white hover:bg-navy-900'
                 }`}
               >
-                <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${saved ? 'fill-current' : ''}`} />
+                <Heart className={`w-5 h-5 ${saved ? 'fill-current' : ''}`} />
               </button>
 
               <button
                 onClick={handleShare}
                 aria-label="Share destination"
-                className="p-2.5 sm:p-3 rounded-full bg-navy-900/80 border border-white/20 text-white hover:bg-navy-900 transition-colors relative"
+                className="p-3 rounded-full bg-navy-900/80 border border-white/20 text-white hover:bg-navy-900 transition-colors relative"
               >
-                {copied ? <Check className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" /> : <Share2 className="w-4 h-4 sm:w-5 sm:h-5" />}
+                {copied ? <Check className="w-5 h-5 text-emerald-400" /> : <Share2 className="w-5 h-5" />}
               </button>
 
               <button
                 onClick={() => toggleCompare(destination.id)}
                 aria-label="Compare destination"
-                className={`px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full border text-xs font-semibold transition-all ${
+                className={`px-4 py-3 rounded-full border text-xs font-semibold transition-all ${
                   compared
                     ? 'bg-amber-500 border-amber-400 text-navy-950 font-bold'
                     : 'bg-navy-900/80 border-white/20 text-white hover:bg-navy-900'
@@ -308,28 +299,31 @@ export const DestinationDetail = () => {
           )}
 
           {/* Nearby Destinations */}
-          {destination.nearbyDestinations?.length > 0 && (
+          {nearbySpots.length > 0 && (
             <section className="bg-navy-900/70 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-glass">
               <h2 className="text-2xl font-bold font-serif text-white mb-6">
-                Explore Nearby
+                Explore More in {destination.state}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {destination.nearbyDestinations.map((nearby, idx) => (
+                {nearbySpots.map((nearby) => (
                   <Link
-                    key={idx}
+                    key={nearby.id}
                     to={`/destination/${nearby.id}`}
                     className="p-4 rounded-2xl bg-white/5 hover:bg-saffron-500/10 border border-white/10 hover:border-saffron-500/40 transition-all flex flex-col justify-between group"
                   >
                     <div>
                       <span className="text-[10px] text-saffron-400 uppercase font-semibold">
-                        {nearby.distance}
+                        {nearby.category}
                       </span>
                       <h4 className="font-bold text-white text-base group-hover:text-saffron-400 transition-colors">
                         {nearby.name}
                       </h4>
+                      <p className="text-xs text-slate-400 line-clamp-2 mt-1">
+                        {nearby.shortDescription}
+                      </p>
                     </div>
                     <div className="pt-3 mt-2 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 group-hover:text-saffron-400">
-                      <span>View details</span>
+                      <span>View spot</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>
@@ -345,8 +339,8 @@ export const DestinationDetail = () => {
           <div className="bg-navy-900/90 border border-white/15 rounded-3xl p-6 shadow-glass space-y-5">
             <div className="flex items-center justify-between pb-4 border-b border-white/10">
               <div>
-                <span className="text-[10px] text-slate-400 uppercase font-semibold block">Starting Budget</span>
-                <span className="text-2xl font-bold font-serif text-white">{destination.formattedBudget}</span>
+                <span className="text-[10px] text-slate-400 uppercase font-semibold block">Travel Style</span>
+                <span className="text-xl font-bold font-serif text-white capitalize">{destination.category}</span>
               </div>
               <div className="text-right">
                 <span className="text-[10px] text-slate-400 uppercase font-semibold block">Ideal Duration</span>
@@ -365,24 +359,20 @@ export const DestinationDetail = () => {
               </p>
             </div>
 
-            {/* Weather Snapshot */}
+            {/* Ideal Months / Weather */}
             <div className="pt-4 border-t border-white/10 space-y-2.5">
               <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block">
-                Weather Snapshot
+                Prime Visiting Months
               </span>
-              <div className="space-y-1.5 text-xs text-slate-300">
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Summer:</span>
-                  <span className="text-white font-medium">{destination.weatherInfo.summer}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Winter:</span>
-                  <span className="text-white font-medium">{destination.weatherInfo.winter}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Monsoon:</span>
-                  <span className="text-white font-medium">{destination.weatherInfo.monsoon}</span>
-                </div>
+              <div className="flex flex-wrap gap-1.5">
+                {destination.idealMonths?.map((month, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-1 rounded-lg text-xs bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-medium"
+                  >
+                    {month}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Heart, MapPin, Compass, BookOpen, Layers, Menu, X, ArrowRight, Sparkles, Scale } from 'lucide-react';
+import { Search, Heart, MapPin, Compass, BookOpen, Layers, Menu, X, ArrowRight, Sparkles, Scale, User } from 'lucide-react';
 import { useSaved } from '../context/SavedContext';
 
 export const Navbar = ({ onOpenSearch }) => {
@@ -29,9 +29,9 @@ export const Navbar = ({ onOpenSearch }) => {
   const navLinks = [
     { name: 'Destinations', path: '/destinations' },
     { name: 'States & UTs', path: '/states' },
+    { name: 'Visual Albums', path: '/albums' },
     { name: 'Travel Styles', path: '/#categories' },
     { name: 'Stories', path: '/stories' },
-    { name: 'Trip Planner', path: '/plan-trip' },
   ];
 
   return (
@@ -45,15 +45,15 @@ export const Navbar = ({ onOpenSearch }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/95 p-1 flex items-center justify-center shadow-glow-saffron group-hover:scale-105 transition-transform overflow-hidden border border-white/20">
-              <img src={`${import.meta.env.BASE_URL}logo-emblem.png`} alt="Yatra India Logo" className="w-full h-full object-contain" />
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-saffron-500 to-amber-600 flex items-center justify-center shadow-glow-saffron group-hover:scale-105 transition-transform">
+              <Compass className="w-5 h-5 text-white" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-wider font-serif text-white flex items-center gap-1.5">
                 YATRA <span className="text-saffron-500 font-extrabold tracking-widest text-sm uppercase bg-saffron-500/10 px-1.5 py-0.5 rounded border border-saffron-500/30">INDIA</span>
               </span>
-              <span className="hidden sm:block text-[10px] text-slate-300 tracking-widest uppercase font-semibold">Explore The True Essence</span>
+              <span className="text-[10px] text-slate-300 tracking-widest uppercase font-medium">Experience Extraordinary</span>
             </div>
           </Link>
 
@@ -114,13 +114,13 @@ export const Navbar = ({ onOpenSearch }) => {
               )}
             </Link>
 
-            {/* Plan Trip CTA Button */}
+            {/* Sign In Link */}
             <Link
-              to="/plan-trip"
-              className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-saffron-500 to-amber-600 hover:from-saffron-600 hover:to-amber-700 text-white text-sm font-semibold shadow-glow-saffron hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+              to="/login"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 hover:bg-saffron-500 text-white transition-all border border-white/15 hover:shadow-glow-saffron ml-1"
             >
-              <Sparkles className="w-4 h-4" />
-              <span>Plan Trip</span>
+              <User className="w-3.5 h-3.5" />
+              <span>Sign In</span>
             </Link>
 
             {/* Mobile Hamburger Menu Toggle */}
@@ -170,11 +170,18 @@ export const Navbar = ({ onOpenSearch }) => {
 
           <div className="pt-6">
             <Link
-              to="/plan-trip"
+              to="/login"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/15 mb-3"
+            >
+              <User className="w-4 h-4 text-saffron-400" />
+              <span>Sign In / Register</span>
+            </Link>
+            <Link
+              to="/destinations"
               className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-saffron-500 to-amber-600 text-white font-semibold shadow-glow-saffron"
             >
               <Sparkles className="w-5 h-5" />
-              <span>Launch Interactive Trip Planner</span>
+              <span>Explore All Destinations</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

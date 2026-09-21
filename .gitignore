@@ -23,5 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# Scratch scripts
+# Scratch scripts & temporary test artifacts
 *.mjs
+scratch_test*
+ss_*.png
