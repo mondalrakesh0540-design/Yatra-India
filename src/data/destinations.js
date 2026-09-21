@@ -1,6 +1,8 @@
-const BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.BASE_URL) || "/Yatra-India/";
+const BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.BASE_URL) || "/";
+const cleanBase = BASE.endsWith("/") ? BASE : `${BASE}/`;
+const fixUrl = (u) => (typeof u === "string" && u.startsWith("/") && !u.startsWith("//") ? `${cleanBase}${u.slice(1)}` : u);
 
-export const DESTINATIONS = [
+const RAW_DESTINATIONS = [
   {
     "id": "tirupati",
     "name": "Tirupati",
@@ -12173,3 +12175,9 @@ export const DESTINATIONS = [
     ]
   }
 ];
+
+export const DESTINATIONS = RAW_DESTINATIONS.map((d) => ({
+  ...d,
+  heroImage: fixUrl(d.heroImage),
+  gallery: Array.isArray(d.gallery) ? d.gallery.map(fixUrl) : d.gallery,
+}));

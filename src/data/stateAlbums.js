@@ -1,5 +1,9 @@
 // Auto-generated album dataset from Desktop 'yatra' folder
-export const STATE_ALBUMS = {
+const BASE = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || '/';
+const cleanBase = BASE.endsWith('/') ? BASE : `${BASE}/`;
+const fixUrl = (u) => (typeof u === 'string' && u.startsWith('/') && !u.startsWith('//') ? `${cleanBase}${u.slice(1)}` : u);
+
+const RAW_STATE_ALBUMS = {
   "andhra-pradesh": {
     "stateId": "andhra-pradesh",
     "stateName": "Andhra Pradesh",
@@ -3013,3 +3017,16 @@ export const STATE_ALBUMS = {
     ]
   }
 };
+
+export const STATE_ALBUMS = Object.fromEntries(
+  Object.entries(RAW_STATE_ALBUMS).map(([k, v]) => [
+    k,
+    {
+      ...v,
+      items: Array.isArray(v.items) ? v.items.map((it) => ({
+        ...it,
+        url: fixUrl(it.url),
+      })) : [],
+    },
+  ])
+);

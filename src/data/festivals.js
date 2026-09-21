@@ -1,4 +1,8 @@
-export const FESTIVALS = [
+const BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.BASE_URL) || "/";
+const cleanBase = BASE.endsWith("/") ? BASE : `${BASE}/`;
+const fixUrl = (u) => (typeof u === "string" && u.startsWith("/") && !u.startsWith("//") ? `${cleanBase}${u.slice(1)}` : u);
+
+const RAW_FESTIVALS = [
   {
     id: 'durga-puja',
     name: 'Durga Puja',
@@ -204,3 +208,8 @@ export const FESTIVALS = [
     tags: ['Tibetan', 'Monastery', 'Ladakh', 'Mask Dance']
   }
 ];
+
+export const FESTIVALS = RAW_FESTIVALS.map((f) => ({
+  ...f,
+  image: fixUrl(f.image),
+}));

@@ -41,7 +41,7 @@ const ScrollToTop = () => {
 function AppContent() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
-  const isAuthPage = location.pathname === '/login';
+  const isAuthPage = location.pathname === '/login' || location.pathname.endsWith('/login');
 
   return (
     <div className="min-h-screen flex flex-col bg-navy-950 text-slate-100">
@@ -79,7 +79,7 @@ function AppContent() {
 export function App() {
   return (
     <SavedProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <AppContent />
       </Router>
