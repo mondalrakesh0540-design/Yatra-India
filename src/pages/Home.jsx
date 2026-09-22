@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hero } from '../components/Hero';
+import { BookingSection } from '../components/BookingSection';
 import { TrendingDestinations } from '../components/TrendingDestinations';
 import { IndiaMap } from '../components/IndiaMap';
 import { CategoryGrid } from '../components/CategoryGrid';
@@ -16,6 +17,9 @@ export const Home = ({ onOpenSearch }) => {
     <div className="space-y-4">
       {/* 2. Cinematic Hero with 3. Search */}
       <Hero onOpenSearch={onOpenSearch} />
+
+      {/* Flight, Train & Bus Booking Engine */}
+      <BookingSection />
 
       {/* 4. Trending Destinations Carousel */}
       <TrendingDestinations />

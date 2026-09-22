@@ -28,6 +28,7 @@ export const Navbar = ({ onOpenSearch }) => {
 
   const navLinks = [
     { name: 'Destinations', path: '/destinations' },
+    { name: 'Bookings', path: '/#booking-section' },
     { name: 'States & UTs', path: '/states' },
     { name: 'Visual Albums', path: '/albums' },
     { name: 'Travel Styles', path: '/#categories' },
