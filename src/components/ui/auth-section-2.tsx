@@ -80,26 +80,7 @@ export default function AuthSectionTwo({
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-navy-950 p-3 sm:p-5 text-slate-100 antialiased font-sans overflow-hidden">
-      {/* Background Realistic Travel Video with Blur */}
-      <div className="pointer-events-none fixed inset-0 z-0 h-full w-full overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 h-full w-full object-cover scale-105 filter blur-[2.5px] opacity-75 transition-opacity duration-1000"
-        >
-          <source src={`${cleanBase}videos/varanasi-boat.webm`} type="video/webm" />
-          <source src={`${cleanBase}videos/clouds-travel.webm`} type="video/webm" />
-        </video>
-        {/* Dark Navy Tint & Vignette Overlays for Optimal Contrast and Glassmorphism */}
-        <div className="absolute inset-0 bg-navy-950/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-navy-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/70 via-transparent to-navy-950/70" />
-      </div>
-
+    <section className="relative min-h-screen bg-transparent p-3 sm:p-5 text-slate-100 antialiased font-sans overflow-hidden">
       {/* Ambient background glow effects matching Yatra India aesthetic */}
       <div className="pointer-events-none absolute -top-40 -left-40 z-0 w-96 h-96 rounded-full bg-saffron-500/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 -right-40 z-0 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl" />
