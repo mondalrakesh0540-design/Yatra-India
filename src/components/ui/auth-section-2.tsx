@@ -89,15 +89,15 @@ export default function AuthSectionTwo({
           muted
           playsInline
           poster="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 h-full w-full object-cover scale-110 filter blur-[9px] opacity-50 transition-opacity duration-1000"
+          className="absolute inset-0 h-full w-full object-cover scale-105 filter blur-[2.5px] opacity-75 transition-opacity duration-1000"
         >
           <source src={`${cleanBase}videos/varanasi-boat.webm`} type="video/webm" />
           <source src={`${cleanBase}videos/clouds-travel.webm`} type="video/webm" />
         </video>
         {/* Dark Navy Tint & Vignette Overlays for Optimal Contrast and Glassmorphism */}
-        <div className="absolute inset-0 bg-navy-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 via-transparent to-navy-950/80" />
+        <div className="absolute inset-0 bg-navy-950/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-navy-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/70 via-transparent to-navy-950/70" />
       </div>
 
       {/* Ambient background glow effects matching Yatra India aesthetic */}

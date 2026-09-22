@@ -48,7 +48,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen flex flex-col bg-navy-950 text-slate-100 relative">
-      {/* Global Realistic Travel Video Background with Blur */}
+      {/* Global Realistic Travel Video Background with Subtle Blur */}
       <div className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
         <video
           autoPlay
@@ -56,15 +56,15 @@ function AppContent() {
           muted
           playsInline
           poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
-          className="absolute inset-0 w-full h-full object-cover scale-110 filter blur-[9px] opacity-40 transition-opacity duration-1000"
+          className="absolute inset-0 w-full h-full object-cover scale-105 filter blur-[2.5px] opacity-75 transition-opacity duration-1000"
         >
           <source src={`${cleanBase}videos/clouds-travel.webm`} type="video/webm" />
           <source src={`${cleanBase}videos/varanasi-boat.webm`} type="video/webm" />
         </video>
-        {/* Cinematic Dark Tint & Gradients for Crisp Legibility and Contrast */}
-        <div className="absolute inset-0 bg-navy-950/75" />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-transparent to-navy-950/90" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(249,115,22,0.06)_0%,_transparent_70%)]" />
+        {/* Cinematic Subtle Dark Tint so the video is clearly visible while text stays readable */}
+        <div className="absolute inset-0 bg-navy-950/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-transparent to-navy-950/70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(249,115,22,0.05)_0%,_transparent_70%)]" />
       </div>
 
       {/* Navbar */}
