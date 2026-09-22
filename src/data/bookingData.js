@@ -15,6 +15,16 @@ export const AIRPORTS = [
   { code: 'IXB', city: 'Bagdogra (Darjeeling)', name: 'Bagdogra Airport', state: 'West Bengal' },
   { code: 'IXL', city: 'Leh Ladakh', name: 'Kushok Bakula Rimpochee Airport', state: 'Ladakh' },
   { code: 'GAU', city: 'Guwahati', name: 'Lokpriya Gopinath Bordoloi Airport', state: 'Assam' },
+  { code: 'TIR', city: 'Tirupati', name: 'Tirupati International Airport', state: 'Andhra Pradesh' },
+  { code: 'VTZ', city: 'Visakhapatnam', name: 'Visakhapatnam International Airport', state: 'Andhra Pradesh' },
+  { code: 'UDR', city: 'Udaipur', name: 'Maharana Pratap Airport', state: 'Rajasthan' },
+  { code: 'ATQ', city: 'Amritsar', name: 'Sri Guru Ram Dass Jee Intl Airport', state: 'Punjab' },
+  { code: 'BBI', city: 'Bhubaneswar', name: 'Biju Patnaik International Airport', state: 'Odisha' },
+  { code: 'DED', city: 'Dehradun / Rishikesh', name: 'Jolly Grant Airport', state: 'Uttarakhand' },
+  { code: 'AGR', city: 'Agra', name: 'Agra Airport (Kheria)', state: 'Uttar Pradesh' },
+  { code: 'AYJ', city: 'Ayodhya', name: 'Maharishi Valmiki International Airport', state: 'Uttar Pradesh' },
+  { code: 'IXM', city: 'Madurai', name: 'Madurai International Airport', state: 'Tamil Nadu' },
+  { code: 'IXZ', city: 'Port Blair', name: 'Veer Savarkar International Airport', state: 'Andaman & Nicobar' },
 ];
 
 export const TRAIN_STATIONS = [
@@ -31,6 +41,17 @@ export const TRAIN_STATIONS = [
   { code: 'ERS', name: 'Ernakulam Junction', city: 'Kochi', state: 'Kerala' },
   { code: 'GHY', name: 'Guwahati Junction', city: 'Guwahati', state: 'Assam' },
   { code: 'ASR', name: 'Amritsar Junction', city: 'Amritsar', state: 'Punjab' },
+  { code: 'TPTY', name: 'Tirupati Main Railway Station', city: 'Tirupati', state: 'Andhra Pradesh' },
+  { code: 'VSKP', name: 'Visakhapatnam Junction', city: 'Visakhapatnam', state: 'Andhra Pradesh' },
+  { code: 'BBS', name: 'Bhubaneswar Railway Station', city: 'Bhubaneswar', state: 'Odisha' },
+  { code: 'UDZ', name: 'Udaipur City Railway Station', city: 'Udaipur', state: 'Rajasthan' },
+  { code: 'HW', name: 'Haridwar Junction', city: 'Haridwar', state: 'Uttarakhand' },
+  { code: 'YNRK', name: 'Yog Nagari Rishikesh', city: 'Rishikesh', state: 'Uttarakhand' },
+  { code: 'AGC', name: 'Agra Cantt', city: 'Agra', state: 'Uttar Pradesh' },
+  { code: 'AY', name: 'Ayodhya Dham Junction', city: 'Ayodhya', state: 'Uttar Pradesh' },
+  { code: 'MDU', name: 'Madurai Junction', city: 'Madurai', state: 'Tamil Nadu' },
+  { code: 'RMM', name: 'Rameswaram Railway Station', city: 'Rameswaram', state: 'Tamil Nadu' },
+  { code: 'NJP', name: 'New Jalpaiguri Junction', city: 'Siliguri / Darjeeling', state: 'West Bengal' },
 ];
 
 export const BUS_CITIES = [
@@ -48,6 +69,18 @@ export const BUS_CITIES = [
   { city: 'Agra', terminal: 'Idgah Bus Stand / ISBT Agra', state: 'Uttar Pradesh' },
   { city: 'Haridwar', terminal: 'Haridwar Bus Stand near Railway Station', state: 'Uttarakhand' },
   { city: 'Rishikesh', terminal: 'Nepali Farm / Natraj Chowk', state: 'Uttarakhand' },
+  { city: 'Tirupati', terminal: 'Tirupati Central Bus Station (CBS)', state: 'Andhra Pradesh' },
+  { city: 'Visakhapatnam', terminal: 'Dwaraka Bus Station (RTC Complex)', state: 'Andhra Pradesh' },
+  { city: 'Udaipur', terminal: 'Udaipur Central Bus Depot (Udiapol)', state: 'Rajasthan' },
+  { city: 'Amritsar', terminal: 'Amritsar Interstate Bus Stand', state: 'Punjab' },
+  { city: 'Puri', terminal: 'Puri Central Bus Stand', state: 'Odisha' },
+  { city: 'Bhubaneswar', terminal: 'Baramunda ISBT', state: 'Odisha' },
+  { city: 'Nainital', terminal: 'Tallital Bus Stand', state: 'Uttarakhand' },
+  { city: 'Darjeeling', terminal: 'Darjeeling Siliguri Bus Stand', state: 'West Bengal' },
+  { city: 'Digha', terminal: 'Digha Central Bus Stand', state: 'West Bengal' },
+  { city: 'Ooty', terminal: 'Ooty Central Bus Stand', state: 'Tamil Nadu' },
+  { city: 'Kodaikanal', terminal: 'Kodaikanal Bus Stand', state: 'Tamil Nadu' },
+  { city: 'Madurai', terminal: 'Mattuthavani Integrated Bus Terminus', state: 'Tamil Nadu' },
 ];
 
 export const POPULAR_ROUTES = {

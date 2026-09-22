@@ -1,3 +1,5 @@
+import { getDestinationTransit } from './transitData.js';
+
 const BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.BASE_URL) || "/";
 const cleanBase = BASE.endsWith("/") ? BASE : `${BASE}/`;
 const fixUrl = (u) => (typeof u === "string" && u.startsWith("/") && !u.startsWith("//") ? `${cleanBase}${u.slice(1)}` : u);
@@ -12176,8 +12178,19 @@ const RAW_DESTINATIONS = [
   }
 ];
 
-export const DESTINATIONS = RAW_DESTINATIONS.map((d) => ({
-  ...d,
-  heroImage: fixUrl(d.heroImage),
-  gallery: Array.isArray(d.gallery) ? d.gallery.map(fixUrl) : d.gallery,
-}));
+export const DESTINATIONS = RAW_DESTINATIONS.map((d) => {
+  const transit = getDestinationTransit(d);
+  return {
+    ...d,
+    heroImage: fixUrl(d.heroImage),
+    gallery: Array.isArray(d.gallery) ? d.gallery.map(fixUrl) : d.gallery,
+    transit,
+    howToReach: {
+      airport: transit?.airport ? `${transit.airport.name} (${transit.airport.distance})` : d.howToReach?.airport,
+      railway: transit?.railway ? `${transit.railway.name} (${transit.railway.distance})` : d.howToReach?.railway,
+      busStand: transit?.busStand ? `${transit.busStand.name} (${transit.busStand.distance})` : `${d.name} Central Bus Stand (2 km)`,
+      road: transit?.road?.highway || d.howToReach?.road,
+      localTransport: transit?.localTransport || d.howToReach?.localTransport
+    }
+  };
+});

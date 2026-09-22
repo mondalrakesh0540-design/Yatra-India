@@ -53,7 +53,8 @@ export const Compare = () => {
               <div className="h-14 flex items-center">Winter Weather</div>
               <div className="h-20 flex items-center">Top Attractions</div>
               <div className="h-14 flex items-center">Nearest Airport</div>
-              <div className="h-14 flex items-center">Railway Access</div>
+              <div className="h-14 flex items-center">Railway Station</div>
+              <div className="h-14 flex items-center">Nearest Bus Stand</div>
             </div>
 
             {/* Destination Columns */}
@@ -103,8 +104,36 @@ export const Compare = () => {
                   <div className="h-20 flex items-center pt-2 text-slate-300 leading-snug line-clamp-3">
                     {dest.topAttractions?.slice(0, 3).join(', ')}
                   </div>
-                  <div className="h-14 flex items-center pt-2 text-slate-400 line-clamp-2 leading-snug">{dest.howToReach?.airport}</div>
-                  <div className="h-14 flex items-center pt-2 text-slate-400 line-clamp-2 leading-snug">{dest.howToReach?.railway}</div>
+                  <div className="h-14 flex items-center pt-2 text-slate-300 line-clamp-2 leading-snug">
+                    {dest.transit?.airport ? (
+                      <div>
+                        <span className="font-semibold text-white truncate block">{dest.transit.airport.name}</span>
+                        <span className="text-slate-400 block text-[11px]">📍 {dest.transit.airport.distance} • ⏱️ {dest.transit.airport.time}</span>
+                      </div>
+                    ) : (
+                      dest.howToReach?.airport
+                    )}
+                  </div>
+                  <div className="h-14 flex items-center pt-2 text-slate-300 line-clamp-2 leading-snug">
+                    {dest.transit?.railway ? (
+                      <div>
+                        <span className="font-semibold text-white truncate block">{dest.transit.railway.name}</span>
+                        <span className="text-slate-400 block text-[11px]">📍 {dest.transit.railway.distance} • ⏱️ {dest.transit.railway.time}</span>
+                      </div>
+                    ) : (
+                      dest.howToReach?.railway
+                    )}
+                  </div>
+                  <div className="h-14 flex items-center pt-2 text-slate-300 line-clamp-2 leading-snug">
+                    {dest.transit?.busStand ? (
+                      <div>
+                        <span className="font-semibold text-white truncate block">{dest.transit.busStand.name}</span>
+                        <span className="text-slate-400 block text-[11px]">📍 {dest.transit.busStand.distance} • ⏱️ {dest.transit.busStand.time}</span>
+                      </div>
+                    ) : (
+                      dest.howToReach?.busStand || 'Central Intercity Bus Stand'
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

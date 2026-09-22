@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { 
   Plane, 
   Train, 
@@ -34,6 +35,7 @@ import {
 } from '../data/bookingData';
 
 export const BookingSection = () => {
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('flights');
 
   // Flight form state
@@ -90,6 +92,32 @@ export const BookingSection = () => {
   const [appliedDiscount, setAppliedDiscount] = useState(100);
   const [couponMessage, setCouponMessage] = useState('Coupon YATRA100 applied successfully!');
   const [generatedPnr, setGeneratedPnr] = useState('');
+
+  // Handle cross-navigation from Destination Detail "How to Reach" CTAs
+  useEffect(() => {
+    try {
+      const searchParams = new URLSearchParams(location.search);
+      const tabParam = searchParams.get('bookingTab') || location.state?.bookingTab;
+      const toParam = searchParams.get('bookingTo') || location.state?.bookingTo;
+
+      if (tabParam && ['flights', 'trains', 'buses'].includes(tabParam)) {
+        setActiveTab(tabParam);
+        setSearchResults(null);
+      }
+
+      if (toParam) {
+        if (tabParam === 'trains') {
+          setTrainTo(toParam);
+        } else if (tabParam === 'buses') {
+          setBusTo(toParam);
+        } else {
+          setFlightTo(toParam);
+        }
+      }
+    } catch (e) {
+      console.warn('Booking cross-navigation param error:', e);
+    }
+  }, [location]);
 
   // Swappers
   const handleSwapFlights = () => {

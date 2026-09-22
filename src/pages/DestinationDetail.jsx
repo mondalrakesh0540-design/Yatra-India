@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
   Heart, Share2, Plus, Star, MapPin, Calendar, Clock, 
-  Plane, Train, Car, ShieldAlert, Sparkles, Utensils, Compass, ArrowRight, Check, Info,
-  Camera, ChevronLeft, ChevronRight, X, Maximize2
+  Plane, Train, Bus, Car, ShieldAlert, Sparkles, Utensils, Compass, ArrowRight, Check, Info,
+  Camera, ChevronLeft, ChevronRight, X, Maximize2, Navigation, ExternalLink, Ticket, Route
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
 import { useSaved } from '../context/SavedContext';
@@ -14,11 +14,20 @@ export const DestinationDetail = () => {
   const { isSaved, toggleSaveDestination, isCompared, toggleCompare } = useSaved();
   const [copied, setCopied] = useState(false);
   const [activeLightboxIndex, setActiveLightboxIndex] = useState(null);
+  const [transitTab, setTransitTab] = useState('all');
 
   const destination = DESTINATIONS.find((d) => d.id === id) || DESTINATIONS[0];
   const saved = isSaved(destination.id);
   const compared = isCompared(destination.id);
   const nearbySpots = DESTINATIONS.filter((d) => d.stateId === destination.stateId && d.id !== destination.id).slice(0, 3);
+
+  const transit = destination.transit || {
+    airport: { name: destination.howToReach?.airport || `${destination.name} Domestic Airport`, code: 'DEL', distance: '25 km', time: '40 mins', type: 'Domestic Airport', directFlights: 'Connecting flights' },
+    railway: { name: destination.howToReach?.railway || `${destination.name} Railway Station`, code: 'NDLS', distance: '4 km', time: '12 mins', type: 'Junction', connectivity: 'Express trains' },
+    busStand: { name: destination.howToReach?.busStand || `${destination.name} Central Bus Stand (ISBT)`, distance: '2 km', time: '6 mins', type: 'Interstate Stand', operators: 'State RTC & Volvo coaches' },
+    road: { highway: destination.howToReach?.road || 'National Highway & State Corridor', condition: 'Paved motorable highway' },
+    localTransport: destination.howToReach?.localTransport || 'Auto-rickshaws, prepaid cabs, and local transit'
+  };
 
   // Keyboard navigation for Lightbox
   useEffect(() => {
@@ -298,6 +307,171 @@ export const DestinationDetail = () => {
             </section>
           )}
 
+          {/* Comprehensive How to Reach & Nearest Transit Hubs Section */}
+          <section className="bg-navy-900/70 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-glass space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-saffron-500/10 text-saffron-400 text-xs font-semibold uppercase tracking-wider mb-2 border border-saffron-500/20">
+                  <Compass className="w-3.5 h-3.5" />
+                  <span>Travel Connectivity & Access</span>
+                </div>
+                <h2 className="text-2xl font-bold font-serif text-white">
+                  How to Reach {destination.name}
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-300 mt-1">
+                  Nearest airport, railway junction, bus stand, and major highway routes with direct travel booking.
+                </p>
+              </div>
+
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination.name + ', ' + destination.state + ', India')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs border border-white/15 hover:border-saffron-500/50 transition-all self-start sm:self-auto shrink-0"
+              >
+                <Navigation className="w-4 h-4 text-saffron-400" />
+                <span>Google Maps Route</span>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+              </a>
+            </div>
+
+            {/* 3 Transit Pillars Grid: Airport, Railway, Bus Stand */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Pillar 1: Nearest Airport */}
+              <div className="p-5 rounded-2xl bg-gradient-to-b from-blue-950/40 to-navy-900/80 border border-blue-500/20 hover:border-blue-500/40 transition-all flex flex-col justify-between space-y-4">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center">
+                      <Plane className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-mono font-bold px-2 py-0.5 rounded-lg bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                      {transit.airport.code}
+                    </span>
+                  </div>
+                  <span className="text-[11px] uppercase font-bold tracking-wider text-blue-400 block mb-1">
+                    Nearest Airport
+                  </span>
+                  <h4 className="text-base font-bold text-white mb-2">
+                    {transit.airport.name}
+                  </h4>
+                  <div className="flex items-center gap-2 text-xs text-slate-300 mb-2">
+                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-emerald-300 font-semibold">
+                      📍 {transit.airport.distance}
+                    </span>
+                    <span className="text-slate-400">⏱️ {transit.airport.time}</span>
+                  </div>
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    {transit.airport.directFlights || 'Domestic flights connecting through major metropolitan centers.'}
+                  </p>
+                </div>
+
+                <Link
+                  to={`/?bookingTab=flights&bookingTo=${transit.airport.code}#booking-section`}
+                  className="w-full py-2 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-all text-center flex items-center justify-center gap-2 shadow-sm"
+                >
+                  <Ticket className="w-3.5 h-3.5" />
+                  <span>Book Flight to {transit.airport.code}</span>
+                </Link>
+              </div>
+
+              {/* Pillar 2: Nearest Railway Station */}
+              <div className="p-5 rounded-2xl bg-gradient-to-b from-amber-950/30 to-navy-900/80 border border-amber-500/20 hover:border-amber-500/40 transition-all flex flex-col justify-between space-y-4">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                      <Train className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-mono font-bold px-2 py-0.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                      {transit.railway.code}
+                    </span>
+                  </div>
+                  <span className="text-[11px] uppercase font-bold tracking-wider text-amber-400 block mb-1">
+                    Nearest Railway Station
+                  </span>
+                  <h4 className="text-base font-bold text-white mb-2">
+                    {transit.railway.name}
+                  </h4>
+                  <div className="flex items-center gap-2 text-xs text-slate-300 mb-2">
+                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-emerald-300 font-semibold">
+                      📍 {transit.railway.distance}
+                    </span>
+                    <span className="text-slate-400">⏱️ {transit.railway.time}</span>
+                  </div>
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    {transit.railway.connectivity || 'Regular superfast trains, intercity express, and passenger services.'}
+                  </p>
+                </div>
+
+                <Link
+                  to={`/?bookingTab=trains&bookingTo=${transit.railway.code}#booking-section`}
+                  className="w-full py-2 px-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs transition-all text-center flex items-center justify-center gap-2 shadow-sm"
+                >
+                  <Train className="w-3.5 h-3.5" />
+                  <span>Check Trains to {transit.railway.code}</span>
+                </Link>
+              </div>
+
+              {/* Pillar 3: Nearest Bus Stand */}
+              <div className="p-5 rounded-2xl bg-gradient-to-b from-emerald-950/30 to-navy-900/80 border border-emerald-500/20 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-4">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
+                      <Bus className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-mono font-bold px-2 py-0.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                      ISBT
+                    </span>
+                  </div>
+                  <span className="text-[11px] uppercase font-bold tracking-wider text-emerald-400 block mb-1">
+                    Nearest Bus Stand / ISBT
+                  </span>
+                  <h4 className="text-base font-bold text-white mb-2">
+                    {transit.busStand.name}
+                  </h4>
+                  <div className="flex items-center gap-2 text-xs text-slate-300 mb-2">
+                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-emerald-300 font-semibold">
+                      📍 {transit.busStand.distance}
+                    </span>
+                    <span className="text-slate-400">⏱️ {transit.busStand.time}</span>
+                  </div>
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    {transit.busStand.operators || 'State RTC buses and private Volvo luxury sleeper services.'}
+                  </p>
+                </div>
+
+                <Link
+                  to={`/?bookingTab=buses&bookingTo=${encodeURIComponent(destination.name)}#booking-section`}
+                  className="w-full py-2 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all text-center flex items-center justify-center gap-2 shadow-sm"
+                >
+                  <Bus className="w-3.5 h-3.5" />
+                  <span>Book Bus Tickets</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Bottom Row: Road & Local Transport */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-white/10 text-xs">
+              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-start gap-3">
+                <Car className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white block font-semibold">Highway & Driving Route:</strong>
+                  <span className="text-slate-300">{transit.road.highway}</span>
+                  {transit.road.condition && (
+                    <span className="text-slate-400 block text-[11px] mt-0.5">{transit.road.condition}</span>
+                  )}
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-start gap-3">
+                <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white block font-semibold">Local Commute Options:</strong>
+                  <span className="text-slate-300">{transit.localTransport}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Nearby Destinations */}
           {nearbySpots.length > 0 && (
             <section className="bg-navy-900/70 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-glass">
@@ -377,46 +551,180 @@ export const DestinationDetail = () => {
             </div>
           </div>
 
-          {/* How to Reach Card */}
-          <div className="bg-navy-900/90 border border-white/15 rounded-3xl p-6 shadow-glass space-y-5">
-            <h3 className="text-lg font-bold font-serif text-white flex items-center gap-2">
-              <Compass className="w-5 h-5 text-saffron-400" />
-              <span>How to Reach</span>
-            </h3>
-
-            {/* Airport */}
-            <div className="flex items-start gap-3 text-xs">
-              <Plane className="w-4 h-4 text-saffron-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-white block">Nearest Airport:</strong>
-                <span className="text-slate-300">{destination.howToReach.airport}</span>
-              </div>
+          {/* Nearest Transit Hubs Card (Upgraded How to Reach) */}
+          <div className="bg-navy-900/90 border border-white/15 rounded-3xl p-6 shadow-glass space-y-4">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <h3 className="text-base font-bold font-serif text-white flex items-center gap-2">
+                <Compass className="w-4 h-4 text-saffron-400" />
+                <span>Nearest Transit Hubs</span>
+              </h3>
+              <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-saffron-500/10 text-saffron-400 border border-saffron-500/20">
+                Direct Links
+              </span>
             </div>
 
-            {/* Railway */}
-            <div className="flex items-start gap-3 text-xs">
-              <Train className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-white block">Railway Station:</strong>
-                <span className="text-slate-300">{destination.howToReach.railway}</span>
-              </div>
+            {/* Mode Switcher Filter */}
+            <div className="grid grid-cols-4 gap-1 p-1 rounded-xl bg-white/5 border border-white/10 text-[10px] font-semibold text-slate-300">
+              <button
+                type="button"
+                onClick={() => setTransitTab('all')}
+                className={`py-1 rounded-lg transition-all text-center ${
+                  transitTab === 'all' ? 'bg-saffron-500 text-white shadow-sm' : 'hover:text-white'
+                }`}
+              >
+                All
+              </button>
+              <button
+                type="button"
+                onClick={() => setTransitTab('airport')}
+                className={`py-1 rounded-lg transition-all flex items-center justify-center gap-1 ${
+                  transitTab === 'airport' ? 'bg-saffron-500 text-white shadow-sm' : 'hover:text-white'
+                }`}
+              >
+                <Plane className="w-3 h-3" />
+                <span>Air</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setTransitTab('railway')}
+                className={`py-1 rounded-lg transition-all flex items-center justify-center gap-1 ${
+                  transitTab === 'railway' ? 'bg-saffron-500 text-white shadow-sm' : 'hover:text-white'
+                }`}
+              >
+                <Train className="w-3 h-3" />
+                <span>Train</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setTransitTab('busStand')}
+                className={`py-1 rounded-lg transition-all flex items-center justify-center gap-1 ${
+                  transitTab === 'busStand' ? 'bg-saffron-500 text-white shadow-sm' : 'hover:text-white'
+                }`}
+              >
+                <Bus className="w-3 h-3" />
+                <span>Bus</span>
+              </button>
             </div>
 
-            {/* Road */}
-            <div className="flex items-start gap-3 text-xs">
-              <Car className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-white block">Road & Highway:</strong>
-                <span className="text-slate-300">{destination.howToReach.road}</span>
+            {/* 1. Nearest Airport */}
+            {(transitTab === 'all' || transitTab === 'airport') && (
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-2 group hover:border-blue-500/40 transition-colors">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center shrink-0">
+                      <Plane className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-400 font-semibold uppercase block">Nearest Airport</span>
+                      <strong className="text-white text-xs font-bold block line-clamp-1">{transit.airport.name}</strong>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 shrink-0">
+                    {transit.airport.code}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-[11px] text-slate-300">
+                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-emerald-400 font-semibold">
+                    📍 {transit.airport.distance}
+                  </span>
+                  <span className="text-slate-400">⏱️ {transit.airport.time} drive</span>
+                </div>
+                <Link
+                  to={`/?bookingTab=flights&bookingTo=${transit.airport.code}#booking-section`}
+                  className="w-full mt-1.5 py-1.5 px-3 rounded-xl bg-blue-500/15 hover:bg-blue-600 text-blue-300 hover:text-white text-[11px] font-semibold transition-all flex items-center justify-center gap-1.5 border border-blue-500/25"
+                >
+                  <Ticket className="w-3 h-3" />
+                  <span>Book Flight to {transit.airport.code}</span>
+                </Link>
               </div>
+            )}
+
+            {/* 2. Nearest Railway Station */}
+            {(transitTab === 'all' || transitTab === 'railway') && (
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-2 group hover:border-amber-500/40 transition-colors">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0">
+                      <Train className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-400 font-semibold uppercase block">Nearest Railway Station</span>
+                      <strong className="text-white text-xs font-bold block line-clamp-1">{transit.railway.name}</strong>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 shrink-0">
+                    {transit.railway.code}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-[11px] text-slate-300">
+                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-emerald-400 font-semibold">
+                    📍 {transit.railway.distance}
+                  </span>
+                  <span className="text-slate-400">⏱️ {transit.railway.time}</span>
+                </div>
+                <Link
+                  to={`/?bookingTab=trains&bookingTo=${transit.railway.code}#booking-section`}
+                  className="w-full mt-1.5 py-1.5 px-3 rounded-xl bg-amber-500/15 hover:bg-amber-600 text-amber-300 hover:text-white text-[11px] font-semibold transition-all flex items-center justify-center gap-1.5 border border-amber-500/25"
+                >
+                  <Train className="w-3 h-3" />
+                  <span>Check Trains to {transit.railway.code}</span>
+                </Link>
+              </div>
+            )}
+
+            {/* 3. Nearest Bus Stand */}
+            {(transitTab === 'all' || transitTab === 'busStand') && (
+              <div className="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-2 group hover:border-emerald-500/40 transition-colors">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0">
+                      <Bus className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-400 font-semibold uppercase block">Nearest Bus Stand / ISBT</span>
+                      <strong className="text-white text-xs font-bold block line-clamp-1">{transit.busStand.name}</strong>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 shrink-0">
+                    ISBT
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-[11px] text-slate-300">
+                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-emerald-400 font-semibold">
+                    📍 {transit.busStand.distance}
+                  </span>
+                  <span className="text-slate-400">⏱️ {transit.busStand.time}</span>
+                </div>
+                <Link
+                  to={`/?bookingTab=buses&bookingTo=${encodeURIComponent(destination.name)}#booking-section`}
+                  className="w-full mt-1.5 py-1.5 px-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-600 text-emerald-300 hover:text-white text-[11px] font-semibold transition-all flex items-center justify-center gap-1.5 border border-emerald-500/25"
+                >
+                  <Bus className="w-3 h-3" />
+                  <span>Book Bus Tickets</span>
+                </Link>
+              </div>
+            )}
+
+            {/* Road / Driving Directions */}
+            <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs">
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination.name + ', ' + destination.state + ', India')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs text-saffron-400 hover:text-saffron-300 font-semibold hover:underline"
+              >
+                <Navigation className="w-3.5 h-3.5" />
+                <span>Driving Directions on Maps</span>
+                <ExternalLink className="w-3 h-3 ml-0.5" />
+              </a>
             </div>
 
-            {/* Local Transit */}
-            <div className="flex items-start gap-3 text-xs pt-3 border-t border-white/10">
-              <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+            {/* Local Transit summary */}
+            <div className="flex items-start gap-2.5 text-[11px] text-slate-300 pt-2 border-t border-white/5">
+              <Info className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
               <div>
-                <strong className="text-white block">Local Transportation:</strong>
-                <span className="text-slate-300">{destination.howToReach.localTransport}</span>
+                <strong className="text-white block font-semibold">Local Transportation:</strong>
+                <span className="text-slate-400 leading-snug">{transit.localTransport}</span>
               </div>
             </div>
           </div>
