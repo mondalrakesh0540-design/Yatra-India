@@ -43,16 +43,40 @@ function AppContent() {
   const location = useLocation();
   const isAuthPage = location.pathname === '/login' || location.pathname.endsWith('/login');
 
+  const baseUrl = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || '/';
+  const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+
   return (
-    <div className="min-h-screen flex flex-col bg-navy-950 text-slate-100">
+    <div className="min-h-screen flex flex-col bg-navy-950 text-slate-100 relative">
+      {/* Global Realistic Travel Video Background with Blur */}
+      <div className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+          className="absolute inset-0 w-full h-full object-cover scale-110 filter blur-[9px] opacity-40 transition-opacity duration-1000"
+        >
+          <source src={`${cleanBase}videos/clouds-travel.webm`} type="video/webm" />
+          <source src={`${cleanBase}videos/varanasi-boat.webm`} type="video/webm" />
+        </video>
+        {/* Cinematic Dark Tint & Gradients for Crisp Legibility and Contrast */}
+        <div className="absolute inset-0 bg-navy-950/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-transparent to-navy-950/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(249,115,22,0.06)_0%,_transparent_70%)]" />
+      </div>
+
       {/* Navbar */}
-      {!isAuthPage && <Navbar onOpenSearch={() => setIsSearchOpen(true)} />}
+      <div className="relative z-50">
+        {!isAuthPage && <Navbar onOpenSearch={() => setIsSearchOpen(true)} />}
+      </div>
 
       {/* Global Search Modal */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
       {/* Main Application Routes */}
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         <Routes>
           <Route path="/" element={<Home onOpenSearch={() => setIsSearchOpen(true)} />} />
           <Route path="/destinations" element={<Destinations />} />
@@ -71,7 +95,9 @@ function AppContent() {
       </main>
 
       {/* Footer */}
-      {!isAuthPage && <Footer />}
+      <div className="relative z-10">
+        {!isAuthPage && <Footer />}
+      </div>
     </div>
   );
 }
