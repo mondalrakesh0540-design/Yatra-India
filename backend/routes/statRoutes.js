@@ -10,19 +10,23 @@ import Hotel from '../models/Hotel.js';
 import Review from '../models/Review.js';
 import Booking from '../models/Booking.js';
 import User from '../models/User.js';
+import Contact from '../models/Contact.js';
+import Newsletter from '../models/Newsletter.js';
 
 router.get('/', protect, authorizeRoles('admin', 'superadmin'), getOverviewStats);
 
 // Database backup export (JSON)
 router.get('/backup', protect, authorizeRoles('admin', 'superadmin'), async (req, res, next) => {
   try {
-    const [destinations, states, hotels, reviews, bookings, users] = await Promise.all([
+    const [destinations, states, hotels, reviews, bookings, users, contacts, newsletters] = await Promise.all([
       Destination.find(),
       State.find(),
       Hotel.find(),
       Review.find(),
       Booking.find(),
-      User.find()
+      User.find(),
+      Contact.find(),
+      Newsletter.find()
     ]);
 
     const backupData = {
@@ -34,7 +38,9 @@ router.get('/backup', protect, authorizeRoles('admin', 'superadmin'), async (req
         hotels: hotels.length,
         reviews: reviews.length,
         bookings: bookings.length,
-        users: users.length
+        users: users.length,
+        contacts: contacts.length,
+        newsletters: newsletters.length
       },
       data: {
         destinations,
@@ -42,7 +48,9 @@ router.get('/backup', protect, authorizeRoles('admin', 'superadmin'), async (req
         hotels,
         reviews,
         bookings,
-        users
+        users,
+        contacts,
+        newsletters
       }
     };
 
