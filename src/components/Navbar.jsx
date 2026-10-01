@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Heart, MapPin, Compass, BookOpen, Layers, Menu, X, ArrowRight, Sparkles, Scale, User, LogOut, Ticket, ChevronDown } from 'lucide-react';
+import { Search, Heart, MapPin, Compass, BookOpen, Layers, Menu, X, ArrowRight, Sparkles, Scale, User, LogOut, Ticket, ChevronDown, ShieldCheck } from 'lucide-react';
 import { useSaved } from '../context/SavedContext';
 import { useAuth } from '../context/AuthContext';
 
@@ -179,6 +179,14 @@ export const Navbar = ({ onOpenSearch }) => {
                         <Heart className="w-4 h-4 text-saffron-400" />
                         <span>Saved Wishlist ({savedDestinations.length})</span>
                       </Link>
+                      <Link
+                        to="/admin"
+                        onClick={() => setUserDropdownOpen(false)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
+                      >
+                        <ShieldCheck className="w-4 h-4 text-saffron-400" />
+                        <span>Admin Dashboard</span>
+                      </Link>
                     </div>
 
                     <div className="pt-1 border-t border-white/10">
@@ -247,6 +255,18 @@ export const Navbar = ({ onOpenSearch }) => {
               <span>Saved Wishlist</span>
               <span className="text-xs bg-saffron-500/20 text-saffron-400 px-2 py-0.5 rounded-full">
                 {savedDestinations.length} saved
+              </span>
+            </Link>
+            <Link
+              to="/admin"
+              className="flex items-center justify-between text-lg font-medium text-slate-200 hover:text-saffron-400 py-2 border-b border-white/5"
+            >
+              <span className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-saffron-400" />
+                <span>Admin Dashboard</span>
+              </span>
+              <span className="text-xs bg-saffron-500/20 text-saffron-400 px-2 py-0.5 rounded-full">
+                Portal
               </span>
             </Link>
           </div>
