@@ -6,17 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YATRA INDIA — Discover India. Experience the Extraordinary.</title>
     <meta name="description" content="Discover India's iconic destinations, hidden valleys, royal palaces, spiritual ghats, pristine beaches and majestic mountains across all 28 states and 8 union territories." />
+    <meta name="theme-color" content="#060913" />
+    <link rel="manifest" href="/Yatra-India/manifest.json" />
+
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="YATRA INDIA — Discover India. Experience the Extraordinary." />
-    <meta property="og:description" content="A premium tourism discovery and trip planning platform for India." />
+    <meta property="og:description" content="A premium tourism discovery, transit booking, and trip planning platform for India." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristInformationCenter",
+        "name": "YATRA INDIA",
+        "url": "https://yatraindia.com",
+        "description": "Discover India's iconic destinations, 36 states and union territories, hotels, and transit routes.",
+        "areaServed": "India",
+        "currenciesAccepted": "INR"
+      }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/Yatra-India/assets/index-4NpEcv7-.js"></script>
-    <link rel="stylesheet" crossorigin href="/Yatra-India/assets/index-BXLsvipd.css">
+    <script type="module" crossorigin src="/Yatra-India/assets/index-DFZ0Vau0.js"></script>
+    <link rel="stylesheet" crossorigin href="/Yatra-India/assets/index-DJQTPn0n.css">
   </head>
   <body class="bg-navy-950 text-slate-100 antialiased selection:bg-saffron-500 selection:text-white font-sans overflow-x-hidden">
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator && !window.location.host.includes('localhost')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
   </body>
 </html>
