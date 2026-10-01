@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
-import { syncUserSavedDestinations, getUserSavedDestinations } from '../services/firestoreService';
+import { authApi } from '../services/api';
 
 const SavedContext = createContext();
 
@@ -34,18 +34,14 @@ export const SavedProvider = ({ children }) => {
     }
   });
 
-  // Pull saved destinations from Firestore when user logs in
+  // Pull saved destinations from user profile (MongoDB) when user logs in
   useEffect(() => {
-    if (user?.uid) {
-      getUserSavedDestinations(user.uid).then((cloudSaved) => {
-        if (cloudSaved && Array.isArray(cloudSaved) && cloudSaved.length > 0) {
-          setSavedDestinations((prev) => Array.from(new Set([...prev, ...cloudSaved])));
-        }
-      });
+    if (user?.savedDestinations && Array.isArray(user.savedDestinations) && user.savedDestinations.length > 0) {
+      setSavedDestinations((prev) => Array.from(new Set([...prev, ...user.savedDestinations])));
     }
   }, [user]);
 
-  // Sync saved destinations to local storage and Firestore
+  // Sync saved destinations to local storage and MongoDB
   useEffect(() => {
     try {
       localStorage.setItem('yatra_saved_destinations', JSON.stringify(savedDestinations));
@@ -53,8 +49,8 @@ export const SavedProvider = ({ children }) => {
       console.error(e);
     }
 
-    if (user?.uid) {
-      syncUserSavedDestinations(user.uid, savedDestinations);
+    if (user) {
+      authApi.syncSaved(savedDestinations).catch(() => {});
     }
   }, [savedDestinations, user]);
 

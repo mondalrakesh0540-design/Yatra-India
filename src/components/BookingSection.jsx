@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useAuth } from '../context/AuthContext';
-import { createBooking, getUserBookings } from '../services/firestoreService';
+import { bookingsApi } from '../services/api';
 import { 
   AIRPORTS, 
   TRAIN_STATIONS, 
@@ -98,8 +98,8 @@ export const BookingSection = () => {
   const [couponMessage, setCouponMessage] = useState('Coupon YATRA100 applied successfully!');
   const [generatedPnr, setGeneratedPnr] = useState('');
 
-  // Firebase Auth & Firestore Bookings Integration
-  const { user, isFirebaseConfigured } = useAuth();
+  // MongoDB Auth & Bookings Integration
+  const { user, isBackendConnected } = useAuth();
   const [myBookingsList, setMyBookingsList] = useState([]);
   const [loadingBookings, setLoadingBookings] = useState(false);
   const [copiedPnr, setCopiedPnr] = useState(null);
@@ -107,16 +107,16 @@ export const BookingSection = () => {
   // Sync passenger info from logged-in user
   useEffect(() => {
     if (user) {
-      if (user.displayName) setPassengerName(user.displayName);
+      if (user.name || user.displayName) setPassengerName(user.name || user.displayName);
       if (user.email) setPassengerEmail(user.email);
     }
   }, [user]);
 
-  // Load user bookings from Firestore / Local Storage
+  // Load user bookings from MongoDB / Local Storage
   const loadBookings = async () => {
     setLoadingBookings(true);
     try {
-      const list = await getUserBookings(user?.uid, user?.email);
+      const list = await bookingsApi.getUserBookings(user?.id || user?.uid, user?.email);
       setMyBookingsList(list);
     } catch (e) {
       console.warn('Error fetching bookings:', e);
@@ -216,7 +216,7 @@ export const BookingSection = () => {
     }
   };
 
-  // Final confirmation & Firestore Persistence
+  // Final confirmation & MongoDB / Local Persistence
   const handleConfirmBooking = async () => {
     const pnr = `YTR${Math.floor(10000000 + Math.random() * 90000000)}`;
     setGeneratedPnr(pnr);
@@ -228,7 +228,7 @@ export const BookingSection = () => {
     const bookingPayload = {
       pnr,
       type: activeTab,
-      userId: user?.uid || null,
+      userId: user?.id || user?.uid || null,
       passengerName,
       passengerAge,
       passengerGender,
@@ -249,7 +249,7 @@ export const BookingSection = () => {
     };
 
     try {
-      await createBooking(bookingPayload);
+      await bookingsApi.createBooking(bookingPayload);
       loadBookings();
     } catch (err) {
       console.warn('Booking persistence notification:', err);
@@ -795,7 +795,7 @@ export const BookingSection = () => {
                 </button>
 
                 <span className="text-[11px] px-2.5 py-1 rounded-full bg-navy-950 border border-white/10 text-slate-300">
-                  {isFirebaseConfigured ? 'Cloud Firestore' : 'Local Storage'}
+                  {isBackendConnected ? 'MongoDB API' : 'Local Storage Mode'}
                 </span>
               </div>
             </div>

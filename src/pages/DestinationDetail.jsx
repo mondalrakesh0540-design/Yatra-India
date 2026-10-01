@@ -9,7 +9,7 @@ import {
 import { DESTINATIONS } from '../data/destinations';
 import { useSaved } from '../context/SavedContext';
 import { useAuth } from '../context/AuthContext';
-import { addDestinationReview, getDestinationReviews } from '../services/firestoreService';
+import { reviewsApi } from '../services/api';
 
 export const DestinationDetail = () => {
   const { id } = useParams();
@@ -41,13 +41,13 @@ export const DestinationDetail = () => {
   const [reviewMessage, setReviewMessage] = useState('');
 
   useEffect(() => {
-    if (user?.displayName) {
-      setAuthorName(user.displayName);
+    if (user?.name || user?.displayName) {
+      setAuthorName(user.name || user.displayName);
     }
   }, [user]);
 
   useEffect(() => {
-    getDestinationReviews(destination.id).then((revs) => {
+    reviewsApi.getDestinationReviews(destination.id).then((revs) => {
       setReviewsList(revs || []);
     });
   }, [destination.id]);
@@ -59,8 +59,8 @@ export const DestinationDetail = () => {
     setReviewMessage('');
 
     try {
-      const savedReview = await addDestinationReview(destination.id, {
-        userName: authorName.trim() || user?.displayName || 'Fellow Traveler',
+      const savedReview = await reviewsApi.addDestinationReview(destination.id, {
+        userName: authorName.trim() || user?.name || user?.displayName || 'Fellow Traveler',
         userEmail: user?.email || null,
         rating: Number(newRating),
         comment: newComment.trim()

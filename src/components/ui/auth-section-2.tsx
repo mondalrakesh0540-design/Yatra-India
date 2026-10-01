@@ -247,26 +247,9 @@ function FocusCorners({ active }: { active: boolean }) {
 }
 
 function getFriendlyErrorMessage(err: any) {
-  const code = err?.code || "";
-  if (code === "auth/invalid-credential" || code === "auth/wrong-password") {
-    return "Invalid email or password. Please verify your credentials.";
-  }
-  if (code === "auth/user-not-found") {
-    return "No account found with this email. Please create an account.";
-  }
-  if (code === "auth/email-already-in-use") {
-    return "An account with this email already exists. Please sign in.";
-  }
-  if (code === "auth/weak-password") {
-    return "Password is too weak. Please use at least 6 characters.";
-  }
-  if (code === "auth/invalid-email") {
-    return "Please enter a valid email address.";
-  }
-  if (code === "auth/popup-closed-by-user") {
-    return "Sign-in popup was closed before completing.";
-  }
-  return err?.message || "An authentication error occurred. Please try again.";
+  if (err?.data?.message) return err.data.message;
+  if (err?.message) return err.message;
+  return "An authentication error occurred. Please try again.";
 }
 
 function AuthForm({
@@ -285,7 +268,7 @@ function AuthForm({
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
-  const { login, signup, loginWithGoogle, isFirebaseConfigured } = useAuth();
+  const { login, signup, loginWithGoogle, isBackendConnected } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -303,7 +286,7 @@ function AuthForm({
         }
         const displayName = `${firstName} ${lastName}`.trim() || "Traveler";
         await signup(email, password, displayName);
-        setSuccess("Account successfully created with Firebase!");
+        setSuccess("Account successfully created!");
       } else {
         if (!email || !password) {
           throw new Error("Please provide your email and password.");
@@ -345,17 +328,17 @@ function AuthForm({
 
   return (
     <div className="mx-auto w-full max-w-[480px] rounded-2xl border border-white/10 bg-navy-900/75 p-7 sm:p-10 backdrop-blur-xl shadow-glass text-center">
-      {/* Firebase Backend Indicator Badge */}
+      {/* MongoDB Backend Indicator Badge */}
       <div className="mb-4 flex items-center justify-center">
-        {isFirebaseConfigured ? (
+        {isBackendConnected ? (
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Connected to Firebase Cloud Backend</span>
+            <span>Connected to MongoDB Backend API</span>
           </span>
         ) : (
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-medium">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Firebase Demo / Local Mode Active</span>
+            <span>MongoDB Local Session Active</span>
           </span>
         )}
       </div>
@@ -470,7 +453,7 @@ function AuthForm({
           {loading ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              <span>Connecting with Firebase...</span>
+              <span>Authenticating...</span>
             </>
           ) : mode === "login" ? (
             "Sign In"

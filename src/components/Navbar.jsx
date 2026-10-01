@@ -147,7 +147,7 @@ export const Navbar = ({ onOpenSearch }) => {
                       {(user.displayName || user.email || 'T')[0].toUpperCase()}
                     </div>
                   )}
-                  <span className="max-w-[100px] truncate">{user.displayName || user.email?.split('@')[0] || 'Traveler'}</span>
+                  <span className="max-w-[100px] truncate">{user.name || user.displayName || user.email?.split('@')[0] || 'Traveler'}</span>
                   <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
                 </button>
 
@@ -155,10 +155,10 @@ export const Navbar = ({ onOpenSearch }) => {
                 {userDropdownOpen && (
                   <div className="absolute right-0 top-full mt-2 w-60 rounded-2xl bg-navy-900/95 backdrop-blur-xl border border-white/15 shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2">
                     <div className="px-3 py-2 border-b border-white/10">
-                      <p className="text-xs font-semibold text-white truncate">{user.displayName || 'Traveler'}</p>
+                      <p className="text-xs font-semibold text-white truncate">{user.name || user.displayName || 'Traveler'}</p>
                       <p className="text-[11px] text-slate-400 truncate">{user.email}</p>
                       <span className="inline-block mt-1 text-[10px] text-saffron-400 font-medium bg-saffron-500/10 px-2 py-0.5 rounded border border-saffron-500/20">
-                        {user.isDemo ? 'Demo Mode' : 'Firebase Verified'}
+                        {user.isLocalFallback ? 'Local Mode' : 'MongoDB Verified'}
                       </span>
                     </div>
 
@@ -287,7 +287,7 @@ export const Navbar = ({ onOpenSearch }) => {
                     </div>
                   )}
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-semibold text-white truncate">{user.displayName || 'Traveler'}</p>
+                    <p className="text-sm font-semibold text-white truncate">{user.name || user.displayName || 'Traveler'}</p>
                     <p className="text-xs text-slate-400 truncate">{user.email}</p>
                   </div>
                 </div>
