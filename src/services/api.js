@@ -409,3 +409,37 @@ export const bookingsApi = {
     return data.booking;
   }
 };
+
+/**
+ * ----------------------------------------------------
+ * CONTACT & SUPPORT API
+ * ----------------------------------------------------
+ */
+export const contactApi = {
+  async submitContact(formData) {
+    return await request('/contact', {
+      method: 'POST',
+      body: JSON.stringify(formData)
+    });
+  },
+
+  async getAllContacts() {
+    const data = await request('/contact', { method: 'GET' });
+    return data.contacts || [];
+  }
+};
+
+/**
+ * ----------------------------------------------------
+ * NEWSLETTER API
+ * ----------------------------------------------------
+ */
+export const newsletterApi = {
+  async subscribe(email) {
+    return await request('/newsletter', {
+      method: 'POST',
+      body: JSON.stringify({ email })
+    });
+  }
+};
+

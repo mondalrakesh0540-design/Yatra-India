@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { SavedProvider } from './context/SavedContext';
+import { LanguageProvider } from './context/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { SearchModal } from './components/SearchModal';
@@ -17,6 +18,8 @@ import { Saved } from './pages/Saved';
 import { Compare } from './pages/Compare';
 import { Stories } from './pages/Stories';
 import { StoryDetail } from './pages/StoryDetail';
+import { About } from './pages/About';
+import { Contact } from './pages/Contact';
 import { AdminDashboard } from './pages/AdminDashboard';
 import { Albums } from './pages/Albums';
 import { Login } from './pages/Login';
@@ -97,6 +100,8 @@ function AppContent() {
           <Route path="/compare" element={<Compare />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="/story/:id" element={<StoryDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           
           {/* Authentication & User Routes */}
           <Route path="/login" element={<Login defaultIsAdmin={false} />} />
@@ -131,14 +136,16 @@ function AppContent() {
 
 export function App() {
   return (
-    <AuthProvider>
-      <SavedProvider>
-        <Router basename={import.meta.env.BASE_URL}>
-          <ScrollToTop />
-          <AppContent />
-        </Router>
-      </SavedProvider>
-    </AuthProvider>
+    <LanguageProvider>
+      <AuthProvider>
+        <SavedProvider>
+          <Router basename={import.meta.env.BASE_URL}>
+            <ScrollToTop />
+            <AppContent />
+          </Router>
+        </SavedProvider>
+      </AuthProvider>
+    </LanguageProvider>
   );
 }
 

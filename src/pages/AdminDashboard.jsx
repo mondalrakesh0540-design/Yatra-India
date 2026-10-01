@@ -25,7 +25,8 @@ import {
   Loader2,
   X,
   ExternalLink,
-  ShieldAlert
+  ShieldAlert,
+  Download
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { 
@@ -265,6 +266,33 @@ export const AdminDashboard = () => {
     }
   };
 
+  const [backingUp, setBackingUp] = useState(false);
+
+  const handleExportBackup = async () => {
+    try {
+      setBackingUp(true);
+      const token = localStorage.getItem('yatra_token');
+      const res = await fetch('http://localhost:5000/api/stats/backup', {
+        headers: token ? { Authorization: `Bearer ${token}` } : {}
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'Failed to download backup');
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `yatra_india_db_backup_${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      alert(`Database backup error: ${err.message}`);
+    } finally {
+      setBackingUp(false);
+    }
+  };
+
   const filteredDestinations = destinationsList.filter(d =>
     d.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     d.state?.toLowerCase().includes(searchQuery.toLowerCase())
@@ -287,7 +315,7 @@ export const AdminDashboard = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={fetchDashboardData}
             disabled={refreshing}
@@ -295,6 +323,17 @@ export const AdminDashboard = () => {
           >
             <RefreshCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin' : ''}`} />
             <span>Sync MongoDB</span>
+          </button>
+
+          {/* 1-Click Database Backup Export (Roadmap Step 10) */}
+          <button
+            onClick={handleExportBackup}
+            disabled={backingUp}
+            className="px-3.5 py-2 rounded-xl bg-saffron-500/15 border border-saffron-500/30 hover:bg-saffron-500/25 text-saffron-300 text-xs font-semibold flex items-center gap-2 transition-all disabled:opacity-50"
+            title="Download full JSON snapshot of all collections"
+          >
+            <Download className={`w-3.5 h-3.5 ${backingUp ? 'animate-bounce' : ''}`} />
+            <span>{backingUp ? 'Exporting...' : '1-Click DB Backup'}</span>
           </button>
 
           <button

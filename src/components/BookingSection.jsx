@@ -4,6 +4,9 @@ import {
   Plane, 
   Train, 
   Bus, 
+  Hotel,
+  Star,
+  BedDouble,
   ArrowLeftRight, 
   Calendar, 
   Users, 
@@ -27,7 +30,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useAuth } from '../context/AuthContext';
-import { bookingsApi } from '../services/api';
+import { bookingsApi, hotelsApi } from '../services/api';
 import { 
   AIRPORTS, 
   TRAIN_STATIONS, 
@@ -80,6 +83,44 @@ export const BookingSection = () => {
     return d.toISOString().split('T')[0];
   });
   const [busType, setBusType] = useState('ALL');
+
+  // Hotel form state (Roadmap Step 11)
+  const [hotelDestination, setHotelDestination] = useState('ALL');
+  const [hotelCheckIn, setHotelCheckIn] = useState(() => {
+    const d = new Date();
+    d.setDate(d.getDate() + 2);
+    return d.toISOString().split('T')[0];
+  });
+  const [hotelCheckOut, setHotelCheckOut] = useState(() => {
+    const d = new Date();
+    d.setDate(d.getDate() + 5);
+    return d.toISOString().split('T')[0];
+  });
+  const [hotelGuests, setHotelGuests] = useState(2);
+  const [hotelRooms, setHotelRooms] = useState(1);
+  const [hotelsList, setHotelsList] = useState([]);
+  const [loadingHotels, setLoadingHotels] = useState(false);
+
+  const loadHotels = async (destFilter = hotelDestination) => {
+    setLoadingHotels(true);
+    try {
+      const data = await hotelsApi.getHotels();
+      if (destFilter && destFilter !== 'ALL') {
+        const filtered = (data || []).filter((h) => 
+          h.destinationId?.toLowerCase().includes(destFilter.toLowerCase()) || 
+          h.destinationName?.toLowerCase().includes(destFilter.toLowerCase()) ||
+          h.state?.toLowerCase().includes(destFilter.toLowerCase())
+        );
+        setHotelsList(filtered);
+      } else {
+        setHotelsList(data || []);
+      }
+    } catch (e) {
+      console.warn('Unable to load hotels from API:', e);
+    } finally {
+      setLoadingHotels(false);
+    }
+  };
 
   // Search Results state
   const [searchResults, setSearchResults] = useState(null);
@@ -318,6 +359,18 @@ export const BookingSection = () => {
           >
             <Bus className="w-4 h-4" />
             <span>Buses</span>
+          </button>
+
+          <button
+            onClick={() => { setActiveTab('hotels'); setSearchResults(null); loadHotels(); }}
+            className={`flex items-center gap-2.5 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
+              activeTab === 'hotels'
+                ? 'bg-gradient-to-r from-saffron-500 to-amber-600 text-white shadow-glow-saffron'
+                : 'text-slate-300 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            <Hotel className="w-4 h-4" />
+            <span>Hotels & Stays</span>
           </button>
 
           <button
@@ -768,7 +821,235 @@ export const BookingSection = () => {
         )}
 
         {/* ======================================================== */}
-        {/* 4. MY BOOKINGS TAB */}
+        {/* 4. HOTELS & HOMESTAYS TAB (Roadmap Step 11) */}
+        {/* ======================================================== */}
+        {activeTab === 'hotels' && (
+          <div className="space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-4 text-xs">
+              <span className="text-slate-300 font-medium flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-saffron-400" />
+                <span>Handpicked heritage palaces, mountain homestays, and beachside luxury villas</span>
+              </span>
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 bg-navy-950/80 border border-white/15 rounded-lg px-3 py-1.5 text-slate-200">
+                  <BedDouble className="w-3.5 h-3.5 text-saffron-400" />
+                  <span>{hotelRooms} Room(s)</span>
+                  <div className="flex items-center gap-1 ml-2">
+                    <button
+                      type="button"
+                      disabled={hotelRooms <= 1}
+                      onClick={() => setHotelRooms((r) => Math.max(1, r - 1))}
+                      className="w-5 h-5 rounded bg-white/10 hover:bg-white/20 disabled:opacity-30 text-center leading-none"
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      disabled={hotelRooms >= 5}
+                      onClick={() => setHotelRooms((r) => Math.min(5, r + 1))}
+                      className="w-5 h-5 rounded bg-white/10 hover:bg-white/20 disabled:opacity-30 text-center leading-none"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 bg-navy-950/80 border border-white/15 rounded-lg px-3 py-1.5 text-slate-200">
+                  <Users className="w-3.5 h-3.5 text-saffron-400" />
+                  <span>{hotelGuests} Guest(s)</span>
+                  <div className="flex items-center gap-1 ml-2">
+                    <button
+                      type="button"
+                      disabled={hotelGuests <= 1}
+                      onClick={() => setHotelGuests((g) => Math.max(1, g - 1))}
+                      className="w-5 h-5 rounded bg-white/10 hover:bg-white/20 disabled:opacity-30 text-center leading-none"
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      disabled={hotelGuests >= 12}
+                      onClick={() => setHotelGuests((g) => Math.min(12, g + 1))}
+                      className="w-5 h-5 rounded bg-white/10 hover:bg-white/20 disabled:opacity-30 text-center leading-none"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Inputs Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
+              {/* Destination Filter */}
+              <div className="md:col-span-5 bg-navy-950/80 rounded-2xl p-3.5 border border-white/15 focus-within:border-saffron-500 transition-colors">
+                <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider mb-1">
+                  Destination / City
+                </span>
+                <select
+                  value={hotelDestination}
+                  onChange={(e) => {
+                    setHotelDestination(e.target.value);
+                    loadHotels(e.target.value);
+                  }}
+                  className="w-full bg-transparent text-white font-bold text-base outline-none cursor-pointer"
+                >
+                  <option value="ALL" className="bg-navy-950 text-white">All Destinations (India-wide)</option>
+                  <option value="jodhpur" className="bg-navy-950 text-white">Jodhpur, Rajasthan</option>
+                  <option value="jaipur" className="bg-navy-950 text-white">Jaipur, Rajasthan</option>
+                  <option value="agra" className="bg-navy-950 text-white">Agra, Uttar Pradesh</option>
+                  <option value="varanasi" className="bg-navy-950 text-white">Varanasi, Uttar Pradesh</option>
+                  <option value="manali" className="bg-navy-950 text-white">Manali, Himachal Pradesh</option>
+                  <option value="goa" className="bg-navy-950 text-white">Goa (Beaches & Resorts)</option>
+                  <option value="munnar" className="bg-navy-950 text-white">Munnar, Kerala</option>
+                </select>
+                <span className="text-[11px] text-slate-400 truncate block mt-0.5">
+                  Verified stays with direct host contact
+                </span>
+              </div>
+
+              {/* Check-In */}
+              <div className="md:col-span-3.5 bg-navy-950/80 rounded-2xl p-3.5 border border-white/15 focus-within:border-saffron-500 transition-colors">
+                <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider mb-1 flex items-center gap-1">
+                  <Calendar className="w-3 h-3 text-saffron-400" /> Check-in Date
+                </span>
+                <input
+                  type="date"
+                  value={hotelCheckIn}
+                  onChange={(e) => setHotelCheckIn(e.target.value)}
+                  className="w-full bg-transparent text-white font-bold text-sm outline-none cursor-pointer"
+                />
+              </div>
+
+              {/* Check-Out */}
+              <div className="md:col-span-3.5 bg-navy-950/80 rounded-2xl p-3.5 border border-white/15 focus-within:border-saffron-500 transition-colors">
+                <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider mb-1 flex items-center gap-1">
+                  <Calendar className="w-3 h-3 text-saffron-400" /> Check-out Date
+                </span>
+                <input
+                  type="date"
+                  value={hotelCheckOut}
+                  onChange={(e) => setHotelCheckOut(e.target.value)}
+                  className="w-full bg-transparent text-white font-bold text-sm outline-none cursor-pointer"
+                />
+              </div>
+            </div>
+
+            {/* Hotel Cards Grid */}
+            <div className="pt-4">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                  <Hotel className="w-4 h-4 text-saffron-400" />
+                  <span>Available Boutique Stays & Palaces ({hotelsList.length})</span>
+                </h4>
+                <button
+                  type="button"
+                  onClick={() => loadHotels(hotelDestination)}
+                  className="text-xs text-saffron-400 hover:text-saffron-300 font-semibold flex items-center gap-1"
+                >
+                  <RefreshCw className={`w-3 h-3 ${loadingHotels ? 'animate-spin' : ''}`} />
+                  <span>Update Listings</span>
+                </button>
+              </div>
+
+              {loadingHotels ? (
+                <div className="py-12 text-center text-slate-400 text-sm">
+                  Fetching verified luxury stays...
+                </div>
+              ) : hotelsList.length === 0 ? (
+                <div className="py-12 text-center text-slate-400 text-sm border border-dashed border-white/10 rounded-2xl">
+                  No hotels found for the selected destination. Try selecting "All Destinations".
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {hotelsList.map((hotel) => (
+                    <div
+                      key={hotel._id || hotel.name}
+                      className="group rounded-2xl bg-navy-950/90 border border-white/10 overflow-hidden hover:border-saffron-500/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                    >
+                      <div>
+                        <div className="relative h-44 overflow-hidden">
+                          <img
+                            src={hotel.image}
+                            alt={hotel.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80" />
+                          <div className="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-bold text-saffron-400 flex items-center gap-1 border border-white/10">
+                            <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                            <span>{hotel.rating}</span>
+                          </div>
+                          <div className="absolute top-3 right-3 bg-emerald-500/20 backdrop-blur-md border border-emerald-500/30 text-emerald-300 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
+                            {hotel.status || 'Verified'}
+                          </div>
+                        </div>
+
+                        <div className="p-4 space-y-2">
+                          <h5 className="font-bold font-serif text-white text-base group-hover:text-saffron-400 transition-colors line-clamp-1">
+                            {hotel.name}
+                          </h5>
+                          <p className="text-xs text-slate-400 flex items-center gap-1">
+                            <span>{hotel.destinationName || hotel.destinationId}</span>
+                            <span>•</span>
+                            <span className="text-slate-300 font-medium">{hotel.state}</span>
+                          </p>
+
+                          <div className="flex flex-wrap gap-1.5 pt-1">
+                            {(hotel.amenities || []).slice(0, 3).map((amenity) => (
+                              <span
+                                key={amenity}
+                                className="text-[10px] px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-slate-300"
+                              >
+                                {amenity}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="p-4 pt-2 border-t border-white/10 flex items-center justify-between bg-white/[0.02]">
+                        <div>
+                          <span className="text-[10px] text-slate-400 block uppercase tracking-wider">Per Night</span>
+                          <span className="text-base font-extrabold text-emerald-400">
+                            ₹{(hotel.pricePerNight || 3500).toLocaleString('en-IN')}
+                          </span>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelectedItinerary({
+                              airline: hotel.name,
+                              trainName: hotel.name,
+                              operator: `${hotel.destinationName || 'Luxury'} Boutique Resort`,
+                              from: hotel.destinationName || 'Destination',
+                              to: hotel.name,
+                              departureDate: hotelCheckIn,
+                              arrivalDate: hotelCheckOut,
+                              departureTime: 'Check-in: 12:00 PM',
+                              arrivalTime: 'Check-out: 11:00 AM',
+                              class: `${hotelRooms} Room(s), ${hotelGuests} Guest(s)`,
+                              price: (hotel.pricePerNight || 3500) * hotelRooms * 2,
+                              type: 'hotels'
+                            });
+                            setBookingStep('form');
+                          }}
+                          className="px-4 py-2 rounded-xl bg-gradient-to-r from-saffron-500 to-amber-600 hover:brightness-110 text-white font-bold text-xs shadow-glow-saffron transition-all flex items-center gap-1.5 cursor-pointer"
+                        >
+                          <Ticket className="w-3.5 h-3.5" />
+                          <span>Reserve Stay</span>
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* ======================================================== */}
+        {/* 5. MY BOOKINGS TAB */}
         {/* ======================================================== */}
         {activeTab === 'my-bookings' && (
           <div className="space-y-6">
@@ -850,11 +1131,11 @@ export const BookingSection = () => {
                       <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
                         <div className="flex items-center gap-2">
                           <div className="w-8 h-8 rounded-lg bg-saffron-500/15 border border-saffron-500/30 text-saffron-400 flex items-center justify-center">
-                            {b.type === 'flights' ? <Plane className="w-4 h-4" /> : b.type === 'trains' ? <Train className="w-4 h-4" /> : <Bus className="w-4 h-4" />}
+                            {b.type === 'flights' ? <Plane className="w-4 h-4" /> : b.type === 'trains' ? <Train className="w-4 h-4" /> : b.type === 'hotels' ? <Hotel className="w-4 h-4" /> : <Bus className="w-4 h-4" />}
                           </div>
                           <div>
                             <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
-                              {b.type === 'flights' ? 'Flight Ticket' : b.type === 'trains' ? 'IRCTC Train' : 'Intercity Bus'}
+                              {b.type === 'flights' ? 'Flight Ticket' : b.type === 'trains' ? 'IRCTC Train' : b.type === 'hotels' ? 'Hotel Stay' : 'Intercity Bus'}
                             </span>
                             <span className="text-xs font-semibold text-white">
                               {b.itinerary?.airline || b.itinerary?.trainName || b.itinerary?.operator || 'Confirmed Journey'}

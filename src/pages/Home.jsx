@@ -4,6 +4,7 @@ import { BookingSection } from '../components/BookingSection';
 import { TrendingDestinations } from '../components/TrendingDestinations';
 import { IndiaMap } from '../components/IndiaMap';
 import { CategoryGrid } from '../components/CategoryGrid';
+import { AIRecommender } from '../components/AIRecommender';
 import { HiddenGems } from '../components/HiddenGems';
 import { StateExplorer } from '../components/StateExplorer';
 import { SeasonalDestinations } from '../components/SeasonalDestinations';
@@ -18,11 +19,14 @@ export const Home = ({ onOpenSearch }) => {
       {/* 2. Cinematic Hero with 3. Search */}
       <Hero onOpenSearch={onOpenSearch} />
 
-      {/* Flight, Train & Bus Booking Engine */}
+      {/* Flight, Train, Bus & Hotel Booking Engine */}
       <BookingSection />
 
       {/* 4. Trending Destinations Carousel */}
       <TrendingDestinations />
+
+      {/* AI Smart Travel Matcher (Roadmap Step 11) */}
+      <AIRecommender />
 
       {/* 5. Explore India Map (28 States & 8 UTs) */}
       <IndiaMap />

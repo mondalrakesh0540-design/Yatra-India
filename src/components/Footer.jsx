@@ -1,15 +1,124 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Compass, Heart, Instagram, Youtube, Facebook, Twitter, ArrowUp, Sparkles, MapPin, Mail, Phone } from 'lucide-react';
+import { 
+  Compass, 
+  Heart, 
+  Instagram, 
+  Youtube, 
+  Facebook, 
+  Twitter, 
+  ArrowUp, 
+  Sparkles, 
+  MapPin, 
+  Mail, 
+  Phone, 
+  Send, 
+  CheckCircle2, 
+  AlertCircle 
+} from 'lucide-react';
+import { newsletterApi } from '../services/api';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Footer = () => {
+  const { t } = useLanguage();
+  const [email, setEmail] = useState('');
+  const [subStatus, setSubStatus] = useState(null); // 'loading', 'success', 'error'
+  const [message, setMessage] = useState('');
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email || !email.includes('@')) {
+      setSubStatus('error');
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+
+    try {
+      setSubStatus('loading');
+      setMessage('');
+      const res = await newsletterApi.subscribe(email);
+      setSubStatus('success');
+      setMessage(res.message || 'Thank you for subscribing to Yatra India!');
+      setEmail('');
+    } catch (err) {
+      setSubStatus('error');
+      setMessage(err.message || 'Unable to subscribe. Please try again.');
+    }
   };
 
   return (
     <footer className="bg-navy-950 border-t border-white/10 pt-16 pb-12 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Newsletter Subscription Card (Roadmap Step 6) */}
+        <div className="mb-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-navy-900/90 via-navy-800/80 to-navy-900/90 border border-white/10 shadow-glass relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-saffron-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div className="lg:col-span-7">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-saffron-500/10 text-saffron-400 border border-saffron-500/20 mb-3">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Yatra India Dispatch</span>
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold font-serif text-white tracking-wide">
+                Get Hidden Gems & Cultural Guides in Your Inbox
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-xl leading-relaxed">
+                Join over 50,000+ passionate explorers. Handcrafted itineraries, secret monsoons, and verified transport routes sent once every week. No spam.
+              </p>
+            </div>
+
+            <div className="lg:col-span-5">
+              <form onSubmit={handleSubscribe} className="space-y-2">
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <div className="relative flex-1">
+                    <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email address..."
+                      disabled={subStatus === 'loading'}
+                      className="w-full pl-10 pr-3 py-3 rounded-xl bg-navy-950/80 border border-white/15 text-white text-xs sm:text-sm placeholder-slate-500 focus:outline-none focus:border-saffron-500 transition-colors"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={subStatus === 'loading'}
+                    className="px-5 py-3 rounded-xl bg-gradient-to-r from-saffron-500 to-amber-600 hover:brightness-110 text-white font-bold text-xs sm:text-sm shadow-glow-saffron transition-all flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer disabled:opacity-50"
+                  >
+                    {subStatus === 'loading' ? (
+                      <span>Subscribing...</span>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span>Subscribe</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                {/* Status Messages */}
+                {message && (
+                  <div className={`flex items-center gap-1.5 text-xs pt-1 ${
+                    subStatus === 'success' ? 'text-emerald-400' : 'text-rose-400'
+                  }`}>
+                    {subStatus === 'success' ? (
+                      <CheckCircle2 className="w-4 h-4 shrink-0" />
+                    ) : (
+                      <AlertCircle className="w-4 h-4 shrink-0" />
+                    )}
+                    <span>{message}</span>
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
+        </div>
+
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand Info */}
@@ -97,7 +206,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link to="/destinations" className="hover:text-saffron-400 transition-colors">
-                  Top 100+ Destinations
+                  Top 180+ Destinations
                 </Link>
               </li>
               <li>
@@ -142,12 +251,22 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Magazine & Quick Links */}
+          {/* Column 3: Resources, About & Support */}
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
-              Resources & About
+              About & Support
             </h4>
             <ul className="space-y-2.5 text-xs">
+              <li>
+                <Link to="/about" className="hover:text-saffron-400 transition-colors font-semibold text-slate-200">
+                  About Yatra India
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-saffron-400 transition-colors font-semibold text-slate-200">
+                  Contact Us & Helpdesk
+                </Link>
+              </li>
               <li>
                 <Link to="/stories" className="hover:text-saffron-400 transition-colors">
                   Travel Stories & Blogs
@@ -162,11 +281,6 @@ export const Footer = () => {
                 <Link to="/admin" className="hover:text-saffron-400 transition-colors">
                   Admin Dashboard
                 </Link>
-              </li>
-              <li>
-                <a href="#privacy" className="hover:text-saffron-400 transition-colors">
-                  Privacy Policy & Terms
-                </a>
               </li>
             </ul>
           </div>

@@ -14,24 +14,32 @@ import {
   ChevronDown, 
   ShieldCheck, 
   UserPlus,
-  KeyRound
+  KeyRound,
+  Globe
 } from 'lucide-react';
 import { useSaved } from '../context/SavedContext';
 import { useAuth } from '../context/AuthContext';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Navbar = ({ onOpenSearch }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const langDropdownRef = useRef(null);
   const location = useLocation();
   const { savedDestinations, compareList } = useSaved();
   const { user, isAuthenticated, isAdmin, isSuperAdmin, logout } = useAuth();
+  const { language, changeLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setUserDropdownOpen(false);
+      }
+      if (langDropdownRef.current && !langDropdownRef.current.contains(e.target)) {
+        setLangDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -54,14 +62,23 @@ export const Navbar = ({ onOpenSearch }) => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setUserDropdownOpen(false);
+    setLangDropdownOpen(false);
   }, [location.pathname]);
 
   const navLinks = [
-    { name: 'Destinations', path: '/destinations' },
-    { name: 'Bookings', path: '/#booking-section' },
-    { name: 'States & UTs', path: '/states' },
-    { name: 'Visual Albums', path: '/albums' },
-    { name: 'Stories', path: '/stories' },
+    { name: t('navDestinations'), path: '/destinations' },
+    { name: t('navBookings'), path: '/#booking-section' },
+    { name: t('navStates'), path: '/states' },
+    { name: t('navAlbums'), path: '/albums' },
+    { name: t('navStories'), path: '/stories' },
+    { name: t('navAbout'), path: '/about' },
+    { name: t('navContact'), path: '/contact' },
+  ];
+
+  const languages = [
+    { code: 'en', label: 'English', short: 'EN' },
+    { code: 'hi', label: 'हिन्दी', short: 'HI' },
+    { code: 'bn', label: 'বাংলা', short: 'BN' }
   ];
 
   return (
@@ -106,7 +123,41 @@ export const Navbar = ({ onOpenSearch }) => {
           </nav>
 
           {/* Right Action Icons & Auth Controls */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Language Selector Dropdown */}
+            <div className="relative" ref={langDropdownRef}>
+              <button
+                onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                aria-label="Select Language"
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-semibold text-slate-200 hover:text-white bg-white/5 hover:bg-white/10 transition-colors border border-white/10 shadow-sm"
+              >
+                <Globe className="w-3.5 h-3.5 text-saffron-400" />
+                <span className="uppercase text-[11px] font-bold">{language}</span>
+                <ChevronDown className="w-3 h-3 text-slate-400" />
+              </button>
+              {langDropdownOpen && (
+                <div className="absolute right-0 top-full mt-2 w-32 rounded-xl bg-navy-900/95 backdrop-blur-xl border border-white/15 shadow-2xl p-1 z-50 animate-in fade-in slide-in-from-top-2">
+                  {languages.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => {
+                        changeLanguage(l.code);
+                        setLangDropdownOpen(false);
+                      }}
+                      className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors text-left ${
+                        language === l.code
+                          ? 'bg-saffron-500/20 text-saffron-300 font-bold'
+                          : 'text-slate-300 hover:bg-white/10 hover:text-white'
+                      }`}
+                    >
+                      <span>{l.label}</span>
+                      <span className="text-[10px] text-slate-400 uppercase">{l.short}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Quick Search */}
             <button
               onClick={onOpenSearch}
@@ -211,7 +262,7 @@ export const Navbar = ({ onOpenSearch }) => {
                         className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
                       >
                         <User className="w-4 h-4 text-saffron-400" />
-                        <span>My Profile</span>
+                        <span>{t('navProfile')}</span>
                       </Link>
 
                       <Link
@@ -220,7 +271,7 @@ export const Navbar = ({ onOpenSearch }) => {
                         className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
                       >
                         <Ticket className="w-4 h-4 text-saffron-400" />
-                        <span>My Bookings</span>
+                        <span>{t('navBookings')}</span>
                       </Link>
 
                       <Link
@@ -229,7 +280,7 @@ export const Navbar = ({ onOpenSearch }) => {
                         className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
                       >
                         <Heart className="w-4 h-4 text-saffron-400" />
-                        <span>Wishlist ({savedDestinations.length})</span>
+                        <span>{t('navWishlist')} ({savedDestinations.length})</span>
                       </Link>
                     </div>
 
@@ -242,7 +293,7 @@ export const Navbar = ({ onOpenSearch }) => {
                         className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-red-400 hover:text-red-300 hover:bg-red-500/10 transition-colors text-left"
                       >
                         <LogOut className="w-4 h-4" />
-                        <span>Sign Out</span>
+                        <span>{t('navLogout')}</span>
                       </button>
                     </div>
                   </div>
@@ -255,14 +306,14 @@ export const Navbar = ({ onOpenSearch }) => {
                   to="/login"
                   className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 hover:bg-white/15 text-slate-200 hover:text-white transition-all border border-white/10 shadow-sm"
                 >
-                  Login
+                  {t('navSignIn')}
                 </Link>
                 <Link
                   to="/register"
                   className="px-4 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-saffron-500 to-amber-600 text-white shadow-glow-saffron hover:brightness-110 transition-all flex items-center gap-1.5"
                 >
                   <UserPlus className="w-3.5 h-3.5" />
-                  <span>Sign Up</span>
+                  <span>{t('navSignUp')}</span>
                 </Link>
               </div>
             )}
@@ -333,6 +384,28 @@ export const Navbar = ({ onOpenSearch }) => {
               </Link>
             )}
 
+            {/* Language Selector in Mobile Drawer */}
+            <div className="pt-2 pb-1 border-t border-white/10">
+              <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider block mb-2">Language / भाषा / ভাষা</span>
+              <div className="grid grid-cols-3 gap-2">
+                {languages.map((l) => (
+                  <button
+                    key={l.code}
+                    onClick={() => {
+                      changeLanguage(l.code);
+                    }}
+                    className={`py-2 rounded-xl text-xs font-semibold text-center transition-all ${
+                      language === l.code
+                        ? 'bg-saffron-500 text-white shadow-glow-saffron font-bold'
+                        : 'bg-white/5 border border-white/10 text-slate-300'
+                    }`}
+                  >
+                    {l.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -349,7 +422,7 @@ export const Navbar = ({ onOpenSearch }) => {
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-between py-2 text-base font-medium text-slate-200"
             >
-              <span>Saved Places</span>
+              <span>{t('navWishlist')}</span>
               <span className="px-2 py-0.5 rounded-full bg-saffron-500 text-white text-xs font-bold">
                 {savedDestinations.length}
               </span>

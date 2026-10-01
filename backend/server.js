@@ -15,6 +15,8 @@ import reviewRoutes from './routes/reviewRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import statRoutes from './routes/statRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
+import contactRoutes from './routes/contactRoutes.js';
+import newsletterRoutes from './routes/newsletterRoutes.js';
 
 // Error handlers
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
@@ -90,6 +92,8 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/stats', statRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.use('/api/contact', contactRoutes);
+app.use('/api/newsletter', newsletterRoutes);
 
 // Root route
 app.get('/', (req, res) => {
