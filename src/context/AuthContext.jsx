@@ -11,29 +11,32 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => getCurrentCachedUser());
   const [loading, setLoading] = useState(true);
-  const [isBackendConnected, setIsBackendConnected] = useState(false);
+  const [isBackendConnected, setIsBackendConnected] = useState(true);
 
-  // Initialize and check user session & backend health
+  // Initialize session and verify token with MongoDB on load/refresh
   useEffect(() => {
     let mounted = true;
 
     async function initAuth() {
-      // Check MongoDB backend health
-      const isOnline = await checkBackendHealth();
-      if (mounted) setIsBackendConnected(isOnline);
+      try {
+        const isOnline = await checkBackendHealth();
+        if (mounted) setIsBackendConnected(isOnline);
 
-      const token = getToken();
-      if (token) {
-        try {
+        const token = getToken();
+        if (token) {
           const profile = await authApi.getMe();
           if (mounted && profile) {
             setUser(profile);
+          } else if (mounted && !profile) {
+            // Token is invalid/expired
+            setUser(null);
           }
-        } catch {
-          // If token failed, keep cached user or clear
         }
+      } catch (err) {
+        console.warn('Auth initialization:', err.message);
+      } finally {
+        if (mounted) setLoading(false);
       }
-      if (mounted) setLoading(false);
     }
 
     initAuth();
@@ -43,34 +46,61 @@ export const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  // Register / Sign Up
-  const signup = async (email, password, name = 'Traveler') => {
-    const newUser = await authApi.register(name, email, password);
+  // Real User Registration
+  const register = async (name, email, password, confirmPassword) => {
+    const newUser = await authApi.register(name, email, password, confirmPassword);
     setUser(newUser);
     return newUser;
   };
 
-  // Sign In / Login
-  const login = async (email, password) => {
-    const loggedUser = await authApi.login(email, password);
+  // Real User Login
+  const login = async (email, password, rememberMe = false) => {
+    const loggedUser = await authApi.login(email, password, rememberMe);
     setUser(loggedUser);
     return loggedUser;
   };
 
-  // Google Login fallback simulator
-  const loginWithGoogle = async () => {
-    const demoUser = await authApi.login('aarav.sharma@example.com', 'password123');
-    demoUser.name = 'Aarav Sharma';
-    demoUser.photoURL = 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80';
-    setUser(demoUser);
-    return demoUser;
+  // Real Admin Portal Login
+  const adminLogin = async (email, password, rememberMe = false) => {
+    const adminUser = await authApi.adminLogin(email, password, rememberMe);
+    setUser(adminUser);
+    return adminUser;
   };
 
-  // Sign Out
-  const logout = () => {
-    authApi.logout();
+  // Real Profile Update
+  const updateProfile = async (profileData) => {
+    const updated = await authApi.updateProfile(profileData);
+    setUser(updated);
+    return updated;
+  };
+
+  // Change Password
+  const changePassword = async (currentPassword, newPassword, confirmNewPassword) => {
+    return await authApi.changePassword(currentPassword, newPassword, confirmNewPassword);
+  };
+
+  // Forgot Password Request
+  const forgotPassword = async (email) => {
+    return await authApi.forgotPassword(email);
+  };
+
+  // Reset Password Execution
+  const resetPassword = async (token, password, confirmPassword) => {
+    const result = await authApi.resetPassword(token, password, confirmPassword);
+    if (result.user) setUser(result.user);
+    return result;
+  };
+
+  // Logout
+  const logout = async () => {
+    await authApi.logout();
     setUser(null);
   };
+
+  // Role helpers
+  const isAuthenticated = !!user;
+  const isAdmin = user?.role === 'admin' || user?.role === 'superadmin';
+  const isSuperAdmin = user?.role === 'superadmin';
 
   return (
     <AuthContext.Provider
@@ -78,10 +108,18 @@ export const AuthProvider = ({ children }) => {
         user,
         loading,
         isBackendConnected,
-        signup,
+        isAuthenticated,
+        isAdmin,
+        isSuperAdmin,
+        register,
+        signup: register, // Alias for backward compatibility
         login,
-        loginWithGoogle,
-        logout
+        adminLogin,
+        logout,
+        updateProfile,
+        changePassword,
+        forgotPassword,
+        resetPassword
       }}
     >
       {children}
@@ -90,3 +128,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+export default AuthContext;
