@@ -3,10 +3,13 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
   Heart, Share2, Plus, Star, MapPin, Calendar, Clock, 
   Plane, Train, Bus, Car, ShieldAlert, Sparkles, Utensils, Compass, ArrowRight, Check, Info,
-  Camera, ChevronLeft, ChevronRight, X, Maximize2, Navigation, ExternalLink, Ticket, Route
+  Camera, ChevronLeft, ChevronRight, X, Maximize2, Navigation, ExternalLink, Ticket, Route,
+  MessageSquare, ThumbsUp, Send
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/destinations';
 import { useSaved } from '../context/SavedContext';
+import { useAuth } from '../context/AuthContext';
+import { addDestinationReview, getDestinationReviews } from '../services/firestoreService';
 
 export const DestinationDetail = () => {
   const { id } = useParams();
@@ -27,6 +30,50 @@ export const DestinationDetail = () => {
     busStand: { name: destination.howToReach?.busStand || `${destination.name} Central Bus Stand (ISBT)`, distance: '2 km', time: '6 mins', type: 'Interstate Stand', operators: 'State RTC & Volvo coaches' },
     road: { highway: destination.howToReach?.road || 'National Highway & State Corridor', condition: 'Paved motorable highway' },
     localTransport: destination.howToReach?.localTransport || 'Auto-rickshaws, prepaid cabs, and local transit'
+  };
+
+  const { user } = useAuth();
+  const [reviewsList, setReviewsList] = useState([]);
+  const [newRating, setNewRating] = useState(5);
+  const [newComment, setNewComment] = useState('');
+  const [authorName, setAuthorName] = useState('');
+  const [isSubmittingReview, setIsSubmittingReview] = useState(false);
+  const [reviewMessage, setReviewMessage] = useState('');
+
+  useEffect(() => {
+    if (user?.displayName) {
+      setAuthorName(user.displayName);
+    }
+  }, [user]);
+
+  useEffect(() => {
+    getDestinationReviews(destination.id).then((revs) => {
+      setReviewsList(revs || []);
+    });
+  }, [destination.id]);
+
+  const handleSubmitReview = async (e) => {
+    e.preventDefault();
+    if (!newComment.trim()) return;
+    setIsSubmittingReview(true);
+    setReviewMessage('');
+
+    try {
+      const savedReview = await addDestinationReview(destination.id, {
+        userName: authorName.trim() || user?.displayName || 'Fellow Traveler',
+        userEmail: user?.email || null,
+        rating: Number(newRating),
+        comment: newComment.trim()
+      });
+      setReviewsList((prev) => [savedReview, ...prev]);
+      setNewComment('');
+      setReviewMessage('Thank you! Your review was recorded.');
+      setTimeout(() => setReviewMessage(''), 4000);
+    } catch (err) {
+      console.warn('Error submitting review:', err);
+    } finally {
+      setIsSubmittingReview(false);
+    }
   };
 
   // Keyboard navigation for Lightbox
@@ -505,6 +552,136 @@ export const DestinationDetail = () => {
               </div>
             </section>
           )}
+
+          {/* ======================================================== */}
+          {/* COMMUNITY TRAVELER REVIEWS & RATINGS */}
+          {/* ======================================================== */}
+          <section className="bg-navy-900/80 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-glass space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
+              <div>
+                <h2 className="text-2xl font-bold font-serif text-white flex items-center gap-2.5">
+                  <MessageSquare className="w-6 h-6 text-saffron-400" />
+                  <span>Traveler Reviews & Community Ratings</span>
+                </h2>
+                <p className="text-xs text-slate-400 mt-1">
+                  Real experiences and ratings from travelers who visited {destination.name}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-saffron-500/15 border border-saffron-500/30 text-saffron-400 text-sm font-bold">
+                  <Star className="w-4 h-4 fill-saffron-400" />
+                  <span>{destination.rating || '4.8'}</span>
+                </div>
+                <span className="text-xs text-slate-400">
+                  ({reviewsList.length + 12} reviews)
+                </span>
+              </div>
+            </div>
+
+            {/* Submit Review Form */}
+            <form onSubmit={handleSubmitReview} className="p-4 sm:p-5 rounded-2xl bg-navy-950/70 border border-white/10 space-y-4">
+              <h3 className="text-sm font-semibold text-white">Share Your Experience at {destination.name}</h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-[11px] text-slate-400 mb-1">Your Name</label>
+                  <input
+                    type="text"
+                    value={authorName}
+                    onChange={(e) => setAuthorName(e.target.value)}
+                    placeholder={user?.displayName || "Aarav Sharma"}
+                    className="w-full bg-navy-900 border border-white/15 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-saffron-500"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] text-slate-400 mb-1">Your Rating</label>
+                  <div className="flex items-center gap-1.5 h-[38px] px-3 bg-navy-900 border border-white/15 rounded-xl">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        type="button"
+                        onClick={() => setNewRating(star)}
+                        className="p-1 focus:outline-none"
+                      >
+                        <Star className={`w-4 h-4 transition-colors ${star <= newRating ? 'fill-saffron-400 text-saffron-400' : 'text-slate-600'}`} />
+                      </button>
+                    ))}
+                    <span className="text-xs text-saffron-400 font-bold ml-2">{newRating} / 5</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[11px] text-slate-400 mb-1">Your Review / Travel Tips</label>
+                <textarea
+                  rows={3}
+                  value={newComment}
+                  onChange={(e) => setNewComment(e.target.value)}
+                  placeholder={`What was your favorite moment at ${destination.name}? Any transit, timing, or local food recommendations?`}
+                  required
+                  className="w-full bg-navy-900 border border-white/15 rounded-xl p-3 text-xs text-white outline-none focus:border-saffron-500 resize-none"
+                />
+              </div>
+
+              <div className="flex items-center justify-between pt-1">
+                {reviewMessage ? (
+                  <span className="text-xs text-emerald-400 font-medium">{reviewMessage}</span>
+                ) : (
+                  <span className="text-[11px] text-slate-400">
+                    {user ? `Posting as ${user.displayName || user.email}` : 'Posting as Traveler'}
+                  </span>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmittingReview || !newComment.trim()}
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-saffron-500 to-amber-600 hover:brightness-110 text-white text-xs font-bold transition-all shadow-glow-saffron disabled:opacity-50"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  <span>{isSubmittingReview ? 'Submitting...' : 'Post Review'}</span>
+                </button>
+              </div>
+            </form>
+
+            {/* Community Reviews List */}
+            <div className="space-y-3">
+              {reviewsList.length > 0 ? (
+                reviewsList.map((rev, idx) => (
+                  <div key={rev.id || idx} className="p-4 rounded-2xl bg-navy-950/50 border border-white/10 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-7 h-7 rounded-full bg-gradient-to-br from-saffron-500 to-amber-600 text-white font-bold text-xs flex items-center justify-center">
+                          {(rev.userName || 'T')[0].toUpperCase()}
+                        </div>
+                        <div>
+                          <strong className="text-xs font-semibold text-white block">{rev.userName}</strong>
+                          <span className="text-[10px] text-slate-400 block">
+                            {rev.createdAt ? new Date(rev.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Verified Traveler'}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-0.5 text-saffron-400">
+                        {Array.from({ length: rev.rating || 5 }).map((_, i) => (
+                          <Star key={i} className="w-3.5 h-3.5 fill-saffron-400" />
+                        ))}
+                      </div>
+                    </div>
+
+                    <p className="text-xs text-slate-300 leading-relaxed pt-1">
+                      {rev.comment}
+                    </p>
+                  </div>
+                ))
+              ) : (
+                <div className="text-center py-6 text-slate-400 text-xs">
+                  <p>No community reviews posted yet for this destination. Be the first to share your journey!</p>
+                </div>
+              )}
+            </div>
+          </section>
         </div>
 
         {/* Right 4 Cols: Quick Info Card, How to Reach, Weather */}

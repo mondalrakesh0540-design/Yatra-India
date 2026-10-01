@@ -1,13 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Heart, MapPin, Compass, BookOpen, Layers, Menu, X, ArrowRight, Sparkles, Scale, User } from 'lucide-react';
+import { Search, Heart, MapPin, Compass, BookOpen, Layers, Menu, X, ArrowRight, Sparkles, Scale, User, LogOut, Ticket, ChevronDown } from 'lucide-react';
 import { useSaved } from '../context/SavedContext';
+import { useAuth } from '../context/AuthContext';
 
 export const Navbar = ({ onOpenSearch }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const location = useLocation();
   const { savedDestinations, compareList } = useSaved();
+  const { user, logout } = useAuth();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setUserDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,14 +129,82 @@ export const Navbar = ({ onOpenSearch }) => {
               )}
             </Link>
 
-            {/* Sign In Link */}
-            <Link
-              to="/login"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 hover:bg-saffron-500 text-white transition-all border border-white/15 hover:shadow-glow-saffron ml-1"
-            >
-              <User className="w-3.5 h-3.5" />
-              <span>Sign In</span>
-            </Link>
+            {/* User Profile or Sign In */}
+            {user ? (
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setUserDropdownOpen(!userDropdownOpen)}
+                  className="hidden sm:inline-flex items-center gap-2 pl-1.5 pr-3 py-1 rounded-full text-xs font-semibold bg-white/10 hover:bg-white/15 text-white transition-all border border-white/15 hover:border-saffron-500/40 ml-1 shadow-sm"
+                >
+                  {user.photoURL ? (
+                    <img 
+                      src={user.photoURL} 
+                      alt={user.displayName || "User"} 
+                      className="w-6 h-6 rounded-full object-cover border border-saffron-400"
+                    />
+                  ) : (
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-saffron-500 to-amber-600 text-white font-bold text-xs flex items-center justify-center shadow-sm">
+                      {(user.displayName || user.email || 'T')[0].toUpperCase()}
+                    </div>
+                  )}
+                  <span className="max-w-[100px] truncate">{user.displayName || user.email?.split('@')[0] || 'Traveler'}</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                </button>
+
+                {/* Dropdown Menu */}
+                {userDropdownOpen && (
+                  <div className="absolute right-0 top-full mt-2 w-60 rounded-2xl bg-navy-900/95 backdrop-blur-xl border border-white/15 shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2">
+                    <div className="px-3 py-2 border-b border-white/10">
+                      <p className="text-xs font-semibold text-white truncate">{user.displayName || 'Traveler'}</p>
+                      <p className="text-[11px] text-slate-400 truncate">{user.email}</p>
+                      <span className="inline-block mt-1 text-[10px] text-saffron-400 font-medium bg-saffron-500/10 px-2 py-0.5 rounded border border-saffron-500/20">
+                        {user.isDemo ? 'Demo Mode' : 'Firebase Verified'}
+                      </span>
+                    </div>
+
+                    <div className="py-1">
+                      <Link
+                        to="/#booking-section"
+                        onClick={() => setUserDropdownOpen(false)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
+                      >
+                        <Ticket className="w-4 h-4 text-saffron-400" />
+                        <span>My Bookings</span>
+                      </Link>
+                      <Link
+                        to="/saved"
+                        onClick={() => setUserDropdownOpen(false)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
+                      >
+                        <Heart className="w-4 h-4 text-saffron-400" />
+                        <span>Saved Wishlist ({savedDestinations.length})</span>
+                      </Link>
+                    </div>
+
+                    <div className="pt-1 border-t border-white/10">
+                      <button
+                        onClick={() => {
+                          logout();
+                          setUserDropdownOpen(false);
+                        }}
+                        className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-red-400 hover:text-red-300 hover:bg-red-500/10 transition-colors text-left"
+                      >
+                        <LogOut className="w-4 h-4" />
+                        <span>Sign Out</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/10 hover:bg-saffron-500 text-white transition-all border border-white/15 hover:shadow-glow-saffron ml-1"
+              >
+                <User className="w-3.5 h-3.5" />
+                <span>Sign In</span>
+              </Link>
+            )}
 
             {/* Mobile Hamburger Menu Toggle */}
             <button
@@ -169,14 +251,46 @@ export const Navbar = ({ onOpenSearch }) => {
             </Link>
           </div>
 
-          <div className="pt-6">
-            <Link
-              to="/login"
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/15 mb-3"
-            >
-              <User className="w-4 h-4 text-saffron-400" />
-              <span>Sign In / Register</span>
-            </Link>
+          <div className="pt-6 border-t border-white/10">
+            {user ? (
+              <div className="mb-4 p-3 rounded-xl bg-navy-900 border border-white/10">
+                <div className="flex items-center gap-3 mb-3">
+                  {user.photoURL ? (
+                    <img 
+                      src={user.photoURL} 
+                      alt={user.displayName || "User"} 
+                      className="w-10 h-10 rounded-full object-cover border border-saffron-400"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-saffron-500 to-amber-600 text-white font-bold text-sm flex items-center justify-center">
+                      {(user.displayName || user.email || 'T')[0].toUpperCase()}
+                    </div>
+                  )}
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-white truncate">{user.displayName || 'Traveler'}</p>
+                    <p className="text-xs text-slate-400 truncate">{user.email}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => {
+                    logout();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-red-500/15 hover:bg-red-500/25 text-red-400 text-xs font-semibold border border-red-500/30 transition-colors"
+                >
+                  <LogOut className="w-3.5 h-3.5" />
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/15 mb-3"
+              >
+                <User className="w-4 h-4 text-saffron-400" />
+                <span>Sign In / Register</span>
+              </Link>
+            )}
             <Link
               to="/destinations"
               className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-saffron-500 to-amber-600 text-white font-semibold shadow-glow-saffron"

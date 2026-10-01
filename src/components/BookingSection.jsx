@@ -20,9 +20,14 @@ import {
   Coffee,
   Wifi,
   Zap,
-  Info
+  Info,
+  Copy,
+  Check,
+  RefreshCw
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { useAuth } from '../context/AuthContext';
+import { createBooking, getUserBookings } from '../services/firestoreService';
 import { 
   AIRPORTS, 
   TRAIN_STATIONS, 
@@ -93,6 +98,37 @@ export const BookingSection = () => {
   const [couponMessage, setCouponMessage] = useState('Coupon YATRA100 applied successfully!');
   const [generatedPnr, setGeneratedPnr] = useState('');
 
+  // Firebase Auth & Firestore Bookings Integration
+  const { user, isFirebaseConfigured } = useAuth();
+  const [myBookingsList, setMyBookingsList] = useState([]);
+  const [loadingBookings, setLoadingBookings] = useState(false);
+  const [copiedPnr, setCopiedPnr] = useState(null);
+
+  // Sync passenger info from logged-in user
+  useEffect(() => {
+    if (user) {
+      if (user.displayName) setPassengerName(user.displayName);
+      if (user.email) setPassengerEmail(user.email);
+    }
+  }, [user]);
+
+  // Load user bookings from Firestore / Local Storage
+  const loadBookings = async () => {
+    setLoadingBookings(true);
+    try {
+      const list = await getUserBookings(user?.uid, user?.email);
+      setMyBookingsList(list);
+    } catch (e) {
+      console.warn('Error fetching bookings:', e);
+    } finally {
+      setLoadingBookings(false);
+    }
+  };
+
+  useEffect(() => {
+    loadBookings();
+  }, [user, activeTab]);
+
   // Handle cross-navigation from Destination Detail "How to Reach" CTAs
   useEffect(() => {
     try {
@@ -100,7 +136,7 @@ export const BookingSection = () => {
       const tabParam = searchParams.get('bookingTab') || location.state?.bookingTab;
       const toParam = searchParams.get('bookingTo') || location.state?.bookingTo;
 
-      if (tabParam && ['flights', 'trains', 'buses'].includes(tabParam)) {
+      if (tabParam && ['flights', 'trains', 'buses', 'my-bookings'].includes(tabParam)) {
         setActiveTab(tabParam);
         setSearchResults(null);
       }
@@ -180,11 +216,44 @@ export const BookingSection = () => {
     }
   };
 
-  // Final confirmation
-  const handleConfirmBooking = () => {
+  // Final confirmation & Firestore Persistence
+  const handleConfirmBooking = async () => {
     const pnr = `YTR${Math.floor(10000000 + Math.random() * 90000000)}`;
     setGeneratedPnr(pnr);
     setBookingStep('confirmed');
+
+    const basePrice = selectedItinerary.chosenClass ? selectedItinerary.chosenClass.price : (selectedItinerary.price || 0);
+    const finalPrice = Math.max(0, (basePrice * passengers) - appliedDiscount);
+
+    const bookingPayload = {
+      pnr,
+      type: activeTab,
+      userId: user?.uid || null,
+      passengerName,
+      passengerAge,
+      passengerGender,
+      passengerEmail,
+      passengerPhone,
+      fromCity: selectedItinerary.from || (activeTab === 'flights' ? flightFrom : activeTab === 'trains' ? trainFrom : busFrom),
+      toCity: selectedItinerary.to || (activeTab === 'flights' ? flightTo : activeTab === 'trains' ? trainTo : busTo),
+      departureDate: selectedItinerary.date || (activeTab === 'flights' ? flightDepDate : activeTab === 'trains' ? trainDate : busDate),
+      itinerary: selectedItinerary,
+      fareDetails: {
+        baseFare: basePrice,
+        discount: appliedDiscount,
+        totalFare: finalPrice,
+        passengers
+      },
+      couponCode: appliedDiscount > 0 ? couponCode : null,
+      status: 'CONFIRMED'
+    };
+
+    try {
+      await createBooking(bookingPayload);
+      loadBookings();
+    } catch (err) {
+      console.warn('Booking persistence notification:', err);
+    }
 
     // Trigger celebratory confetti
     confetti({
@@ -249,6 +318,23 @@ export const BookingSection = () => {
           >
             <Bus className="w-4 h-4" />
             <span>Buses</span>
+          </button>
+
+          <button
+            onClick={() => { setActiveTab('my-bookings'); setSearchResults(null); }}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 sm:ml-auto ${
+              activeTab === 'my-bookings'
+                ? 'bg-gradient-to-r from-saffron-500 to-amber-600 text-white shadow-glow-saffron'
+                : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
+            }`}
+          >
+            <Ticket className="w-4 h-4 text-saffron-400" />
+            <span>My Bookings</span>
+            {myBookingsList.length > 0 && (
+              <span className="w-5 h-5 rounded-full bg-saffron-500 text-white font-bold text-[10px] flex items-center justify-center">
+                {myBookingsList.length}
+              </span>
+            )}
           </button>
         </div>
 
@@ -678,6 +764,181 @@ export const BookingSection = () => {
                 <span>{searching ? 'Finding Coaches...' : 'Search Buses'}</span>
               </button>
             </div>
+          </div>
+        )}
+
+        {/* ======================================================== */}
+        {/* 4. MY BOOKINGS TAB */}
+        {/* ======================================================== */}
+        {activeTab === 'my-bookings' && (
+          <div className="space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
+              <div>
+                <h3 className="text-xl font-bold font-serif text-white flex items-center gap-2">
+                  <Ticket className="w-5 h-5 text-saffron-400" />
+                  <span>Your Travel Bookings & E-Tickets</span>
+                </h3>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  {user ? `Showing bookings linked to ${user.email}` : 'Showing current device and session bookings'}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={loadBookings}
+                  disabled={loadingBookings}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs text-slate-200 transition-colors"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${loadingBookings ? 'animate-spin' : ''}`} />
+                  <span>Refresh</span>
+                </button>
+
+                <span className="text-[11px] px-2.5 py-1 rounded-full bg-navy-950 border border-white/10 text-slate-300">
+                  {isFirebaseConfigured ? 'Cloud Firestore' : 'Local Storage'}
+                </span>
+              </div>
+            </div>
+
+            {loadingBookings ? (
+              <div className="py-16 text-center text-slate-400 text-sm">
+                <RefreshCw className="w-8 h-8 animate-spin mx-auto text-saffron-400 mb-3" />
+                <p>Loading your verified bookings...</p>
+              </div>
+            ) : myBookingsList.length === 0 ? (
+              <div className="py-16 px-4 text-center rounded-2xl bg-navy-950/50 border border-white/10">
+                <div className="w-14 h-14 rounded-2xl bg-saffron-500/10 border border-saffron-500/20 text-saffron-400 mx-auto flex items-center justify-center mb-4">
+                  <Ticket className="w-7 h-7" />
+                </div>
+                <h4 className="text-lg font-bold text-white mb-1">No Bookings Found</h4>
+                <p className="text-xs text-slate-400 max-w-md mx-auto mb-6">
+                  You haven't made any flight, train, or bus reservations yet. Choose a route above to generate your instant e-ticket with PNR!
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('flights')}
+                    className="px-4 py-2 rounded-xl bg-saffron-500 hover:bg-saffron-600 text-white text-xs font-semibold shadow-glow-saffron transition-colors"
+                  >
+                    Book Flights
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('trains')}
+                    className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold transition-colors"
+                  >
+                    Book Trains
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('buses')}
+                    className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold transition-colors"
+                  >
+                    Book Buses
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {myBookingsList.map((b) => (
+                  <div
+                    key={b.pnr}
+                    className="p-5 rounded-2xl bg-navy-950/80 border border-white/10 hover:border-saffron-500/40 transition-all flex flex-col justify-between shadow-lg"
+                  >
+                    <div>
+                      {/* Top Row: Type & PNR */}
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-8 h-8 rounded-lg bg-saffron-500/15 border border-saffron-500/30 text-saffron-400 flex items-center justify-center">
+                            {b.type === 'flights' ? <Plane className="w-4 h-4" /> : b.type === 'trains' ? <Train className="w-4 h-4" /> : <Bus className="w-4 h-4" />}
+                          </div>
+                          <div>
+                            <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
+                              {b.type === 'flights' ? 'Flight Ticket' : b.type === 'trains' ? 'IRCTC Train' : 'Intercity Bus'}
+                            </span>
+                            <span className="text-xs font-semibold text-white">
+                              {b.itinerary?.airline || b.itinerary?.trainName || b.itinerary?.operator || 'Confirmed Journey'}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs font-mono font-bold text-saffron-400 bg-saffron-500/10 px-2 py-0.5 rounded border border-saffron-500/20">
+                            {b.pnr}
+                          </span>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              navigator.clipboard?.writeText(b.pnr);
+                              setCopiedPnr(b.pnr);
+                              setTimeout(() => setCopiedPnr(null), 1500);
+                            }}
+                            title="Copy PNR"
+                            className="p-1 rounded hover:bg-white/10 text-slate-400 hover:text-white transition-colors"
+                          >
+                            {copiedPnr === b.pnr ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Route & Passenger */}
+                      <div className="grid grid-cols-2 gap-2 text-xs mb-3">
+                        <div>
+                          <span className="text-[10px] text-slate-400 block">From ➔ To</span>
+                          <strong className="text-white text-sm">{b.fromCity} ➔ {b.toCity}</strong>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-slate-400 block">Travel Date</span>
+                          <strong className="text-slate-200">{b.departureDate}</strong>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-slate-400 block">Passenger</span>
+                          <span className="text-slate-300">{b.passengerName}</span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-slate-400 block">Paid Fare</span>
+                          <span className="text-emerald-400 font-bold">₹{(b.fareDetails?.totalFare || 0).toLocaleString('en-IN')}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Footer Actions */}
+                    <div className="border-t border-white/10 pt-3 flex items-center justify-between mt-2">
+                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-semibold">
+                        {b.status || 'CONFIRMED'}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedItinerary(b.itinerary || {
+                            airline: b.itinerary?.airline || 'Travel Partner',
+                            trainName: b.itinerary?.trainName || 'Express',
+                            operator: b.itinerary?.operator || 'Volvo Bus',
+                            from: b.fromCity,
+                            to: b.toCity,
+                            date: b.departureDate,
+                            type: b.type === 'flights' ? 'flight' : b.type === 'trains' ? 'train' : 'bus',
+                            departureTime: b.itinerary?.departureTime || '08:00 AM',
+                            arrivalTime: b.itinerary?.arrivalTime || '11:30 AM',
+                            price: b.fareDetails?.totalFare || 0
+                          });
+                          setPassengerName(b.passengerName || 'Traveler');
+                          setPassengerEmail(b.passengerEmail || 'traveler@yatraindia.com');
+                          setPassengerAge(b.passengerAge || '28');
+                          setPassengerGender(b.passengerGender || 'Any');
+                          setGeneratedPnr(b.pnr);
+                          setBookingStep('confirmed');
+                        }}
+                        className="text-xs font-semibold text-saffron-400 hover:text-saffron-300 flex items-center gap-1"
+                      >
+                        <span>View E-Ticket</span>
+                        <Ticket className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>

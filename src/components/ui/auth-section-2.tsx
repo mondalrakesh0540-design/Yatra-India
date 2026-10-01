@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
-import { ArrowRight, Compass, Sparkles, MapPin } from "lucide-react";
+import { ArrowRight, Compass, Sparkles, MapPin, AlertCircle, CheckCircle2, ShieldCheck, Loader2 } from "lucide-react";
+import { useAuth } from "../../context/AuthContext";
 
 // Curated verified high-resolution photography showcasing India's extraordinary destinations
 const images = [
@@ -245,6 +246,29 @@ function FocusCorners({ active }: { active: boolean }) {
   );
 }
 
+function getFriendlyErrorMessage(err: any) {
+  const code = err?.code || "";
+  if (code === "auth/invalid-credential" || code === "auth/wrong-password") {
+    return "Invalid email or password. Please verify your credentials.";
+  }
+  if (code === "auth/user-not-found") {
+    return "No account found with this email. Please create an account.";
+  }
+  if (code === "auth/email-already-in-use") {
+    return "An account with this email already exists. Please sign in.";
+  }
+  if (code === "auth/weak-password") {
+    return "Password is too weak. Please use at least 6 characters.";
+  }
+  if (code === "auth/invalid-email") {
+    return "Please enter a valid email address.";
+  }
+  if (code === "auth/popup-closed-by-user") {
+    return "Sign-in popup was closed before completing.";
+  }
+  return err?.message || "An authentication error occurred. Please try again.";
+}
+
 function AuthForm({
   defaultMode = "signup",
   onSuccess,
@@ -254,22 +278,88 @@ function AuthForm({
 }) {
   const [mode, setMode] = useState<"login" | "signup">(defaultMode);
   const [loading, setLoading] = useState(false);
+  const [firstName, setFirstName] = useState("Aarav");
+  const [lastName, setLastName] = useState("Sharma");
+  const [email, setEmail] = useState("traveler@yatraindia.com");
+  const [password, setPassword] = useState("Traveler@2026");
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const { login, signup, loginWithGoogle, isFirebaseConfigured } = useAuth();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
+    setSuccess(null);
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      if (onSuccess) {
-        onSuccess();
+
+    try {
+      if (mode === "signup") {
+        if (!email || !password) {
+          throw new Error("Please provide both email and password.");
+        }
+        if (password.length < 6) {
+          throw new Error("Password must be at least 6 characters long.");
+        }
+        const displayName = `${firstName} ${lastName}`.trim() || "Traveler";
+        await signup(email, password, displayName);
+        setSuccess("Account successfully created with Firebase!");
       } else {
-        alert(mode === "login" ? "Signed in successfully!" : "Account created successfully!");
+        if (!email || !password) {
+          throw new Error("Please provide your email and password.");
+        }
+        await login(email, password);
+        setSuccess("Signed in successfully!");
       }
-    }, 600);
+
+      setTimeout(() => {
+        if (onSuccess) {
+          onSuccess();
+        }
+      }, 500);
+    } catch (err: any) {
+      setError(getFriendlyErrorMessage(err));
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleAuth = async () => {
+    setError(null);
+    setSuccess(null);
+    setLoading(true);
+    try {
+      await loginWithGoogle();
+      setSuccess("Signed in with Google!");
+      setTimeout(() => {
+        if (onSuccess) {
+          onSuccess();
+        }
+      }, 500);
+    } catch (err: any) {
+      setError(getFriendlyErrorMessage(err));
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="mx-auto w-full max-w-[480px] rounded-2xl border border-white/10 bg-navy-900/75 p-7 sm:p-10 backdrop-blur-xl shadow-glass text-center">
+      {/* Firebase Backend Indicator Badge */}
+      <div className="mb-4 flex items-center justify-center">
+        {isFirebaseConfigured ? (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Connected to Firebase Cloud Backend</span>
+          </span>
+        ) : (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-medium">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Firebase Demo / Local Mode Active</span>
+          </span>
+        )}
+      </div>
+
       <h1 className="whitespace-nowrap text-3xl font-serif font-bold tracking-tight text-white sm:text-4xl">
         {mode === "login" ? "Sign In to Yatra India" : "Create Your Account"}
       </h1>
@@ -280,14 +370,19 @@ function AuthForm({
           : "Join thousands of travelers exploring extraordinary India."}
       </p>
 
+      {/* Social Auth Providers */}
       <div className="mt-7 grid gap-3 sm:grid-cols-2">
         <SocialButton
           icon={<GoogleIcon />}
           label={mode === "login" ? "Sign in with Google" : "Sign up with Google"}
+          onClick={handleGoogleAuth}
         />
         <SocialButton
           icon={<AppleIcon />}
           label={mode === "login" ? "Sign in with Apple" : "Sign up with Apple"}
+          onClick={() => {
+            alert("Apple Sign-in is available in production with Apple Developer ID. For now, try Google Sign-In or Email/Password!");
+          }}
         />
       </div>
 
@@ -297,22 +392,55 @@ function AuthForm({
         <div className="h-px flex-1 bg-white/10" />
       </div>
 
+      {/* Error Alert */}
+      {error && (
+        <div className="mb-4 flex items-start gap-2.5 rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-left text-xs text-red-300 animate-in fade-in">
+          <AlertCircle className="mt-0.5 size-4 shrink-0 text-red-400" />
+          <span>{error}</span>
+        </div>
+      )}
+
+      {/* Success Alert */}
+      {success && (
+        <div className="mb-4 flex items-start gap-2.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3 text-left text-xs text-emerald-300 animate-in fade-in">
+          <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-400" />
+          <span>{success}</span>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="space-y-4 text-left">
         {mode === "signup" && (
           <div className="grid gap-4 sm:grid-cols-2">
-            {formFields.map((field) => (
-              <FieldBox
-                key={field.label}
-                label={field.label}
-                value={field.value}
-                type={field.type}
-              />
-            ))}
+            <FieldBox
+              label="First Name"
+              value={firstName}
+              onChange={setFirstName}
+              type="text"
+              required
+            />
+            <FieldBox
+              label="Last Name"
+              value={lastName}
+              onChange={setLastName}
+              type="text"
+            />
           </div>
         )}
 
-        <FieldBox label="Email" value="traveler@yatraindia.com" type="email" />
-        <FieldBox label="Password" value="*************" type="password" />
+        <FieldBox
+          label="Email"
+          value={email}
+          onChange={setEmail}
+          type="email"
+          required
+        />
+        <FieldBox
+          label="Password"
+          value={password}
+          onChange={setPassword}
+          type="password"
+          required
+        />
 
         {mode === "signup" ? (
           <div className="space-y-3 pt-2 text-xs leading-5 text-slate-400 sm:text-[13px]">
@@ -324,18 +452,31 @@ function AuthForm({
         ) : (
           <div className="flex items-center justify-between pt-1 text-xs text-slate-300 sm:text-[13px]">
             <CheckboxLine>Remember me for 30 days</CheckboxLine>
-            <a href="#" className="font-medium text-saffron-400 hover:text-saffron-300 hover:underline">
+            <button 
+              type="button" 
+              onClick={() => alert("Password reset instructions will be sent to your email.")}
+              className="font-medium text-saffron-400 hover:text-saffron-300 hover:underline"
+            >
               Forgot password?
-            </a>
+            </button>
           </div>
         )}
 
         <button
           type="submit"
           disabled={loading}
-          className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-gradient-to-r from-saffron-500 via-saffron-600 to-amber-600 text-base font-semibold text-white shadow-glow-saffron transition-all hover:brightness-110 hover:shadow-lg disabled:opacity-50"
+          className="mt-7 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-saffron-500 via-saffron-600 to-amber-600 text-base font-semibold text-white shadow-glow-saffron transition-all hover:brightness-110 hover:shadow-lg disabled:opacity-50"
         >
-          {loading ? "Processing..." : mode === "login" ? "Sign In" : "Create Account"}
+          {loading ? (
+            <>
+              <Loader2 className="w-5 h-5 animate-spin" />
+              <span>Connecting with Firebase...</span>
+            </>
+          ) : mode === "login" ? (
+            "Sign In"
+          ) : (
+            "Create Account"
+          )}
         </button>
 
         <div className="mt-6 text-center text-sm text-slate-300">
@@ -344,7 +485,10 @@ function AuthForm({
               Don't have an account?{" "}
               <button
                 type="button"
-                onClick={() => setMode("signup")}
+                onClick={() => {
+                  setMode("signup");
+                  setError(null);
+                }}
                 className="font-semibold text-saffron-400 underline underline-offset-2 hover:text-saffron-300"
               >
                 Sign up
@@ -355,7 +499,10 @@ function AuthForm({
               Already have an account?{" "}
               <button
                 type="button"
-                onClick={() => setMode("login")}
+                onClick={() => {
+                  setMode("login");
+                  setError(null);
+                }}
                 className="font-semibold text-saffron-400 underline underline-offset-2 hover:text-saffron-300"
               >
                 Sign in
@@ -368,10 +515,19 @@ function AuthForm({
   );
 }
 
-function SocialButton({ icon, label }: { icon: ReactNode; label: string }) {
+function SocialButton({ 
+  icon, 
+  label, 
+  onClick 
+}: { 
+  icon: ReactNode; 
+  label: string; 
+  onClick?: () => void;
+}) {
   return (
     <button
       type="button"
+      onClick={onClick}
       className="flex h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-navy-800/80 px-3 text-sm font-medium text-slate-200 transition-all hover:bg-navy-800 hover:border-saffron-500/40 hover:text-white shadow-sm"
     >
       <span className="shrink-0">{icon}</span>
@@ -383,38 +539,29 @@ function SocialButton({ icon, label }: { icon: ReactNode; label: string }) {
 function FieldBox({
   label,
   value,
+  onChange,
   type = "text",
+  required = false,
 }: {
   label: string;
   value: string;
+  onChange: (val: string) => void;
   type?: string;
+  required?: boolean;
 }) {
-  const [inputValue, setInputValue] = useState(value);
-  const [isEditing, setIsEditing] = useState(false);
-
   return (
     <label className="flex h-12 items-center justify-between gap-3 rounded-xl border border-white/10 bg-navy-950/80 px-4 text-sm text-slate-200 transition-all focus-within:border-saffron-500 focus-within:ring-1 focus-within:ring-saffron-500/50 shadow-inner">
       <input
         type={type}
-        value={inputValue}
+        value={value}
+        required={required}
         aria-label={label}
-        onFocus={() => {
-          if (!isEditing) {
-            setInputValue("");
-            setIsEditing(true);
-          }
-        }}
-        onChange={(event) => {
-          setInputValue(event.target.value);
-          setIsEditing(true);
-        }}
+        onChange={(event) => onChange(event.target.value)}
         className="min-w-0 flex-1 truncate bg-transparent text-white outline-none placeholder:text-slate-500 text-sm"
       />
-      {!isEditing && (
-        <span className="shrink-0 text-xs font-semibold text-saffron-400/90 bg-saffron-500/10 px-2 py-0.5 rounded border border-saffron-500/20">
-          {label}
-        </span>
-      )}
+      <span className="shrink-0 text-xs font-semibold text-saffron-400/90 bg-saffron-500/10 px-2 py-0.5 rounded border border-saffron-500/20">
+        {label}
+      </span>
     </label>
   );
 }
