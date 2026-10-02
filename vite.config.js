@@ -4,10 +4,15 @@ import path from 'path'
 import fs from 'fs'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/Yatra-India/' : '/',
-  plugins: [
-    react(),
+export default defineConfig(({ command }) => {
+  // Use '/' on Vercel, Netlify and root deployments; use '/Yatra-India/' only if explicitly targeting GitHub Pages
+  const isGhPages = process.env.DEPLOY_TARGET === 'gh-pages' || process.env.GITHUB_PAGES === 'true';
+  const base = process.env.VERCEL ? '/' : (isGhPages ? '/Yatra-India/' : '/');
+
+  return {
+    base,
+    plugins: [
+      react(),
     {
       name: 'copy-404',
       closeBundle() {
@@ -35,4 +40,5 @@ export default defineConfig(({ command }) => ({
       }
     }
   }
-}))
+};
+});

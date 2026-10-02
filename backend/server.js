@@ -51,7 +51,7 @@ app.use(
   cors({
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps, curl, or Postman)
-      if (!origin || allowedOrigins.includes(origin) || origin.endsWith('.github.io')) {
+      if (!origin || allowedOrigins.includes(origin) || origin.endsWith('.github.io') || origin.endsWith('.vercel.app')) {
         return callback(null, true);
       }
       return callback(null, true); // Permissive in dev/staging to avoid blocking
@@ -104,13 +104,15 @@ app.get('/', (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(`🚀 Yatra India Server running on http://localhost:${PORT}`);
-  console.log(`🛡️  Security headers, CORS, JWT Auth & Rate Limiters active`);
-  console.log(`📡 Endpoints: /api/auth, /api/destinations, /api/stats...`);
-  console.log(`=======================================================`);
-});
+// Start server only when running standalone (not in Vercel serverless functions)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`=======================================================`);
+    console.log(`🚀 Yatra India Server running on http://localhost:${PORT}`);
+    console.log(`🛡️  Security headers, CORS, JWT Auth & Rate Limiters active`);
+    console.log(`📡 Endpoints: /api/auth, /api/destinations, /api/stats...`);
+    console.log(`=======================================================`);
+  });
+}
 
 export default app;
